@@ -1,2 +1,2 @@
 #wancademy
-This is wancademt
+This is wancademy
