@@ -1,0 +1,31 @@
+
+<% include ./partials/header %>
+
+
+<div class="jumbotron" style=" background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ height:380px;">
+	<div class="container">
+		<br><br>
+		<h1 style="color:white;font-size:80px;"><strong>Verify your a Teacher <img style="height:80px;width:80px;" src="https://i.imgur.com/f9UGCbw.png"> </strong></h1>
+		<br>
+		 <p style="color:white;font-size:30px;">Re-enter your email and you will recieve intructions in your message</p>
+		 <br>
+		
+	</div>
+</div>
+
+</div>
+<div class="container">
+<form action="/teacher-email" method="POST">
+    <input class="input-field-new" type="email" name="email" placeholder="Re-enter your email" required>
+    <br><br><br>
+    <input type="submit" class="button3-md" value="Get Teacher Code">
+    <br><br>
+</form>
+</div>
+
+<br><br><br><br><br><br>
+
+<% include ./partials/footer %> 

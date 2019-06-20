@@ -1,0 +1,346 @@
+<% include ../partials/editorhead %>
+
+<style>
+
+html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
+
+#left {
+    float: left;
+    width: 45%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    
+}
+#right {
+    float: left;
+    width: 55%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+   
+}
+
+#editor {
+    height: 400px;
+    width:100%;
+}
+
+
+#iframe {
+	height:10000px;
+	overflow: scroll;
+	width:100%;
+	 border: 8px solid #00283F;
+	 padding:9px;
+
+}
+
+#iframe-2 {
+	height:560px;
+	overflow: scroll;
+	width:100%;
+	 padding:9px;
+
+}
+
+#fixedbutton-1 {
+    color:white;
+    position: fixed;
+    bottom: 20px;
+    right: 50px; 
+    z-index:10;
+    background:black;
+}
+
+#fixedbutton-2 {
+    color:white;
+    position: fixed;
+    bottom: 20px;
+    right: 560px; 
+    z-index:10;
+    background:#009EFF;
+}
+
+/* disable tag matching */
+.ace_editor .ace_marker-layer .ace_bracket { display: none }
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+<div id="content">
+<div class="row">
+    
+    <div id="left" style="overflow: hidden;">
+        <!--Answer to check-->
+        <textarea type="text" id="txt1"  name="txt1" hidden></textarea>
+        <!--Actual Editor-->
+        <div id="editor"></div>
+        <!--Result of Code-->
+        <iframe id='iframe' frameBorder="0"></iframe>
+        <!-- Large Modal -->
+        <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <iframe id='iframe-2' frameBorder="0"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button onclick="Run()" type="button" class="btn btn-primary">Check Code</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="right" style="overflow: hidden;padding-left:35px;">
+        
+        <!--Menu-->
+        <div style="padding:9px;"></div>
+        <ul class="nav nav-tabs" id="mytabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span style="color:#002439">Instructions</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span style="color:#002439">Video</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><span style="color:#002439">Hints</span></a>
+                </li>
+            </ul>
+        
+        <!--Instruction Content-->
+        <div class="tab-content" id="myTabContent">
+            
+            <!--Actual Instruction-->
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div style="padding-right:40px;">
+                <div style="padding:9px;"></div>
+                    <div style="overflow:scroll;height:1000px;">
+                        <h1 style="font-size:35px;font-weight:600;">Headings and Paragraphs <br><div style="padding:7px;"></div>
+                        <p style="font-weight:440;font-size:21px;">
+                        Now that we have our boiler plate established, it's time to create something! In this lesson, we will go over how to create headings and paragraphs.
+                        <br><br><strong>Headings:</strong> Headings are used for large text that you want to stand out. There are 6 types of headings ranging from small to large.<br><br> The way you create a heading, is using h1-h6 in tags. h1 is the largest heading with each heading in between (h2-h5) leading to h6, the smallest heading. 
+                        <br><br><img height="170" width="350" src="https://i.imgur.com/GWtpLF4.png">
+                        <img height="330" width="280" src=" https://i.imgur.com/Y0PKWHh.png">
+                        <br><br>
+                        <strong>Paragraphs:</strong> Paragraphs are used for smaller texts such as fine print and detailed information. To create a paragraph, use the letter p in tags:
+                        <br><br>
+                        <img src="https://i.imgur.com/DDVpb6P.png" height="50" width="325">
+                        </p>
+                       
+                        <br><hr><h3><strong>Your Turn!</strong></h3>
+                        <i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp; <span style="font-size:21px;font-weight:440">Inside the body tag, create the largest heading possible and write your name. Then, underneath the heading, create a paragraph writing a little something about you! Click "check code" once you are done.</span>
+                        
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        
+                        </h1>
+                        
+                        <div style="padding:9px;"></div>
+                        <h1 style="font-size:21px;font-weight:440;"> </h1>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            
+            <!--Video-->
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <br>
+                <iframe width="580" height="320" frameBorder="0" src="https://www.youtube-nocookie.com/embed/FSVb41ITpFU?rel=0&amp;showinfo=0"></iframe>
+                <br>
+                <div style="padding-right:40px;">
+                    <hr>
+                    <h3>Instructions:</h3>
+                    <h4 style="font-weight:300;"><i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp;Your turn! Change the &lt;h1&gt; tag in between from "This is a heading" to "Hello World"<br></h4>
+                </div>
+            </div>
+            
+            <!--Hints-->
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="container">
+                    <br>
+                    <!--Hint One-->
+                    <h2 class="one" style="font-size:25px;font-weight:600;"><i style="font-size:38px;color:#3A3939;" class="fas fa-sort-down"></i>&nbsp;1) First Hint </h2>
+                    <div style="display:none;" class="two">
+                        <div style="padding:5px;"></div>
+                        <p style="font-size:25px;font-weight:300;">Did you create an h1 and p tag?</p>
+                        <br>
+                    </div>
+                    
+                    <!--Hint Two-->
+                    <h2 class="one1" style="font-size:25px;font-weight:600;"><i style="font-size:38px;color:#3A3939;" class="fas fa-sort-down"></i>&nbsp;2) Second Hint </h2>
+                    <div style="display:none;" class="two1">
+                        <div style="padding:5px;"></div>
+                        <p style="font-size:25px;font-weight:300;">Did you open and close your tags properly for both tags?</p>
+                        <br>
+                    </div>
+                    
+                    <!--Hint Three-->
+                    <h2 class="one3" style="font-size:25px;font-weight:600;"><i style="font-size:38px;color:#3A3939;" class="fas fa-sort-down"></i>&nbsp;3) Third Hint </h2>
+                    <div style="display:none;" class="two3">
+                        <div style="padding:5px;"></div>
+                        <p style="font-size:25px;font-weight:300;">Did you accidentally capitalized a letter?</p>
+                        <br>
+                    </div>
+                    
+                    <!--Solution-->
+                    <h2 class="one2" style="font-size:25px;font-weight:600;"><i style="font-size:38px;color:#3A3939;" class="fas fa-sort-down"></i>&nbsp;3) Solution </h2>
+                    <div style="display:none;" class="two2">
+                        <div style="padding:5px;"></div>
+                        <p style="font-size:25px;font-weight:300;"><img height="200" width="450" src="https://i.imgur.com/MPHlCo8.png"></p>
+                        <div style="padding:5px;"></div>
+                        <br><br>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+       
+    </div>
+    
+</div>
+</div>
+  
+<!--Backend Javascript-->
+<script>
+
+
+  function update()
+{
+	var idoc = document.getElementById('iframe').contentWindow.document;
+var idoc2 = document.getElementById('iframe-2').contentWindow.document;
+	idoc.open();
+	idoc.write(editor.getValue());
+	idoc.close();
+	
+	idoc2.open();
+	idoc2.write(editor.getValue());
+	idoc2.close();
+}
+
+function activaTab(){
+    
+};
+
+function Run(){
+ var editor = ace.edit("editor");
+ var Code = editor.getSession().getValue();
+ var txt1 = document.getElementById("txt1").value;
+ $('.nav-tabs a[href="#contact-tab"]').tab('show');
+
+
+ if (Code.includes('<p>','</p>','<h1>','</h1>')){
+      $( "#checkbox" ).addClass( ".far fa-check-square" ).removeClass( ".far fa-square" );
+      
+        swal({
+            title: "Good job!",
+            text: "Continue to the next lesson!",
+            icon: "success",
+             closeOnClickOutside: false,
+             buttons: {
+                confirm: "Next Lesson",
+              }
+        }).then(function() {
+            window.location.href = "/editor/introductiontohtml/links";
+            
+            
+    });
+   
+   return false;
+    
+  
+  } else if(Code == "<h1>hello world</h1>"){
+     swal({
+  title: "Uh Oh!",
+  text: "Make sure the H in Hello and W in World are capitalized!",
+  icon: "error",
+  button: "Try Again",
+});
+       return false;
+       
+  } else if(Code == "hello world"){
+     swal({
+  title: "Uh Oh!",
+  text: "Don't forget the <h1></h1> tags!",
+  icon: "error",
+  button: "Try Again",
+});
+       return false;
+       
+  } else{
+            swal({
+          title: "Oh No!",
+          text: "Your code seems to be incorrect",
+          icon: "error",
+          buttons: ["Try Again", "View Solution"],
+          
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+            swal("<h1>Hello World</h1>", {
+              title: "Solution:",
+              icon: "info",
+              button: "Try Again"
+             
+            });
+          } 
+        });
+        
+         return false;
+    }
+
+}
+
+
+$(".one").click(function() {
+        $(".two").toggle();
+    });
+    
+    $(".one1").click(function() {
+        $(".two1").toggle();
+    });
+
+$(".one2").click(function() {
+        $(".two2").toggle();
+    });
+    $(".one3").click(function() {
+        $(".two3").toggle();
+    });
+function setupEditor()
+{
+  window.editor = ace.edit("editor");
+  editor.setTheme("ace/theme/cobalt");
+  editor.getSession().setMode("ace/mode/html");
+  editor.setValue(`<!DOCTYPE html>
+<html>
+    <body>
+    
+    </body>
+</html>`,1); //1 = moves cursor to end
+   editor.renderer.setScrollMargin(13, 3);
+   
+  editor.getSession().on('change', function() {
+    update();
+  });
+
+  editor.focus();
+  
+  
+  editor.setOptions({
+    fontSize: "13pt",
+    showLineNumbers: true,
+    showGutter: true,
+    autoScrollEditorIntoView: true,
+    enableBasicAutocompletion: false, enableLiveAutocompletion: true
+  });
+
+  editor.setShowPrintMargin(false);
+  editor.setBehavioursEnabled(false);
+}
+
+setupEditor();
+update();
+  
+</script>

@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+
+    <div class="container">
+    <br><br>
+    <h1 style="font-weight: 100;font-size:60px;" class="h1-title-1">Create a class</h1>
+    <br><br><br>
+     <form action="/classes" method="POST" accept-charset="UTF-8" role="form">
+    <div>
+            <input class="input-field-new" type="text" name="name" placeholder="Name of Class" required>
+        <br><br>
+
+            <input class="input-field-new" type="text" name="bannerImage" placeholder="Banner Image" required>
+  <br><br>
+    
+    <input class="input-field-new" type="text" name="image" placeholder="Image that represents your class" required>
+  <br><br>
+        <input class="input-field-new" name="description" placeholder="Short Description of your class" required></input>
+        
+  <br><br>
+        <button class="button button5-md">Submit</button>
+        
+        <br>
+        <br>
+        <a href="/classes" style="color:blue"><strong>Go back</strong></a>
+</div>
+    </form>
+  
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0//js/froala_editor.pkgd.min.js"></script>
+<% include ../partials/footer %> 

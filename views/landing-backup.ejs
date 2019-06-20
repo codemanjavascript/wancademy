@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <!--Title-->  
+        <title>Welcome to Wancademy</title>
+    
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+       
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Raleway|Roboto" rel="stylesheet">
+        
+        <!--Font-awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="https://i.imgur.com/z28blXz.png" type="image/x-icon" />
+        
+        <!--Css Stylesheet-->
+        <link rel="stylesheet" href="/stylesheets/app.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+            
+    </head>
+    
+
+<body>
+
+<nav class="fixed-top navbar navbar-expand-lg navbar-light" style="background:#00283F;">
+  <a class="py-0 navbar-brand" href="#" style="font-size:32px;color:#00AAFF;font-weight:700;font-family: 'Roboto', sans-serif;"><img src="https://i.imgur.com/z28blXz.png" style="margin-bottom:5px; height:35px;width:35px;"> Wan</span><span style="color:white;">cademy</span></a>
+  <button class="py-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span  class="py-0"><i style="color:white;" class="fas fa-bars"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="py-0 nav-item active">
+        <a style="display:none;" class="nav-link" href="/"> </a>
+      </li>
+      <li class="py-0 nav-item">
+        <a  style="display:none;" class="nav-link" href="/login"></a>
+      </li>
+      <li class="py-0 nav-item">
+        <a  style="display:none;" class="nav-link" href="/register"> </a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <% if(!currentUser){ %> 
+      
+      <button type="button" class="btn btn-primary"><a href="/login" style="color:white;">Log In</a></button>
+      
+      <% } else { %> 
+       
+       <button type="button" class="btn btn-primary"><i class="fas fa-hands-helping"></i> Help Center</button>
+       
+      <% } %>
+    </span>
+  </div>
+</nav>
+    </body>
+      
+
+        <br><br><br classs="mobileShow">
+        <div class="container">
+          
+        
+<div style="text-align:center">
+              
+              
+             
+            <img class="mobileHide" src="https://cdn.dribbble.com/users/330915/screenshots/3587000/10_coding_dribbble.gif" style="height:330px;width:430px;">
+            <img class="mobileShow" src="https://cdn.dribbble.com/users/330915/screenshots/3587000/10_coding_dribbble.gif" style="height:260px;width:360px;">
+            <br>
+<div style="text-align:center;">
+     <h1 class="mobileHide" style="font-weight:900;color:black;text-align:center;font-size:80px;font-family: 'Roboto', sans-serif;">Code Practical Projects<span class="blinking" style="font-family: 'Montserrat', sans-serif;font-weight:100;">|</span></h1>
+      <h1 class="mobileShow" style="font-weight:900;color:black;text-align:center;font-size:40px;font-family: 'Roboto', sans-serif;letter-spacing:2px;">Code Practical Projects<span class="blinking" style="font-family: 'Montserrat', sans-serif;font-weight:100;">|</span></h1>      
+            <br><br>
+            
+            <div class="mobileHide">
+                <a href="/register" style="text-decoration:none;" class="button3-md">Students Start Here</a>
+                <a href="/getstarted/educators" style="text-decoration:none;" class="button4-md">Educators Start Here</a>
+            </div>
+            
+            <div class="mobileShow">
+                <br>
+                <a href="/register" style="text-decoration:none;" class="button3-md">Get Started</a>
+              
+            </div>
+            
+            <br><br><br>
+            
+            <a href="#down" style="font-size:20px;color:black;font-family: 'Roboto', sans-serif;">Learn More <i class="fas fa-level-down-alt"></i></a>
+
+            <br><br>
+            <hr class="mobileShow">
+            <br><br>
+            
+            <div class="row">
+            <div class="col" style="text-align:center;">
+              <img src="https://i.imgur.com/lfvTuFX.png" style="height:210px;width:210px;">
+              <br><br>
+              <h1 style="font-size:33px;font-weight:700;">Anywhere, Any Time</h1>
+              
+              <h1 style="font-size:20px;font-weight:200;">With Wancademy, you can access your courses, read your articles, create your projects, and learn on the go. You could learn to code around the world!</h1>
+            </div>
+            
+            <div class="col">
+             <img src="https://i.imgur.com/QdiwOaH.png" style="height:210px;width:210px;">
+             <br><br>
+              <h1 style="font-size:33px;font-weight:700;">Interactive Courses</h1>
+              <h1 style="font-size:20px;font-weight:200;">Wancademy provides 15+ programming/design/project courses with indepth explinations, quizzes, and articles, where you can code on our editor while watching quality tutorials.</h1>
+            </div>
+            
+            <div class="col">
+              <img src="https://i.imgur.com/IwWZSVZ.png" style="height:210px;width:210px;">
+              <br><br>
+              <h1 style="font-size:33px;font-weight:700;">Create Fun, Practical Projects</h1>
+              <h1 style="font-size:20px;font-weight:200;">Code games, practical and useful web applications, and learn to release them online on the internet or on Wancademy for users all over the world</h1>
+            </div>
+            </div>
+        </div>
+       <br class="mobileHide"> <hr class="mobileHide"><br>
+        <h1 class="mobileHide"style="font-family: 'Roboto', sans-serif;text-align:center;font-size:65px;font-weight:200;">We've been Featured</h1>
+      <br class="mobileHide"><br class="mobileHide"><br class="mobileHide">
+        <div class="row" class="mobileHide">
+        
+          <div class="col" class="mobileHide">
+            <img class="mobileHide" style="width:250px;height:100px;" src="https://static2.businessinsider.com/assets/images/us/logos/logo-print-v1.png">
+          </div>
+            <br><br>
+          <div class="col" class="mobileHide">
+            <img class="mobileHide" style="width:250px;height:160px;" src="https://pmcdeadline2.files.wordpress.com/2016/10/the-new-york-times-logo-featured.jpg?w=446&h=299&crop=1">
+          </div>
+
+          <div class="col" class="mobileHide">
+            <img class="mobileHide" style="width:230px;height:100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/1200px-CNN.svg.png">
+          </div>
+         
+          <div class="col" class="mobileHide">
+            <img class="mobileHide" style="width:270px;height:100px;" src="http://news.youthvillages.org/wp-content/uploads/2017/11/forbes.jpg">
+          </div>
+        </div>
+        
+        <br class="mobileHide"><br class="mobileHide">
+        <hr >
+         <br class="mobileHide"><br class="mobileHide">
+        <div class="row">
+          <div class="col">
+              <h1 style="text-align:center">Our Educators</h1>
+              <img style="height:220px;width:300px;" src="https://cdn.dribbble.com/users/413551/screenshots/4334632/dr.png">
+            <p style="text-align:center">We provide professional educators, who create quality content for students like you. Our educators are verified with our developers and admins, before they upload. Register as an educator today and earn revenue!</p>
+           
+          </div>
+           <div class="col">
+               
+              <h1 style="text-align:center">Our Courses</h1>
+               <img style="height:300px;width:400px;" src="https://cdn.dribbble.com/users/407431/screenshots/4281480/education.jpg">
+            <p style="text-align:center">Wancademy provides over 2000 hours of quality content where students can learn to use API's, learn programming languages, and create practical and fun projects</p>
+           
+          </div>
+           <div class="col">
+              
+  <h1 style="text-align:center">Our Mission</h1>  
+  <img style="height:200px;width:300px;" src="https://cdn.dribbble.com/users/1626229/screenshots/4894712/image.png">
+          <p style="text-align:center">We belive that coding is a way of lifestyle, and that everyone can learn if they put their minds to it. Coding can release stress, help you think in other ways, and with coding, students can release their own games, websites, or company.</p>
+            
+           
+             
+          </div>
+        </div>
+        <br class="mobileHide"><hr><br>
+        <div class="mobileHide" class="text-align:center;">
+          
+        <div style="background:url(https://i.imgur.com/TFuQaqt.jpg);height:484px;">
+          <br><br>
+           <h1 style="text-align:center;color:white;font-weight:100;font-size:80px;">The Premium Club:</h1>
+           <h1 style="text-align:center;padding:20px;color:white;font-size:30px;font-weight:100;">A nominal monthly payment of $9.99 a month will you gain <br> access to all of our programming languages, premium <br>articles and tutorials, all projects and assets, and a faster support system.</h1>
+           <div style="text-align:center;">
+             <br>
+             <a href="/premium" class="button3-md">Join Today! 🕹</a>
+           </div>
+        </div> 
+        </div>
+        
+        
+        
+        <div class="mobileShow" class="text-align:center;">
+          
+        <div style="background:url(https://i.imgur.com/TFuQaqt.jpg);height:560px;">
+          <br><br>
+           <h1 style="letter-spacing: 5px;text-align:center;color:white;font-weight:100;font-size:45px;">Premium Club:</h1>
+           <h1 style="text-align:center;padding:30px;color:white;font-size:22px;font-weight:100;">A nominal monthly payment of $9.99 a month will you gain <br>access to all of our programming languages, premium <br>articles and tutorials, all projects and assets, and a faster support system.</h1>
+           <div style="text-align:center;">
+             <br>
+             <a href="/premium" class="button3-md">Join Today! 🕹</a>
+           </div>
+        </div> 
+        </div>
+        <br><br><br><br>
+        </div> <!-- /.container -->
+
+
+
+</div>
+<!--Footer-->
+
+    </body>
+
+  <% include ./partials/footer %>  
+</html>
+
+<script>
+    $(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('shrink');
+  } else {
+    $('nav').removeClass('shrink');
+  }
+});
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+   location.replace("https://design-wancademy-tommyschool.c9users.io/mobile.html");
+}
+
+
+</script>
+
+
+ 

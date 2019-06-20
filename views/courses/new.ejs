@@ -1,0 +1,75 @@
+<% include ../partials/header %>
+
+<% if(currentUser && currentUser.isAdmin) { %>
+    <style>
+
+      div#editor {
+        width: 81%;
+        margin: auto;
+        text-align: left;
+      }
+
+      div#preview {
+        padding: 10px;
+        background: #efefef;
+        margin-top: 20px;
+      }
+      
+    </style>
+    
+    <div class="jumbotron" style="background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height:350px;">
+    <br><br>
+    <h1 style="font-weight:100;color:white;font-size:80px;text-align:center;">New Course</h1>
+    <h1 style="font-weight:100;color:white;font-size:40px;text-align:center;">Admin access only</h1>
+</div>
+
+<div class="container" style="text-align:center;">
+    
+    <form action="/courses" method="POST">
+        
+        <br>
+        <input placeholder="Name of the course" name="name">
+        <br><br>
+        <input placeholder="Image of the course" name="image">
+        <br><br>
+        <input placeholder="Description of the course" name="description">
+        <br><br>
+        <button class="btn btn-primary"><i class="fas fa-file-upload"></i>Video Upload</button>
+        <br><br>
+<br>
+        <button class="button3-md">Create</button>
+    
+    </form>
+</div>
+
+<br><br><br>
+
+<% } else { %>
+
+  <div style="text-align:center;" lass="container">
+    <br><br><br><br>
+    <img src="https://image.flaticon.com/icons/png/512/1014/1014173.png" width="300" height="330"> 
+    <h1 style="font-weight:200;font-size:70px;">Forbidden to access this page</h1>
+    <br>
+    <a href="/" class="button3-md">Back to Dashboard</a>
+    <br><br><br><br><br><br>
+</div>
+
+<% } %>
+
+<% include ../partials/footer %> 
+
+
+
+<!--Courses.needs
+
+Author will be allowed to add or remove sections of courses with a button.
+
+When you click on the "Add section button" using jQuery sets of buttons show 
+
+like video, image, text, etc. This then will apply to the course.
+
+-->

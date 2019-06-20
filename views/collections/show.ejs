@@ -1,0 +1,68 @@
+<% include ../partials/header %>
+
+<style>
+    body{
+        font-family: 'Raleway', sans-serif;
+        font-weight:100;
+    }
+</style>
+<div class="container">
+    <br><br><br><br><br>
+        <h1 style="font-size:73px;font-weight:900px;">
+            <span style="color:#01E980;"><strong><%= collection.name %></strong></span>
+            <span style="font-size:30px;"> created by <a style="color:black;" href="/users/friends/<%= collection.author.id %>">
+            <%= collection.author.username %>
+            </a></span>
+        </h1>
+
+<br><br>
+<% if(currentUser && collection.author.id.equals(currentUser.id)) { %>
+    <div class="delete-form">
+        <a href="/collections/<%= collection._id %>/edit"><button  class="button3-md">Edit Details <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button ></a>
+            <form class="delete-form" action="/collections/<%= collection._id %>?_method=DELETE" method="POST">
+                <button class="button5-md" id="delete">Delete Collection <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+            </form>
+    </div>
+<% } %>
+<a href="/collections/<%= collection._id %>/study-flashcards"><button  class="button-green">Study <i class="fa fa-book" aria-hidden="true"></i></button ></a>
+<a href="/collections/<%= collection._id %>/edit"><button  class="button6-md">Test <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button ></a>
+<a href="/collections/<%= collection._id %>/edit"><button  class="button-purple">Master <i class="fa fa-thumb-tack" aria-hidden="true"></i></button ></a>
+<a href="/collections/<%= collection._id %>/edit"><button  class="button-orange">Write <i class="fa fa-pencil-square" aria-hidden="true"></i></button ></a>
+                        
+<% collection.flashcards.forEach(function(flashcard) { %>
+    
+    <div style="height:50px;width:300px;color:white;"></div>
+    <br>
+    <h1 style="font-size:40px;">
+        <strong><% if(currentUser && collection.author.id.equals(currentUser.id)) { 
+        %><a href="/collections/<%= collection.id %>/flashcards/<%= flashcard.id %>/edit" class="btn btn-primary">
+            <i class="fa fa-pencil" aria-hidden="true"></i>  Edit </a>&nbsp; 
+            <form class="delete-form" action="/collections/<%= collection.id %>/flashcards/<%= flashcard._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger" id="delete"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete </button>
+                        </form>
+        <% } %> &nbsp;<%= flashcard.question %></strong>
+      : &nbsp;
+        <span style="font-size:20px;font-weight:200px;">
+        <%= flashcard.answer %></span>
+    </h1>
+    <br>
+    
+    
+<% }); %>
+
+<% if(currentUser && collection.author.id.equals(currentUser.id)) { %>
+<br><br><br>
+
+<form action="/newflashcard" type="POST">
+    <a type="button" class="btn btn-warning btn-lg btn-block">Add Flashcard</a>
+</form>
+     
+   
+                     
+
+</div>
+
+<% } %>
+<br><br><br><br><br><br>
+
+    <% include ../partials/footer %> 

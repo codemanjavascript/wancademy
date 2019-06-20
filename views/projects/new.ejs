@@ -1,0 +1,92 @@
+<% include ../partials/editorhead %>
+<head>
+    <title>New Project</title>
+</head>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+        }
+        
+        #htmleditor {
+            height:300px;
+            width:33%;
+            display:inline-block;
+        }
+        #csseditor {
+            height:300px;
+            width:33%;
+            display:inline-block;
+        }
+        #jseditor {
+            height:300px;
+            width:33%;
+            display:inline-block;
+        }
+        #result{
+            position:absolute;
+           
+            width:100%;
+            height:100%;
+        }
+        
+    </style>
+    
+    <div id="container">
+        <div style="background:black;height:50%;">
+        <div id="htmleditor"></div>
+        <div id="csseditor"></div>
+        <div id="jseditor"></div>
+        </div>
+    </div>
+    
+    <iframe id="result" frameBorder="0"></iframe>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+   
+<script>
+    
+function update(){
+            var res = document.getElementById("result").contentWindow.document;
+            res.open();
+            res.write(eh.getValue());
+            //for css
+            res.write('<style>'+ec.getValue()+'</style>');
+             //for js
+            res.write('<script>'+ej.getValue()+'</scr'+'ipt>');
+            res.close();
+        }
+        
+        function seteditor(){
+            //HTML
+            window.eh = ace.edit("htmleditor");
+            eh.setTheme("ace/theme/cobalt");
+            eh.session.setMode("ace/mode/html");
+            //CSS
+            window.ec = ace.edit("csseditor");
+            ec.setTheme("ace/theme/cobalt");
+            ec.session.setMode("ace/mode/css");
+            //JS
+            window.ej = ace.edit("jseditor");
+            ej.setTheme("ace/theme/cobalt");
+            ej.session.setMode("ace/mode/javascript");
+            
+            
+            eh.getSession().on("change", function(){
+               update(); 
+            });
+            
+            ec.getSession().on("change", function(){
+               update(); 
+            });
+            
+            ej.getSession().on("change", function(){
+               update(); 
+            });
+        }
+        seteditor();
+        update();
+</script>

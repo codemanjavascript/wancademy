@@ -1,0 +1,314 @@
+<!--THIS IS THE OLD LANDING PAGE. DO NOT DELETE-->
+<!DOCTYPE html>
+<html>
+<head>
+
+        <!--Title -->
+        <title>Welcome to Wancademy</title>
+    
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+       
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Raleway|Roboto" rel="stylesheet">
+        
+        <!--Font-awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="https://i.imgur.com/z28blXz.png" type="image/x-icon" />
+        
+        <!--Css Stylesheet-->
+        <link rel="stylesheet" href="/stylesheets/app.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+            
+    </head>
+<body>
+
+<nav class="fixed-top navbar navbar-expand-lg navbar-light" style="background:url(https://i.imgur.com/JqGZS8d.jpg);">
+  <a class="py-0 navbar-brand" href="/" style="font-size:32px;color:#00AAFF;font-weight:700;font-family: 'Roboto', sans-serif;"><img src="https://i.imgur.com/TWUaO4D.png" style="margin-bottom:5px; height:35px;width:35px;"> Wan</span><span style="color:white;">cademy</span></a>
+  <button class="py-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span  class="py-0"><i style="color:white;" class="fas fa-bars"></i></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="py-0 nav-item active">
+        <a style="display:none;" class="nav-link" href="/"> </a>
+      </li>
+      <li class="py-0 nav-item">
+        <a  style="display:none;" class="nav-link" href="/login"></a>
+      </li>
+      <li class="py-0 nav-item">
+        <a  style="display:none;" class="nav-link" href="/register"> </a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <% if(!currentUser){ %> 
+      
+      <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+
+                <li class="dropdown order-1">
+                    <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Login <span class="caret"></span></button>
+                       <form  action="/login" method="POST" style="padding:40px;" class="dropdown-menu dropdown-menu-right mt-2 form" role="form">
+                            <div class="form-group">
+                                <input name="username" type="username" placeholder="Username" style="width:270px;padding:20px;" class="form-control form-control-sm" type="text" required="">
+                            </div>
+                            <div class="form-group">
+                                <input name="password" type="password" id="passwordInput" style="width:270px;padding:20px;" placeholder="Password" class="form-control form-control-sm" type="text" required="">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            </div>
+                            <div class="form-group text-center">
+                                <small><a href="/forgot" style="color:#0097FF;" data-toggle="modal" data-target="#modalPassword"><a href="/forgot" style="font-size: 15px;color:#0097FF;text-decoration:none;">Forgot password?</a></a></small>
+                            </div>
+                        </form>
+                </li>
+            </ul>
+            
+      <!--<button type="button" class="btn btn-primary"><a href="/register" style="color:white;">Register</a></button>-->
+      
+      <% } else { %> 
+       
+       <button type="button" class="btn btn-primary"><i class="fas fa-hands-helping"></i> Help Center</button>
+       
+      <% } %>
+    </span>
+  </div>
+</nav>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1 {
+  background-image: url("https://i.imgur.com/JqGZS8d.jpg");
+  min-height: 350px;
+  position: relative;
+  
+}
+
+.bgimg-2 {
+  background-image: url("http://jmd.im/wp-content/uploads/2017/06/blackx_thumbnail.jpg");
+  min-height: 400px;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-3 {
+  background-image: url("https://i.imgur.com/YZgc2uj.jpg");
+  min-height: 400px;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+.box:hover{
+   transform: scale(1.01); 
+   transition: transform 0.6s;
+}
+
+.box{
+ 
+   transition: transform 1s;
+}
+
+.button-hover:hover{
+   transform: scale(1.02); 
+   transition: transform 0.6s;
+}
+
+.button-hover{
+ 
+   transition: transform 1s;
+}
+
+</style>
+
+<body>
+
+<div class="bgimg-1">
+  <div style="text-align:center;">
+    <br><br><br>
+    <h1 style="font-size:100px;font-weight:900;color:white;">Learn to Code<span class="blinking" style="font-family: 'Montserrat', sans-serif;font-weight:100;">|</span></h1></h1>
+ <div style="padding:5px;"></div>
+    <a href="/register" class="button-hover btn btn-lg btn-primary">Students: Start Here</a>
+    <a href="/getstarted/educators" class="button-hover btn btn-lg btn-info">Educators: Start Here</a>
+</div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;">
+    <br>
+    
+    <br>
+    <div class="container">
+        
+        
+        <h1 style="text-align:center;font-size:50px;font-weight:600;color:#303030;">A simpler way to learn:</h1>
+        <h2>Interactive Courses with Videos</h2>
+        <br>
+      <div class="row">
+         
+            <div class="box col">
+                <img  src="https://i.imgur.com/TXWhFmb.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/6uOlo4F.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/yLSqMbE.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/5oqUf5S.jpg" height="150" width="230">
+            </div>
+            
+            
+        </div>
+        <br><br>
+        <div class="row">
+         
+            <div class="box col">
+                <img src="https://i.imgur.com/UdmYUu3.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/0adskan.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/ULtoLEJ.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/9BC1cqI.jpg" height="150" width="230">
+            </div>
+            
+            
+        </div>
+        <br><br>
+        <div class="row">
+         
+            <div class="box col">
+                <img src="https://i.imgur.com/YS9RZXb.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/l42TCKL.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/z8nmdF9.jpg" height="150" width="230">
+            </div>
+            <div class="box col">
+                <img src="https://i.imgur.com/dSuum9q.jpg" height="150" width="230">
+            </div>
+            
+            
+        </div>
+        <h4>and many more! <a href="/courses">See all courses and paths</a></h4>
+        
+        
+        <br><br>
+
+</div>
+
+<div class="bgimg-2">
+    <br><br>
+<div class="container">
+   <div class="row">
+            <div class="col" style="text-align:center;color:white;">
+              <img src="https://image.flaticon.com/icons/svg/1476/1476046.svg" style="height:210px;width:210px;">
+              <br><br>
+              <h1 style="font-size:33px;font-weight:700;">Anywhere, Any Time</h1>
+              
+              <h1 style="font-size:20px;font-weight:200;">Access your courses, read your articles, create projects on the go!</h1>
+            </div>
+            
+            <div class="col" style="text-align:center;color:white;">
+             <img src="https://image.flaticon.com/icons/svg/149/149004.svg" style="height:210px;width:210px;">
+             <br><br>
+              <h1 style="font-size:33px;font-weight:700;">Interactive Courses</h1>
+              <h1 style="font-size:20px;font-weight:200;">15+ programming/design/project courses with indepth explanations, videos, quizzes, and articles.</h1>
+            </div>
+            
+            <div class="col" style="text-align:center;color:white;">
+              <img src="https://image.flaticon.com/icons/svg/1373/1373016.svg" style="height:210px;width:210px;">
+              <br><br>
+              <h1 style="font-size:33px;font-weight:700;">Fun, Practical Projects</h1>
+              <h1 style="font-size:20px;font-weight:200;">Code games, practical and useful web applications, and learn to release them online on the internet.</h1>
+            </div>
+            </div>
+        </div>
+        <br><br>
+</div>
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:white;text-align:center;padding:50px 80px;text-align: justify;height:400px;">
+      <div class="row">
+          <div class="col-4">
+              <img src="https://image.flaticon.com/icons/svg/1256/1256655.svg" height="270" width="350">
+          </div>
+           <div class="col-8">
+              <h1 style="color:black;font-size:50px;font-weight:800;">Your Personalized Curriculum</h1>
+              <br>
+              <h1 style="color:black;font-size:30px;font-weight:100;"><i style="font-size:25px;" class="fas fa-caret-right"></i> Courses tailored to your needs</h1>
+              <h1 style="color:black;font-size:30px;font-weight:100;"><i style="font-size:25px;" class="fas fa-caret-right"></i> Learning paths to help reach your goal</h1>
+              <h1 style="color:black;font-size:30px;font-weight:100;"><i style="font-size:25px;" class="fas fa-caret-right"></i> Learn progressively from beginner to advanced</h1>
+              <h1 style="color:black;font-size:30px;font-weight:100;"><i style="font-size:25px;" class="fas fa-caret-right"></i> Grasp concepts and ideas more easily</h1>
+          </div>
+      </div>
+    
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#A9A9A9;background:url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/moving-through-stars-in-space_-1zccenlb__F0000.png);text-align:center;padding:50px 80px;text-align: justify;">
+    <h1 style="text-align:center;font-size:50px;font-weight:600;color:white;">What are you waiting for? Start Today!</h1>
+    <br>
+    <div style="text-align:center;">
+        <a href="/register" class="button-hover btn btn-lg btn-primary">Get Started For Free</a>
+        <a href="/learn-more" class="button-hover btn btn-lg btn-danger">Reviews & Testimonials</a>
+    </div>
+  </div>
+</div>
+
+<% include ./partials/footer %>

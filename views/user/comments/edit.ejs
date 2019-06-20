@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zapit</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.2/css/bulma.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/app.css">
+        <link rel="stylesheet" href="https://cdnjs.com/libraries/bulma">
+        <script src="https://use.fontawesome.com/9ce04c304f.js"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <link rel="shortcut icon" href="http://vignette3.wikia.nocookie.net/nohud/images/6/64/Favicon.ico/revision/20160321195625" type="image/x-icon" />
+        <style>
+       
+.hover{
+    color:black;
+    transition:0.4s;
+}
+.hover:hover{
+    color:#00C1FF;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+    text-decoration: none;
+}
+
+li {
+    float: left;
+    text-decoration: none;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition:0.7s;
+}
+
+li a:hover:not(.active) {
+    background-color:  #86D1FF;
+    text-decoration: none;
+}
+
+li a.active {
+    color: white;
+    background-color: #000000;
+    text-decoration: none;
+}
+nav{
+    margin-bottom: 0;
+}
+.container{
+     margin-bottom: 0;   
+}
+/* Icon Colors */
+.fa.fa-bolt{
+  color:yellow;
+}
+.fa.fa-level-up{
+    color:red;
+}
+.fa.fa-users{
+    color:blue;
+}
+
+.jumbotron {
+    background-image:url(https://images.template.net/wp-content/uploads/2015/08/Extraordinary-Free-Space-Background-for-You.png);
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    height:200px;
+}
+        </style>
+    </head>
+    <body>
+        	<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <% if(currentUser){ %>
+		  <a href="/user/<%= currentUser._id %>/edit">Profile Settings</a>
+		  <a href="/404">New Post</a>
+		  <a href="/404">Find Friends</a>
+		  <a href="/user/<%= currentUser._id %>">Visit Profile</a>
+		   <% } %>
+	</div>
+  <nav>
+      
+<ul>
+    <li><a class="active navbar-brand" href="/">Zapit <i class="fa fa-bolt fa-lg" aria-hidden="true" ></i></a></li>
+  
+    <li><a href="/trending">Trending <i class="fa fa-level-up fa-lg" aria-hidden="true"></i></a></li>
+     <!-- Use any element to open the sidenav -->
+    <li onclick="openNav()"><a href="#" onclick="openNav()"><span onclick="openNav()">My Profile</span> <i class="fa fa-users fa-lg" aria-hidden="true"></i></a></li>
+  
+    <% if(!currentUser){ %>
+  
+    <li style="float:right"><a href="/login">Login <i class="fa fa-sign-in fa-lg" aria-hidden="true"></i></a></li>
+        
+    <li style="float:right"><a href="/register">Register <i class="fa fa-address-book-o fa-lg" aria-hidden="true"></i></a></li>
+  
+    <% } else { %>
+  
+    <li style="float:right"><a href="#">Signed In As <%= currentUser.username %></a></li>
+        
+    <li style="float:right"><a href="/logout">Logout <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a></li>
+       
+    <% } %>
+  
+    </nav>       
+</ul>
+
+    
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+          <div class="alert alert-danger" role="alert">
+           <%= error %>
+    </div>
+    <% } %>
+    
+
+    <% if(success && success.length > 0){ %>
+    
+     <div class="alert alert-success" role="alert">
+           <%= success %>
+           
+    </div>
+  <% } %>
+
+    </div>
+ 
+  
+  
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Edit Your Comment</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/user/<%= currentUser._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="comment[text]" vaule="<%= comment.text %>">
+                </div>
+                <button type="submit" type="button" class="btn btn-primary">Edit Comment!</button>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+</div>
+
+

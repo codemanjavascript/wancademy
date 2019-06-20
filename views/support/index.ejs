@@ -1,0 +1,85 @@
+
+<% include ../partials/header %>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
+<style>
+    .jumbotron{
+       background:#00283F;
+
+        height:335px;
+        width:100%;
+        -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  backg
+  round-size: cover;
+    }
+ 
+ .show{
+     display:visible;
+ }
+ 
+ .hide{
+     display:none;
+ }
+    
+    
+
+</style>
+<br><br><br><br>
+<div class="container">
+<div class="jumbotron">
+  <div style="text-align:center">
+     <h1 style="color:white;font-weight: 500;font-size:70px;">
+        <strong>Help Center</strong>
+    </h1>
+    <br>
+
+    <input style="margin:0 auto;width:65%;text-align:left" placeholder=" Search for a question">
+
+	
+</div>
+</div>
+	    
+
+</div>
+
+<div class="container">
+   <% helps.forEach(function(help){ %>
+   
+       <h1 style="font-weight:300;font-size:45px;"><i id="down" style="font-size:40px;" class="fas fa-caret-down"></i> <%= help.question %></h1>
+       
+       <div class="hide" id="answer">
+           <hr>
+           <p><%= help.answer %></p>
+       </div>
+       
+    <% }); %>
+</div>
+
+
+<br>
+
+
+<div class="container">
+ 
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</div>
+
+<script>
+    // A $( document ).ready() block.
+    $( document ).ready(function() {
+       $( "#down" ).click(function() {
+           
+            $( "#answer" ).toggle("hide");
+        });
+        
+        
+    });
+</script>
+<% include ../partials/footer %>

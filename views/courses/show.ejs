@@ -1,0 +1,48 @@
+<% include ../partials/header %>
+
+<style>
+    body{
+        font-family: 'Raleway', sans-serif;
+    font-weight:100;
+    }
+    .jumbotron{
+        background:black;
+        height:250px;
+    }
+</style>
+<br><br>
+    <h1 style="text-align:center;color:black;font-weight: 100;font-size:90px;">
+       <%= course.name %>
+    </h1>
+    <h1 style="text-align:center;color:black;font-weight: 100;font-size:30px;">
+       Created by <a href="/users/friends/<%= course.author.id %>/"><%= course.author.username %></a>
+    </h1>
+    <br>
+    <% if(currentUser && course.author.id.equals(currentUser.id)) { %>
+    <div style="text-align:center;">
+     <a  href="/courses/<%= course._id %>/edit"><button class="button4-md">Edit</button></a>
+                    <form class="delete-form" action="/courses/<%= course._id %>?_method=DELETE" method="POST">
+                            <button class="button5-md" id="delete">Delete</button>
+                        </form>
+                        </div>
+   <% } %>
+                 <!--Author can see create and delete && course.author.id.equals(currentUser.id)-->
+                 
+    </div>
+                     
+<div class="container">
+    <div style="text-align:center">
+       <h4><i class="fa fa-heart-o" aria-hidden="true"></i> <%= course.likes %></h4>
+     </div>
+     
+     <hr style="width:900px;">
+     
+     <strong><h1 style="text-align:center;"><span style="color:red;">About</span> the course</h1></strong>
+     <br>
+     <h4 style="text-align:center;"><%= course.description %></h4>
+     
+</div>
+
+</div>
+
+<% include ../partials/footer %> 

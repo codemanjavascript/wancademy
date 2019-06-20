@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+<div class="jumbotron" style="height:350px;background: #7F7FD5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    <div class="container" style="text-align:center;">
+        <br>
+        <h1 class="mobileHide" style="font-weight:100;font-size:96px;color:white;">Press Room</h1>
+        <br><br>
+        <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+    </div>
+</div>
+
+<br><br>
+<div class="container">
+   <% presses.forEach(function(press){ %>
+        <div class="row">
+            <div class="col-5">
+               <a href="/press/<%= press._id %>"> <img src="<%= press.image %>" style="height:300px;width:400px;"></a>
+            </div>
+             <div class="col-7">
+                <h1><a style="text-decoration:none;color:black;" href="/press/<%= press._id %>"><strong><%= press.name %></strong></a></h1>
+                <h6><em>Posted <%= press.created.toDateString() %></em></h6>
+                <p><%= press.description.substring(0,750); %><strong> <a style="text-decoration:none;" href="/press/<%= press._id %>">...Read More</a></strong></p>
+            </div>
+        </div>
+        <br><br>
+    <% }); %>
+</div>
+
+
+<br><br><br><br>
+<% include ../partials/footer %>

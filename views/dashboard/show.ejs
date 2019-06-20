@@ -1,0 +1,68 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <br><br>
+                <img class="img-responsive" id="max" src="<%= campground.image %>">
+                <div class="caption-full">
+                   <br>
+                    <h3><strong><%=campground.name%></strong></h3>
+                    
+                    <p id="roman"><%= campground.description %></p>
+                    <img  class="image-small" src="<%= campground.author.profileImage %>">
+    <h5 class="delete-form">Created by <a class="blue-title" href="/users/friends/<%= campground.author.id %>/"><%= campground.author.username %></a></h5>
+    <br><br><h4><i class="fa fa-heart-o" aria-hidden="true"></i> <%= campground.likes %></h4>
+                    <p><em>This Post Is Subject To Copywrite: <%= campground.author.username %>, <%= moment(campground.createdAt).fromNow() %></em></p>
+                    
+                    <% if(currentUser && campground.author.id.equals(currentUser.id)) { %>
+                    <a class="btn btn-xs btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+                    
+                    <form class="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger" id="delete">Delete</button>
+                        </form>
+                        <% } %>
+                        
+                </div>
+        <br>
+            <div class="well">
+               
+                    <a class="btn btn-info" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
+                    
+                    
+              
+                <hr>
+                <% campground.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <strong><%= comment.author.username %></strong>
+                            <span class="pull-right"><%= moment(comment.createdAt).fromNow() %> </span>
+                            <p>
+                                <%= comment.text %> 
+                            </p>
+                            <!--Long ass edit button -->
+                            <a class="btn btn-xs btn-warning" 
+                            href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">
+                                Edit</a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+        <div class="col-md- 4">
+        <h3>Articles Related To "<strong><%=campground.name%></strong>"</h3>
+        <br>
+        <br>
+        <!--PLACE HOLDER POSTS-->
+        <h4>Tesla's Giga Factory: How Much $$$?</h2>
+        <h4>Samsung S8 Unveals A Flaw</h2>
+        <br>
+        <hr>
+        <h3><strong>More Posts From <%= campground.author.username %></strong></h3>
+        <h2>Placeholder</h2>
+        <p id="roman">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor, felis ut luctus vestibulum, risus lorem bibendum orci, non accumsan mi neque sit amet neque. Aenean vestibulum magna metus, non lobortis tellus laoreet et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sollicitudin arcu vel.</p>
+    </div>
+    </div>
+
+</div>
+
+<% include ../partials/footer %>

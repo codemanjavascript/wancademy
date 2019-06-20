@@ -1,0 +1,983 @@
+<% include ../partials/header %> 
+
+<style>
+.button-11 {
+    text-align:center;
+    font-weight:300;
+     background-color: white; 
+    color: black; 
+    border: 1.5px solid #00B292;
+    text-decoration:none;
+    font-size: 20px;
+    transition-duration: 1s;
+     padding:9px;
+     border-radius:5%;
+}
+
+.button-11:hover {
+     background-color: #00B292;
+    color: white;
+    transition: 0.4s;
+}
+
+.button-10 {
+    text-align:center;
+    font-weight:300;
+    text-decoration:none;
+     background-color: white; 
+    color: black; 
+    border: 1.5px solid #0061B2;
+    font-size: 20px;
+    transition-duration: 1s;
+     padding:9px;
+     border-radius:5%;
+}
+
+.button-10:hover {
+     background-color: #0061B2;
+    color: white;
+    transition: 0.4s;
+}
+.button3-md {
+    text-align:center;
+    font-weight:200;
+     background-color: white; 
+    color: black; 
+    border: 2px solid #06B6F9;
+    font-size: 24px;
+    transition-duration: 1s;
+     padding:13px;
+}
+
+.button3-md:hover {
+     background-color: #00AAFF;
+    color: white;
+    transition: 0.4s;
+}
+
+.button4-md {
+    text-align:center;
+    font-weight:200;
+     background-color: white; 
+    color: black; 
+    border: 2px solid #00FF9B;
+    font-size: 24px;
+    transition-duration: 1s;
+     padding:13px;
+}
+
+.button4-md:hover {
+     background-color: #00FF9B;
+    color: white;
+    transition: 0.4s;
+}
+.buttonTab-md {
+    text-align:center;
+    font-weight:200;
+     background-color: white; 
+    color: black; 
+    border: 2px solid #00283F;
+    font-size: 28px;
+    transition-duration: 1s;
+     padding:15px;
+}
+
+.buttonTab-md:hover {
+     background-color: #00283F;
+    color: white;
+    transition: 0.4s;
+}
+.showCourses{
+  display:block;
+}
+
+.hideCourses{
+  display:none
+}
+</style>
+
+<% if(currentUser && currentUser.isTeacher) { %>
+<teacher-dashboard>
+    
+<br><br>
+<!--Jumbotron-->
+<div class="jumbotron" style=" height:380px;background: #C6FFDD;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    <div class="container">
+      
+        <img class="mobileHide" style="width:120px;height:120px;" src="<%= currentUser.image %>"/> &nbsp; &nbsp; &nbsp;
+        <h1 style="font-weight:500;font-size:90px;color:white; display:inline-block;vertical-align:middle;"><%= currentUser.username %></h1>
+      <br><br><br>
+  <a class="buttonTab-md" href="/faq" style="text-decoration:none;">Help <i class="fas fa-hands-helping"></i></a>
+  <a class="buttonTab-md" href="/users/friends/<%= currentUser.id %>" style="text-decoration:none;">Profile <i class="fa fa-user" aria-hidden="true"></i></a>
+  <a class="buttonTab-md" href="/classes" style="text-decoration:none;">Communities <i class="fa fa-users" aria-hidden="true"></i></a>
+  <a class="buttonTab-md" href="/forums" style="text-decoration:none;">Forums <i class="fa fa-book" aria-hidden="true"></i></a>
+  
+  
+
+    </div>
+</div>
+
+<br>
+<div class="container">
+        
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    
+<div class="container">
+
+<h1 class="mobileHide" style="color:black;font-size:60px;font-weight:100;"> <span style="color:#00A2FF;font-weight:900;">Educator</span> Tools</h1>
+ <hr>
+
+<br>
+<div class=" mobileHide col-md-6 col-sm-6" style="float: left;border-radius:3%;width:550px;height:290px;background:url(https://i.imgur.com/fKR7gCQ.jpg);">
+  <div style="text-align:center;">
+     <br>    
+      <h1 style="color:white;font-weight:900;font-size:40px;">Using your Dashboard</h1>
+      <h1 style="color:white;font-weight:300;font-size:25px;">Take a quick tour on using your educators dashboard</h1>
+      <br>
+      <a href="/educators-dashboard-instructions" class="button3-md">Take the tour <i class="fa fa-laptop"></i></a>
+   </div>
+</div>
+
+
+
+<div class="mobileHide  col-md-6 col-sm-6" style="float: right;border-radius:3%;width:550px;height:290px;background:url(https://i.imgur.com/bqFiUPp.jpg);">
+ <br>
+  <div style="text-align:center;">
+  <h1 style="color:white;font-weight:900;font-size:40px;">Create a post!</h1>
+      <h1 style="color:white;font-weight:300;font-size:25px;">Help students learn with your posts</h1>
+      <br>
+       <a href="/educators/post" class="button3-md">Create a post <i class="fa fa-edit"></i></a>
+      <br>
+		</div>
+</div>
+</div>
+<div class="container">
+  <div class="mobileShow" class="alert alert-danger" role="alert">
+  
+
+<h1 style="font-size:23px;" class="mobileShow">Not all features of the educators dashboard on mobile is included yet.</h1>
+</div>
+<br class="mobileHide">
+<br class="mobileHide">
+<div class="col-md-3 mobileHide">
+          <div style="position: relative;
+bottom: 29.8px;height:200px;width:250;background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius:7%">
+            
+            <h1 style="color:white;padding:40px;font-size:30px;font-weight:900;">Completed Courses <i class="fa fa-pencil-square-o" aria-hidden="true"></i>: 0</h1>
+          </div>
+
+        </div>
+        <div class="col-md-3 mobileHide">
+          <div style="position: relative;
+bottom: 29.8px;height:200px;width:250;background: #fc4a1a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius:7%">
+             <h1 style="color:white;padding:40px;font-size:30px;font-weight:900;">Reputation Status <i class="fa fa-arrow-up" aria-hidden="true"></i>: 55</h1>
+            
+          </div>
+        </div>
+        <div class="col-md-3 mobileHide">
+          <div style="position: relative;
+bottom: 29.8px;height:200px;width:250;background: #AAFFA9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #11FFBD, #AAFFA9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #11FFBD, #AAFFA9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;border-radius:7%">
+             <h1 style="color:white;padding:40px;font-size:30px;font-weight:900;">New Messages <i class="fas fa-comments"></i>: 2</h1>
+          </div>
+        </div>
+        <div class="col-md-3 mobileHide">
+          <div style="position: relative;
+bottom: 29.8px;height:200px;width:250;background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+;border-radius:7%">
+             <h1 style="color:white;padding:40px;font-size:30px;font-weight:900;">Reward Points <i class="fas fa-trophy"></i>: 0</h1>
+          </div>
+        </div>
+        <br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br><br><br>
+</div>
+
+
+        <br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br class="mobileHide"><br><br><br>
+      <br>
+<button id="button-course" class="button3-md" >Show courses <i class="fas fa-chevron-down"></i></button>
+<br><br>  <br>
+        </div>
+
+<div id="courses-1" class="hideCourses">
+  <div class="container" id="tourpackages-carousel">
+      <br>
+     
+      <h1 style="color:black;font-size:59px;font-weight:100;">Complete <span style="color:#FF9B00">HTML</span> Courses 🏆  </h1>
+      <br><br>
+      <!--Second Row-->
+      <div class="row">
+        
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="http://www.tutorialchip.com/wp-content/uploads/2012/05/HTML5-Icon.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Introduction to HTML</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="http://kineticwing.com/packages/img/blue/features/html5.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Intermediate HTML</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="http://www.it-training4u.com/wp-content/uploads/2017/02/1.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Advanced HTML</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        
+       <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/17301/screenshots/3564585/late-night-coding_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Code your portfolio</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        <br>
+<hr>
+<br><br><br><br>
+
+
+      
+        
+        
+      </div><!-- End row -->
+      <br>
+      <h1 style="color:black;font-size:59px;font-weight:100;">Complete <span style="color:#FFE400">CSS</span> Courses ✏️  </h1>
+      <br>
+      <!--Second Row-->
+      <div class="row">
+        
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="http://www.liftedsolutions.com/images/css.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Introduction to CSS</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://speckyboy.com/wp-content/uploads/2014/07/css_thumb.jpg" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Intermediate CSS</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn-wp.dprcdn.net/wp-content/uploads/2014/10/tumblr_inline_nd8s4jpVhd1t0nbs9.jpg" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Advanced CSS</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        
+       <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/345022/screenshots/1117101/coding.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Design your blog</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+       <!--Second Row-->
+      <div class="row">
+        <br><br>
+        <h1 style="color:black;font-size:59px;font-weight:200;">Tool Kit for <span style="color:#A600FF">Node.js</span> 🔏 </h1>
+        <br><br>
+        
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://1.bp.blogspot.com/-BisoSWyJmKA/WRYDyX7Ex4I/AAAAAAAABPg/mkJwqU-jfGAiyTzftnPbcX8gLTRxf2cvQCLcB/s1600/infodatatech_frontend-backend.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Intro to Backend</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/28565/screenshots/1566518/pure-remix-icons_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>CRUD Project</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.hashnode.com/res/hashnode/image/upload/w_400,h_300,c_thumb/mncwjutu767m1v72rdqy/1455111076.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>MongoDB</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/169724/screenshots/2321438/nodejs-logo_1x.png" style="height:170px;" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Introduction to Node.js</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+</div>
+<br><br>        
+<h1 style="color:black;font-size:59px;font-weight:100;">Completed <span style="color:#00A2FF;">Projects</span> 💡  </h1>
+      <br><br>
+      <!--Second Row-->
+      <div class="row">
+        
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/125948/screenshots/2730778/codeicon_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Create a quiz website</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/345022/screenshots/1117101/coding.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Design your blog</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/28565/screenshots/1566518/pure-remix-icons_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>CRUD Project</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        
+       <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/17301/screenshots/3564585/late-night-coding_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Code your portfolio</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/1044993/screenshots/3872165/sleeping-dog_dribbble-2_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Restful App</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/645046/screenshots/3062998/dribbble_1x.jpg" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Launching your site</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://politicstheorypractice.files.wordpress.com/2017/09/searchbar.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Domain Names</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        
+       <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://i.imgur.com/KbJCVbA.png" style="width:400px;height:190px;" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Cookie Clicker Clone</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        </div>
+   <h1 style="color:black;font-size:59px;font-weight:100;">Design<span style="color:#FF0800;"> Courses</span> 🎨  </h1>
+      <br><br>
+      <!--Second Row-->
+      <div class="row">
+        
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="http://scriptinstallation.ca/img/bootstrap.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Bootstrap 3</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/8623/screenshots/3884173/probootstrap_unlock_1x.jpg" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Bootstrap 4</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://i.pinimg.com/736x/33/93/c6/3393c6b2e0180dc6a3fb2dbc95f85d6c--bright-color-schemes-bright-colors.jpg" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>HTML Color Types</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        
+       <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img  src="https://i.pinimg.com/736x/ac/b7/bd/acb7bd1a89e56ca66c0dc509901c50c8--ios--ux.jpg" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Animate.css</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        
+        </div>
+        
+        <h1 style="color:black;font-size:59px;font-weight:100;">Project<span style="color:#00C1FF;"> Management</span>   &nbsp;💻  </h1>
+      <br><br>
+      <!--Second Row-->
+      <div class="row">
+        
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/894849/screenshots/3477786/kindtyme-product-planning-icon_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Planning a project</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="http://www.php-training.microdots.in/image/5.jpg" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Using Cloud9 </strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/427540/screenshots/2846214/prisma-atom-theme-ui_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Using Atom</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        
+       <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img  src="https://cdn.dribbble.com/users/370956/screenshots/2228142/dribble-startup.gif" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Starting a startup</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        <br>
+        </div>
+        
+        <h1 style="color:black;font-size:59px;font-weight:100;">Miscellaneous<span style="color:#00C1FF;"> Courses</span>   &nbsp;💭  </h1>
+      <br><br>
+      <!--Second Row-->
+      <div class="row">
+        
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.hashnode.com/res/hashnode/image/upload/w_400,h_300,c_thumb/vygyfdnaovwonn2oqcin/1494003983.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Express.js</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://cdn.dribbble.com/users/511865/screenshots/3340765/terminal_icon_logo_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Using the Terminal</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="https://pbs.twimg.com/media/CSHVmN5WoAAXs-1.jpg" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>Intro to Github</strong></h4>
+                <br>
+                <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        
+        
+       <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img  src="https://cdn.dribbble.com/users/16313/screenshots/3473766/debug_1x.png" alt="">
+              <div class="caption">
+                <h4 style="font-size:22px;"><strong>How to debug</strong></h4>
+                <br>
+               <a href="#" class="button-10" role="button"> Start </a>
+                &nbsp;
+                <a href="#" class="button-11" role="button"> Curriculum</a>
+                <br><br>
+            </div>
+          </div>
+        </div>
+        <br>
+        </div>
+        <br>
+        
+        
+     
+</div>
+</div>
+
+</div>
+</div>
+<br>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</teacher-dashboard>
+<% } if(currentUser && currentUser.isAdmin) { %>
+    <admin-dashboard>
+        <!--Jumbotron-->
+        <br><br>
+    <div class="jumbotron" style=" height:290px;background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ">
+        <div class="container">
+          
+            <img class="mobileHide" style="width:120px;height:120px;" src="<%= currentUser.image %>"/> &nbsp; &nbsp; &nbsp;
+            <h1 style="font-weight:500;font-size:90px;color:white; display:inline-block;vertical-align:middle;"><%= currentUser.username %></h1>
+          <br><br><br>
+    
+      
+    
+        </div>
+    </div>
+    <div class="container">
+        <h1 style="font-weight:500;font-size:50px;">Awaiting Educator Approvals</h1>
+        <hr><br>
+       <% approvals.forEach(function(approve){ %>
+          <div class="row">
+              <div class="col">
+                  <h1 style="font-weight:200;font-size:40px;"><%= approve.author.username %></h1>
+                  <br>
+                    <img style="height:200px;width:200px;" src="<%= approve.profileLink %>">
+                   
+               </div>
+               <div class="col">
+                   <h1 style="font-weight:200;font-size:40px;">Experience</h1>
+                   <h5><%= approve.experience %></h5>
+               </div>
+               <div class="col">
+                   <h1 style="font-weight:200;font-size:40px;">Description</h1>
+                   <h5><%= approve.description %></h5>
+               </div>
+           </div>
+           <br><hr><br>
+        <% }); %>
+        
+        
+        <h1 style="font-weight:600;font-size:40px;">Awaiting Course Approvals</h1>
+        <br>
+        <% coursesApproved.forEach(function(courseApproval){ %>
+           <div class="row">
+              <div class="col">
+                  <h1 style="font-weight:200;font-size:40px;">Title</h1>
+                  <br>
+                    <h5><%= courseApproval.title %></h5>
+                   
+               </div>
+               <div class="col">
+                   <h1 style="font-weight:200;font-size:40px;">Description</h1>
+                   <h5><%= courseApproval.description %></h5>
+               </div>
+               <div class="col">
+                   <h1 style="font-weight:200;font-size:40px;">Image</h1>
+                   
+                   <img src="<%= courseApproval.imageLink %>" style="height:200px;width:300px;">
+               </div>
+           </div>
+           <br><hr><br>
+        <% }); %>
+    </div>
+</admin-dashboard>
+<% } else { %>
+
+<student-dashboard>
+    <br>
+
+<!--Jumbotron-->
+<div class="jumbotron" style=" height:320px;background:url(https://ak6.picdn.net/shutterstock/videos/6522356/thumb/1.jpg);">
+    <div class="container">
+      <div style="padding:5px;"></div>
+        <img class="mobileHide" style="width:110px;height:110px;border-radius: 50%;" src="<%= currentUser.image %>"/> &nbsp; &nbsp; &nbsp;
+        <h1 style="font-weight:600;font-size:95px;color:white; display:inline-block;vertical-align:middle;"><%= currentUser.username %></h1>
+      <br><div style="padding:8px;"></div>
+      <a href="/users/friends/<%= currentUser._id %>" class="btn btn-success btn-lg" style="color:white;"><i class="fas fa-user-alt"></i> My Profile</a>
+      <a href="/explore" class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-globe-asia"></i> Explore </a>
+      <a href="/courses" class="btn btn-secondary btn-lg" style="color:white;"><i class="fas fa-bookmark"></i> All Courses </a>
+<a href="/classes" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-users"></i> Communities</a>
+<a href="/forums" class="btn btn-danger btn-lg" style="color:white;"><i class="fas fa-bookmark"></i> Forums</a>
+
+      <br><br>
+    </div>
+</div>
+<!--
+  <a class="buttonTab-md" href="/faq" style="text-decoration:none;">Help <i class="fas fa-hands-helping"></i></a>
+  <a class="buttonTab-md" href="/users/friends/<%= currentUser.id %>" style="text-decoration:none;">Profile <i class="fa fa-user" aria-hidden="true"></i></a>
+  <a class="buttonTab-md" href="/classes" style="text-decoration:none;">Communities <i class="fa fa-users" aria-hidden="true"></i></a>
+  <a class="buttonTab-md" href="/forums" style="text-decoration:none;">Forums <i class="fa fa-book" aria-hidden="true"></i></a>
+ -->
+<div class="container">
+   
+<% if(error && error.length > 0){ %>
+    <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+<% } %>
+<% if(success && success.length > 0){ %>
+    <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+<% } %>
+<h1 style="font-size:45px;font-weight:700;">My Science Courses 🔭</h1>
+<hr>
+<br>
+<div class="card-deck">    
+    <div class="col-3">
+              <div class="card">
+                <a href=""><img class="card-img-top" src="https://i.imgur.com/VCpeaMt.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                 
+<div class="progress">
+  <div class="progress-bar" style="width:90%"></div>
+ 
+</div>
+<div style="padding:5px;"></div>
+ <p style="font-size:20px;font-weight:700;">90% Completed</p>
+                  <p class="card-text"></p>
+                  <div style="padding:5px;"></div>
+                  <a href="" style="text-decoration:none;" class="button-11" role="button"> Resume </a>
+                  <br>
+                </div>
+              </div>
+    </div>
+    <div class="col-3">
+              <div class="card">
+                <a href=""><img class="card-img-top" src="https://i.imgur.com/kYBzhOw.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                 
+<div class="progress">
+  <div class="progress-bar" style="width:40%"></div>
+ 
+</div>
+<div style="padding:5px;"></div>
+ <p style="font-size:20px;font-weight:700;">40% Completed</p>
+                  <p class="card-text"></p>
+                  <div style="padding:5px;"></div>
+                  <a href="" style="text-decoration:none;" class="button-11" role="button"> Resume </a>
+                  <br>
+                </div>
+              </div>
+    </div>
+    
+    
+</div>
+<br><br><br>
+<h1 style="font-size:45px;font-weight:700;">My Coding Courses 🕹</h1>
+<hr>
+<br>
+<div class="card-deck">    
+    <div class="col-3">
+              <div class="card">
+                <a href=""><img class="card-img-top" src="https://i.imgur.com/FDUyR1Q.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                 
+<div class="progress">
+  <div class="progress-bar" style="width:70%"></div>
+ 
+</div>
+<div style="padding:5px;"></div>
+ <p style="font-size:20px;font-weight:700;">70% Completed</p>
+                  <p class="card-text"></p>
+                  <div style="padding:5px;"></div>
+                  <a href="" style="text-decoration:none;" class="button-11" role="button"> Resume </a>
+                  <br>
+                </div>
+              </div>
+    </div>
+    <div class="col-3">
+              <div class="card">
+                <a href=""><img class="card-img-top" src="https://i.imgur.com/Se4wdpf.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                 
+<div class="progress">
+  <div class="progress-bar" style="width:40%"></div>
+ 
+</div>
+<div style="padding:5px;"></div>
+ <p style="font-size:20px;font-weight:700;">40% Completed</p>
+                  <p class="card-text"></p>
+                  <div style="padding:5px;"></div>
+                  <a href="" style="text-decoration:none;" class="button-11" role="button"> Resume </a>
+                  <br>
+                </div>
+              </div>
+    </div>
+    <div class="col-3">
+              <div class="card">
+                <a href=""><img class="card-img-top" src="https://i.imgur.com/ymX3egs.jpg" alt="Card image cap"></a>
+                <div class="card-body">
+                 
+<div class="progress">
+  <div class="progress-bar" style="width:5%"></div>
+ 
+</div>
+<div style="padding:5px;"></div>
+ <p style="font-size:20px;font-weight:700;">5% Completed</p>
+                  <p class="card-text"></p>
+                  <div style="padding:5px;"></div>
+                  <a href="" style="text-decoration:none;" class="button-11" role="button"> Resume </a>
+                  <br>
+                </div>
+              </div>
+    </div>
+    
+</div>
+<br>
+
+<br>
+</div>
+<br><br><br>
+  
+</student-dashboard>
+<% } %>
+
+<script>
+$(document).ready(function(){
+
+ $( "#button-course" ).click(function() {
+     $( "#courses-1" ).toggle("hideCourses")
+});
+
+});
+
+</script>
+
+<% include ../partials/footer %> 

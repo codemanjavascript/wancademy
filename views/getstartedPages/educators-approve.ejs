@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+<div class="jumbotron" style="background:#56BDFF;height:350px;">
+    <br><br>
+    <h1 style="font-weight:100;color:white;font-size:80px;text-align:center;">Educators Approve</h1>
+    <h1 style="font-weight:100;color:white;font-size:40px;text-align:center;">Fill all blanks and sumbit.</h1>
+</div>
+
+<div class="container" style="text-align:center;">
+    
+    <form action="/educators/approve" method="POST">
+        <h5>Description of yourself (I am 25 years old from NYC)</h5>
+        <br>
+        <textarea name="experience" cols="80" rows="6" required></textarea>
+        <br><br>
+        <h5>Your Experience (I have been developing react projects for the past 5 years)</h5>
+        <br>
+        <textarea name="profileLink" cols="80" rows="6" required></textarea>
+        <br><br>
+        <h5>Description of yourself (I am 25 years old from NYC)</h5>
+        <br>
+        <input name="profileLink" placeholder="Profile Picture Link (A picture of you to show that you are not a robot!)" required>
+        <br><br><br>
+        <button class="btn btn-primary"><i class="fas fa-file-upload"></i> Upload a Sample Video</button>
+        <br><br>
+        <p>A sample video is a part of a tutorial video that you have created. <a>Learn More</a></p>
+        <br>
+        <button class="button3-md">Submit Approval Request</button>
+    
+    </form>
+</div>
+
+<br><br><br><br><br>
+<% include ../partials/footer %>

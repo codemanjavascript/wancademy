@@ -1,0 +1,81 @@
+<% include ./partials/header %>
+<style>
+	  /* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+.flashcard-grid[class*="col-"] {
+    margin-bottom: -215px;
+}
+</style>
+<br><br><br>
+<div class="container">
+    <br><br>
+    <div class="jumbotron" style="height:250px;background: #396afc;  /* fallback for old browsers */background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+        <h1 style="color:white;font-size:70px;font-family: 'Poiret One', cursive;"><strong>Study Flashcards <i class="fa fa-bell" aria-hidden="true"></i></strong></h1>
+        <a style="color:white" href="/collections/<%= collection._id %>"> <h3 > <i class="fa fa-arrow-left" aria-hidden="true"></i> Go back to flashcard</h3></a>
+    </div>
+    
+ 
+<% collection.flashcards.forEach(function(flashcard) { %>
+	<div class="col-md-4 flashcard-grid">
+<div class="flip-container" ontouchstart="this.classList.toggle('click');">
+	<div class="flipper">
+		<div class="front">
+		<div style="background-color:#EAEAEA;width:300px;height:200px;">
+			<br><br>
+		  <h1 style="color:black;text-align:center;"><%= flashcard.question %></h1>
+		</div>
+		</div>
+		<div class="back">
+			<div style="background-color:#EAEAEA;width:300px;height:200px;">
+				
+				<h1 style="color:black;text-align:center;font-size:16px;padding:20px;"><%= flashcard.answer %></h1>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<% }); %>
+
+
+    
+<% include ./partials/footer %>

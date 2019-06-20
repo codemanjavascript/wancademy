@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+<style>
+    .jumbotron{
+        background:url(https://s26.postimg.org/7wfciiqyx/Sports.png);
+        height:500px;
+    }
+    .image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h2 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%; 
+}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
+<div class="jumbotron">
+    <br><br>
+    <h1 style="text-align:center;color:black;font-weight: 500;font-size:98px;font-family: 'Lilita One', cursive;">
+      Flashcard Collections
+    </h1>
+    <h1 style="text-align:center;color:black;font-weight: 500;font-size:50px;">Make studing easier!</h1>
+    <br>
+    <div style="text-align:center;">
+        <br>
+        <a href="/collections/new" type="button" class="button-green">Create a Collection <i class="fa fa-plus" aria-hidden="true"></i></a>
+    </div>
+</div>
+<div class="container">
+    <form action="/collections" method="GET" class="form-inline">
+              <input type="text" name="search" placeholder="🔎 Flashcard Collections search...." class="new-input" style="width:30%">
+              <input type="submit" value="Search" class="btn btn-primary  btn-lg">
+    </form>
+    <br><br><br>
+    
+    <div class="row">
+        
+        <% collections.forEach(function(collection){ %>
+
+         <div class="collection-grid col-md-3">
+            <div style="border: 2px solid black;height:250px;padding:30px;">
+                <h1  style="text-align:center;font-size:30px;"><a href="/collections/<%= collection._id %>"><%= collection.name %></a></h1>
+                <p style="text-align:center;">Created by <a href="/users/friends/<%= collection.author.id %>"><%= collection.author.username %></a></p>
+            </div>
+        </div> 
+        
+        <% }); %>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+    
+    
+<% include ../partials/footer %> 

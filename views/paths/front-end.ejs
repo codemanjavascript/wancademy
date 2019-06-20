@@ -1,0 +1,312 @@
+<% include ../partials/header %> 
+<div class="jumbotron" style="height:350px;background: #396afc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+">
+    <br><div style="padding:4px;"></div>
+    <h1 style="text-align:center;color:white;font-weight:500;font-size:90px;">Front-End Path</h1>
+    <div style="padding:9px;"></div>
+    <div style="text-align:center;">
+      <a href="/" class="btn btn-success btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard </a>
+      <a href="/" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-plus"></i> Add to your courses </a>
+    </div>
+    <br>
+   
+</div>
+
+<div class="container">
+
+<div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Introduction to Front End</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-html" role="tab" aria-controls="profile">Introduction to HTML</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-htmlquiz" role="tab" aria-controls="messages"><i class="fas fa-lock"></i> HTML Quiz #1</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-css" role="tab" aria-controls="settings">Introduction to CSS</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-cssquiz" role="tab" aria-controls="settings"><i class="fas fa-lock"></i> CSS Quiz #1</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-blog" role="tab" aria-controls="messages">Design a Blog</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-js" role="tab" aria-controls="settings">Introduction to Javascript</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-jsquiz" role="tab" aria-controls="messages"><i class="fas fa-lock"></i> JS Quiz #1</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-counting" role="tab" aria-controls="settings">Counting Game</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-clock" role="tab" aria-controls="messages">Functional Clock</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-jquery" role="tab" aria-controls="settings">Introduction to jQuery</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-bootstrap" role="tab" aria-controls="messages">Bootstrap 4</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-intermediatehtml" role="tab" aria-controls="settings">Intermediate HTML</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-htmlweb" role="tab" aria-controls="messages"><i class="fas fa-lock"></i> HTML: Website Layout</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-htmlquiz2" role="tab" aria-controls="settings"><i class="fas fa-lock"></i> HTML Quiz #2</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-intermediatecss" role="tab" aria-controls="messages">Intermediate CSS</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-cssweb" role="tab" aria-controls="settings"><i class="fas fa-lock"></i> CSS: Website Layout</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-cssquiz2" role="tab" aria-controls="messages"><i class="fas fa-lock"></i> CSS Quiz #2</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-intermediatejs" role="tab" aria-controls="settings">Intermediate Javascript</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-jsquiz3" role="tab" aria-controls="messages"><i class="fas fa-lock"></i> Js Quiz #2</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-advhtml" role="tab" aria-controls="settings">Advanced Html</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-nclhtml" role="tab" aria-controls="messages">Netflix Clone layout: HTML</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-htmlquiz3" role="tab" aria-controls="settings"><i class="fas fa-lock"></i> Html Quiz #3</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-advcss" role="tab" aria-controls="messages"><i class="fas fa-lock"></i> Advanced CSS</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-nclcss" role="tab" aria-controls="settings"><i class="fas fa-lock"></i> Netflix Clone layout: CSS</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-cssquiz3" role="tab" aria-controls="messages"><i class="fas fa-lock"></i> CSS Quiz #3</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-advjs" role="tab" aria-controls="settings"><i class="fas fa-lock"></i> Advanced Javascript</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-ncljs" role="tab" aria-controls="messages"><i class="fas fa-lock"></i> Netflix Clone layout: JS and animations</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-jsquiz3" role="tab" aria-controls="settings"><i class="fas fa-lock"></i> Javascript Quiz #3</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+          <h2 style="font-weight:500;font-size:40px;">Introduction to Front-End</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to front end, what is programming, and you will write your first code snippet with a heading!<br><br>Learn more about the significance of <a target="_blank" href="https://whatis.techtarget.com/definition/Hello-World">"Hello World"</a></h5>
+          <br>
+          <a href="/editor/introduction-to-frontend" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-html" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Introduction to HTML</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced HTML (hyper text markup language) and be learning the basic document structure, headings, buttons, and important tags</h5>
+          <br>
+          <a href="/html" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lessons</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-htmlquiz" role="tabpanel" aria-labelledby="list-messages-list">
+      <h2><i class="fas fa-lock"></i>  HTML Quiz #1</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this 10 question quiz, you will review the basic HTML language of document structure, headings, buttons, and tags.</h5>
+          <br>
+          <h3>Sample Question:</h3>
+          <h4 style="color:#2A2A2A;font-weight:300;font-size:23px;line-height: 1.5;">What is the largest heading in HTML?</h4>
+          a) h2 &nbsp;&nbsp;&nbsp;&nbsp;b) h4 &nbsp;&nbsp;&nbsp;&nbsp;c) h1 &nbsp;&nbsp;&nbsp;&nbsp;d) h3&nbsp;&nbsp;&nbsp;&nbsp;
+          <br><br><br>
+          <a class="btn btn-primary disabled" style="color:white;"><i class="fas fa-play-circle"></i> Start The Quiz</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-css" role="tabpanel" aria-labelledby="list-settings-list">
+          <h2>Introduction to CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced CSS (Cascading Style Sheets), a language to create better looking HTML. You will learn color, backgrounds, borders, and more. Then, you will apply the skills we have learned in HTML and create much better looking sites. </h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a></div>
+          
+      <div class="tab-pane fade" id="list-cssquiz" role="tabpanel" aria-labelledby="list-messages-list">
+      <h2><i class="fas fa-lock"></i>  CSS Quiz #1</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this 10 question quiz, you will review the basic language of Javascript, content manipulation, variables and more.</h5>
+          <br>
+          <h3>Sample Question:</h3>
+          <h4 style="color:#2A2A2A;font-weight:300;font-size:23px;line-height: 1.5;">What is the correct syntax to style the body?</h4>
+          a) body{} &nbsp;&nbsp;&nbsp;&nbsp;b) body: &nbsp;&nbsp;&nbsp;&nbsp;c) pagebody: &nbsp;&nbsp;&nbsp;&nbsp;d) pagecontent{} &nbsp;&nbsp;&nbsp;&nbsp;
+          <br><br><br>
+          <a class="btn btn-primary disabled" style="color:white;"><i class="fas fa-play-circle"></i> Start The Quiz</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-blog" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Design a Blog</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In your first project, you will be walked through on creating your own blog! We will go through html structure, then making it look nicer with css.</h5>
+          <br>
+           <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a></div>
+           
+      <div class="tab-pane fade" id="list-js" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Introduction to Javascript</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson you will learn Javascript and how to use it for changing the page content, changing styles, variables and more. You will also create a functional light bulb with on/off buttons as practice.</h5>
+          <br>
+           <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a></div>
+           
+      <div class="tab-pane fade" id="list-jsquiz" role="tabpanel" aria-labelledby="list-messages-list">
+      <h2><i class="fas fa-lock"></i>  Javascript Quiz #1</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this 10 question quiz, you will review the basic language of Javascript, content manipulation, variables and more.</h5>
+          <br>
+          <h3>Sample Question:</h3>
+          <h4 style="color:#2A2A2A;font-weight:300;font-size:23px;line-height: 1.5;">What is the correct way to write a comment?</h4>
+          a) // &nbsp;&nbsp;&nbsp;&nbsp;b) || &nbsp;&nbsp;&nbsp;&nbsp;c) \\ &nbsp;&nbsp;&nbsp;&nbsp;d) /* &nbsp;&nbsp;&nbsp;&nbsp;
+          <br><br><br>
+          <a class="btn btn-primary disabled" style="color:white;"><i class="fas fa-play-circle"></i> Start The Quiz</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-counting" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Simple Counting Games</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will use your newly learned javascript skills and create a simple counting game. The game consists of a up and down button which will count up or down. </h5>
+          <br>
+           <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a></div>
+           
+      <div class="tab-pane fade" id="list-clock" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Functional Javascript Clock</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson you will apply your javascript skills and create a functional clock to the second! We will use functions, variables, and more to create this clock. This is a great first javascript project to code!</h5>
+          <br>
+           <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a></div>
+           
+      <div class="tab-pane fade" id="list-jquery" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Introduction to jQuery</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, we will expand on your javascript knowledge and add jQuery to the library. jQuery is an add-on library to Javascript which makes it much easier to manipulate the code. jQuery is a popular library to learn and the syntax if easy to catch on. </h5>
+          <br>
+           <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a></div>
+           
+      <div class="tab-pane fade" id="list-bootstrap" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Introduction to Bootstrap 4</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, we will learn how to install and use bootstrap 4. Bootstrap 4 is a universally useful language in design, and will speed up your process in css while also making your site look better! </h5>
+          <br>
+           <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a></div>
+           
+      <div class="tab-pane fade" id="list-intermediatehtml" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate HTML</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this the intermediate HTML lessons, you will learn more html and deal more with APIs, Media, More Tags, Forms and Tables. While this learning extra html is not completely nessesary, some jobs require more knowledge of HTML and having more HTML knowledge can help you code faster.</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-htmlweb" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>HTML: Website Layout</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In the following lessons, we will explore more indepth with Bootstrap 4 and apply it to a functional website layout.  This is the 1nd part of the "Website Layout Series".</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-htmlquiz2" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>HTML Quiz #2</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this 10 question quiz, you will review the knowledge taught in Intermediate HTML.</h5>
+          <br>
+          <h3>Sample Question:</h3>
+          <h4 style="color:#2A2A2A;font-weight:300;font-size:23px;line-height: 1.5;">What is the correct way to write the action in a form?</h4>
+          a) action="/action_page" &nbsp;&nbsp;&nbsp;&nbsp;b) action: "/action_page.php" <br><br> c) action="action_page" &nbsp;&nbsp;&nbsp;&nbsp;d) action=action_page &nbsp;&nbsp;&nbsp;&nbsp;
+          <br><br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-intermediatecss" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-cssweb" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>CSS: Website Layout</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons, we will continue our goal of creating a website. In the css portion, we will style your site with bootstrap, designs, and implement a logo. This is the 2nd part of the "Website Layout Series".</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>  
+      
+      <div class="tab-pane fade" id="list-cssquiz2" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>CSS Quiz #2</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this 10 question quiz, you will review what you have learned prior in the intermediate css lessons. You will review tables, psuedo classes, alignment properties, galleries, and more.</h5>
+          <br>
+          <h3>Sample Question:</h3>
+          <h4 style="color:#2A2A2A;font-weight:300;font-size:23px;line-height: 1.5;">What is the correct definition of the property text-align?</h4>
+          a)  specifies the vertical alignment of text in an element &nbsp;&nbsp;&nbsp;&nbsp;b) specifies the horizontal alignment of text in an element<br><br> c) specifies the absolute position of text in an element &nbsp;&nbsp;&nbsp;&nbsp;d)  estimates the horizontal positioning of headings in an element&nbsp;&nbsp;&nbsp;&nbsp;
+          <br><br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Quiz</a>
+      </div>   
+      
+      <div class="tab-pane fade" id="list-intermediatejs" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In the following lessons, you will learn indepth about Javascript. You will dive deep into functions, arrays, dates, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-jsquiz3" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-advhtml" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-nclhtml" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+      <div class="tab-pane fade" id="list-htmlquiz3" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+       <div class="tab-pane fade" id="list-advcss" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+       <div class="tab-pane fade" id="list-nclcss" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+       <div class="tab-pane fade" id="list-cssquiz3" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+       <div class="tab-pane fade" id="list-advjs" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+       <div class="tab-pane fade" id="list-ncljs" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+      
+       <div class="tab-pane fade" id="list-jsquiz3" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Intermediate CSS</h2>
+          <hr>
+          <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In these lessons you will learn intermediate css. You will learn about tables, pseudo classes, aligns, galleries, units, and more</h5>
+          <br>
+          <a class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start This Lesson</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+ $( "#button-next" ).click(function() {
+     
+});
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<% include ../partials/footer %> 

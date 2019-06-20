@@ -1,0 +1,21 @@
+<% include ../../partials/header %>
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <strong><h1 style="font-size:50px; font-family: 'Raleway', sans-serif;font-weight:100;">Edit this Flashcard</h1></strong>
+            <form action="/collections/<%= collection_id %>/flashcards/<%= flashcard.id %>?_method=PUT" method="POST" accept-charset="UTF-8" role="form">
+                <hr><br>
+                <input class="input-field-new" type="text" name="flashcard[question]" placeholder="Term" value="<%= flashcard.question %>" required>
+                <br><br> 
+                 <input class="input-field-new" type="text" name="flashcard[answer]" placeholder="Definition" value="<%= flashcard.answer %>" required>
+                <br><br>
+                <br>
+                <button class="button button3-md" type="submit">Submit</button>
+                <br><br>
+            
+            </form>
+            
+    </div>
+</div>
+<% include ../../partials/footer %>
+

@@ -1,0 +1,52 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+
+<style>
+    .jumbotron{
+        background:url(https://blog.brandfolder.com/wp-content/uploads/2016/04/Material_Design_Wallpaper_WALLPAPERDNA-3-1.png);
+        height:470px;
+    }
+    a:hover{
+        color:#009BFF;
+        transition:0.2s;
+    }
+</style>
+
+<div class="jumbotron" >
+    <br><br><br>
+    <h1 style="text-align:center;color:white;font-size:70px;font-weight:900;">Learn Beginner CSS</h1>
+    <p style="font-size:30px;text-align:center;color:white;">Click on any video that suits you to get started!</p>
+    <br>
+    <div style="text-align:center;">
+        <a class="button3-md" href="/getstarted/students"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Course Selection</a>
+        <a class="button3-md" href="/new-video-css">Create a video</a>
+    </div>
+</div>
+<div class="container">
+    <br>
+    <div class="alert alert-info" role="alert">
+    <h1 style="font-size:45px;font-weight:900;">Unlock your <span style="color:#009BFF;">Personalized</span> Journey! <i class="fa fa-space-shuttle" aria-hidden="true"></i></h1>
+    <p style="font-size:25px;">Start by taking a simple quiz and we will recommend you some courses to take!</p>
+    <br>
+
+    </div>
+    <br>
+        <a href="#" class="button3-md">Quizzes</a>
+        <a href="#" class="button3-md">Beginner CSS Certificate Test</a>
+        <a href="#" class="button3-md">CSS and HTML Projects</a>
+        <a href="#" class="button3-md">Videos</a>
+        <a href="#" class="button3-md">Articles</a>
+        <br><br>
+    <br>
+    
+<% cssvideos.forEach(function(cssVideo){ %>
+    <h1 style="font-weight:100;font-size:40px;"><a href="/css/<%= cssVideo._id %>"><%= cssVideo.name %></a></h1>
+    <hr>
+<% }); %>
+<br><br>
+
+
+</div>
+
+<br><br><br><br><br><br><br>
+
+<% include ../../partials/footer %> <!-- HEADER PARTIALS -->

@@ -1,0 +1,114 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    
+</style>
+<div style="height:300px;background:background: #F2994A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+" class="jumbotron">
+    <br><br><br>
+    <h1 style="color:white;text-align:center;"><strong>Code Your Own Portfolio!</strong></h1>
+    <p style="color:white;text-align:center;">Article written by <a style="color:white;" href="https://yelp-camp-tommyschool.c9users.io/users/friends/5a5bac8a807ea7a2065901ee">Tommy Wan</a></p>
+</div>
+
+    <div class="container">
+            <h4 style="font-size:25px;font-weight:100;">Welcome to an article for creating your own portfolio. We will walk you through every aspect of coding a portfolio for yourself as an resume or a fun side project! If you would like a source code, check out our <a href="https://github.com/codemanjavascript/Code-a-portfolio-Wancademy/tree/master" target="_blank" style="font-weight:900;">github</a></h4>
+        <br>
+        <hr>
+        <h1 style="font-weight:100;">Prequisites:</h1>
+            <h3>- HTML Beginner Course <a href="/html">(Click here to be redirected)</a></h3>
+            <h3>- Optional (Highly suggested): <a href="/bootstrap" target="_blank">Bootstrap Course</a></h3>
+            <h3>- Your creative mind!</h3>
+            <br><hr>
+        <h1 style="font-weight:100;font-size:50px;">Step <span style="color:#F2B400">One</span>: Choose your code editor!</h1>
+            <h3 style="font-size:22px;font-weight:100;">There are many code editors online and downloadable. Wancademy offers many courses about <a style="font-weight:900;" href="/code-editors">code editors</a> but today, we will use the beginner online code editor called "thimble".
+            If you are new to thimble, check out the <a href="/html">HTML Beginner Course</a>. Login to Thimble and start a new project.
+            </h3><br>
+            <img src="https://i.imgur.com/ZnMJmRs.png" style="height:250px;width:600px;">
+            <br>
+        <br><br>
+          <h1 style="font-weight:100;font-size:50px;">Step <span style="color:#F2B400">Two</span>: Set up Personal Parameters</h1>
+            <h3 style="font-size:22px;font-weight:100;">The parameters of the workspace is set to the defualt thimble settings. Delete all but the boiler plate. Feel free to change the title name, heading titles, and others.</h3>
+            <br>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;My Blog&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        <br><br>
+        <h1 style="font-weight:100;font-size:50px;">Step <span style="color:#F2B400">Three</span>: Link up Bootstrap</h1>
+            <h3 style="font-size:22px;font-weight:100;">Link up bootstrap before the end of the head tag so we can add the jumbotron and thumbnails
+            </h3><br>
+            <pre>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot; integrity=&quot;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&quot; crossorigin=&quot;anonymous&quot;&gt;
+            </pre>
+            <br>
+            <h1 style="font-weight:100;font-size:50px;">Step <span style="color:#F2B400">Four</span>: Create Jumbotron and Style (From Bootstrap)</h1>
+            <h3 style="font-size:22px;font-weight:100;">After this, add the jumbotron (Basically, a colorful header) code. Then, for now, we will add the inline css styles. Add these lines in the start after the body tag
+            </h3><br>
+            <pre>
+&lt;div class=&quot;jumbotron&quot; style=&quot;background-color:#fcfc00;text-align: center&quot;&gt;
+    &lt;h1&gt;Welcome to My Portfolio!&lt;/h1&gt;
+&lt;/div&gt;
+            </pre>
+            <br>
+           
+           <h1 style="font-weight:100;font-size:50px;">Step <span style="color:#F2B400">Four</span>: Create Thumbnails with Bootstrap</h1>
+            <h3 style="font-size:22px;font-weight:100;"> Now that we have the basic design down, we need some sort of way to express what you want on your portfolio such as photos, videos, or projects you have worked on. Look at the folowing code below using bootstrap. Feel free and personalize it! It's your portfolio! Add this under the jumbotron
+            </h3><br>
+            <pre>
+&lt;div class=&quot;container&quot;&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md-4&quot;&gt;
+  &lt;div class=&quot;thumbnail&quot;&gt;
+    &lt;a href=&quot;/w3images/lights.jpg&quot; target=&quot;_blank&quot;&gt;
+      &lt;img src=&quot;https://fthmb.tqn.com/j3Va5-2ujW2wY06tV0J1x-Stbrc=/768x0/filters:no_upscale()/WL003953-56a003b15f9b58eba4ae7b7b.jpg&quot; alt=&quot;Lights&quot; style=&quot;width:100%&quot;&gt;
+      &lt;div class=&quot;caption&quot;&gt;
+        &lt;p&gt;Look at these animals!&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-4&quot;&gt;
+  &lt;div class=&quot;thumbnail&quot;&gt;
+    &lt;a href=&quot;/w3images/nature.jpg&quot; target=&quot;_blank&quot;&gt;
+      &lt;img src=&quot;https://i.pinimg.com/736x/63/df/93/63df93b7a1843ce50da265d9ffbf5a59--hummingbird-pictures-tropical-birds.jpg&quot; alt=&quot;Nature&quot; style=&quot;width:100%&quot;&gt;
+      &lt;div class=&quot;caption&quot;&gt;
+        &lt;p&gt;Wow! This weekend I went bird watching and found this!&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-4&quot;&gt;
+  &lt;div class=&quot;thumbnail&quot;&gt;
+    &lt;a href=&quot;/w3images/fjords.jpg&quot; target=&quot;_blank&quot;&gt;
+      &lt;img src=&quot;https://i.pinimg.com/736x/88/74/e8/8874e893aa628e9ff4cbb832f8412b5b--hummingbird-pictures-the-hummingbird.jpg&quot; alt=&quot;Fjords&quot; style=&quot;width:100%&quot;&gt;
+      &lt;div class=&quot;caption&quot;&gt;
+        &lt;p&gt;Heres another bird I found!&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+    <h1 style="font-weight:100;">Final Product!</h1>
+    <img src="https://i.imgur.com/2359nny.jpg" style="height:500px;width:900px;">
+            <h1>Next Steps:</h1>
+            <h3>What are you going to do now with your portfolio? There's not alot of options but to put it online!  <a href="/uploadWebsite" target="_blank" style='font-weight:900;'>Click here to learn how to put your portfolio online with your own domain name!</a></h3>
+</html>
+    </div>
+
+
+
+<br><br><br><br><br>
+<% include ../../partials/footer %> <!-- HEADER PARTIALS -->

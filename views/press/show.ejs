@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<div class="jumbotron" style="height:380px;background:#00B2FF;">
+    <div class="container" style="text-align:center;">
+        <br><br>
+        <h1 style="font-weight:100;font-size:85px;color:white;"><%= press.name %></h1>
+        
+         <br>
+        
+      
+        <button type="button" class="btn btn-primary btn-lg"><a style="color:white;text-decoration:none;" href="/press/all">Back to Press Room</a></button>
+    </div>
+    
+</div>
+<br><br>
+
+<div class="container">
+    
+    <img src="<%= press.image %>" style="width:100%;height:700px;">
+    <br><br><hr><br>
+    <h1 style="font-weight:300;font-size:30px;line-height:40px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= press.description %></h1>
+ 
+</div>
+
+
+<br><br><br><br>
+<% include ../partials/footer %>

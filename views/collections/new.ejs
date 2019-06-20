@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <br><br><br><br><br><br>
+<h1 style="font-size:66px;">Create your <strong>Flashcard Set!</strong></h1>
+
+<hr>
+<form action="/collections" method="POST" accept-charset="UTF-8" role="form">
+    <!--<label for="collection">Collection Name:</label>-->
+    <input class="input-field-new" id="collection" name="name" placeholder="Collection name">
+    <br><br>
+    
+    <!--<label for="amount">How many flash cards do you need?</label>-->
+    <input class="input-field-new" type="number" name="amount" id="amount" placeholder="Amount of Flashcards" min="1" max="100" step="1" required>
+    <br><br>
+
+    <!--<input class="input-field-new" type="text" name="flashcard[description]" placeholder="Short Description" required>-->
+    <!--<br><br>-->
+    
+    <!--<input class="input-field-new" type="text" name="flashcard[question]" placeholder="Question" required>-->
+    <!--<br><br>-->
+    
+    <!--<input class="input-field-new" type="text" name="flashcard[answer]" placeholder="Answer" required>-->
+    <!--<br><br>-->
+
+    <button class="button button4-md" type="submit">Create</button>
+    <br><br>
+    <p>** You will be able to edit your flashcards after creation. Click on Need Help Link for more info **</p>
+</form>
+<br>
+<p><strong>Need Help?</p></strong>
+</div>
+<% include ../partials/footer %> 

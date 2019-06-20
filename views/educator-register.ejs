@@ -1,0 +1,35 @@
+
+<% include ./partials/header %>
+
+
+<div class="jumbotron" style="background: url(https://i.imgur.com/ShYWxpY.png); height:400px;">
+	<div class="container">
+		<br><br>
+		<h1 style="color:white;font-size:60px;"><strong>"Learning never exhuasts the mind"</strong></h1>
+		<br>
+		 <p style="color:white;">Fill in all required blanks to continue</p>
+		 <br>
+		 <a style="font-size:23px;color:#00DCFF" href="/login">Have an account?</a>
+	</div>
+	</div>
+</div>
+<div class="container">
+<form class="action="/educator-register" method="post" class="form-signin" form-signin" id="login-form"  role="form" style="display: block;">
+  <input style="width:900px;" name="email" type="email" class="form-control input-lg" placeholder="Your Email" />
+  <br>
+  <input style="width:900px;" name="username" type="text" class="form-control input-lg" placeholder="Your Username" />
+  <br>
+  <input style="width:900px;" name="password" type="password" class="form-control input-lg" placeholder="Your Password" />
+  <br>
+  <input style="width:900px;" name="description" type="text" class="form-control input-lg" placeholder="Description for your profile (Optional)" />
+  <br>
+  <input style="width:900px;" name="image" type="text" class="form-control input-lg" placeholder="Profile Image URL(Optional)" />
+  <br>
+  
+  <button class="button3-md">Create My Account</button>
+</form>
+</div>
+
+<br><br><br><br><br><br>
+
+<% include ./partials/footer %> 

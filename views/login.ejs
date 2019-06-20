@@ -1,0 +1,42 @@
+<% include ./partials/header %>
+<style>
+  body{
+    overflow:hidden;
+  }
+</style>
+
+<br><br>
+<div class="login-page">
+  <div class="form">
+  
+    <form action="/login" method="POST" class="login-form">
+    
+      <h1 style="font-size:45px;font-weight:800;color:black">Login</h1>
+      
+      <div class="container">
+        
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+      <hr><br>
+      <input name="username" type="text" placeholder="Username"/>
+      <input name="password" type="password" placeholder="Password"/>
+      <button>login</button>
+      <p class="message"> <a href="/forgot" style="color:#0097FF;">Forgot your password?</a></p>
+      <p class="message">Need an account?<a href="/register" style="color:#0097FF;"> Register Now</a></p>
+    </form>
+  </div>
+</div>
+<style>
+  $('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</style>

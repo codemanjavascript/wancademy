@@ -1,0 +1,69 @@
+
+<% include ../partials/header %> 
+<br><br><br><br>
+
+<style>
+
+body{
+    overflow:hidden;
+    text-decoration:none;
+}
+
+.box:hover{
+   transform: scale(1.05); 
+   transition: transform 0.7s;
+}
+
+.box{
+ 
+   transition: transform 2s;
+}
+
+</style>
+<br>
+<div class="container">
+    <h1 class="animated slideInDown" style="color:black;font-size:80px;font-weight:700;text-align:center;">Hello <%= currentUser.username %>,</h1>
+    <p class="animated slideInLeft" style="animation-delay: 1.5s;font-size:40px;font-weight:100;text-align:center;" >What would you like to learn?</p>
+  <div style="padding:7px;"></div><hr class="animated bounceInUp" style="animation-delay: 2s;">
+    <div class="row">
+        <a href="/biology" style=" text-decoration:none;">
+        <div class="box col animated flipInX" style="animation-delay: 2.7s;position: relative;border-radius:3%;width:240px;height:220px;background:url(https://i.imgur.com/DDvbIWY.jpg);">
+       <div   style="text-align:center;">
+           <br><br><br>
+         <h1 style="color:white;font-size:43px;font-weight:600;">Biology</h1>
+       </div>
+     </div>
+     </a>
+      <a href="/chemistry" style=" text-decoration:none;">
+        <div class="box col animated flipInX" style="animation-delay: 3.5s;position: relative;margin-left:38px;border-radius:3%;width:240px;height:220px;background:url(https://i.imgur.com/9i4SXUs.jpg);">
+       <div style="text-align:center;">
+           <br><br><br>
+         <h1 style="color:white;font-size:43px;font-weight:600;">Chemistry</h1>
+       </div>
+     </div>
+     </a>
+     <a href="/physics" style=" text-decoration:none;">
+        <div class="box col animated flipInX" style="animation-delay: 4.5s;position: relative;margin-left:38px;border-radius:3%;width:240px;height:220px;background:url(https://i.imgur.com/HP8BPZn.jpg);">
+       <div style="text-align:center;">
+           <br><br><br>
+         <h1 style="color:white;font-size:43px;font-weight:600;">Physics</h1>
+       </div>
+     </div>
+     </a>
+     <a href="/paths" style=" text-decoration:none;">
+        <div class="box col animated flipInX" style="animation-delay: 5.5s;position: relative;margin-left:38px;border-radius:3%;width:240px;height:220px;background:url(https://i.imgur.com/dOOXqAd.jpg);">
+       <div style="text-align:center;">
+           <br><br><br>
+         <h1 style="color:white;font-size:43px;font-weight:600;">Coding</h1>
+       </div>
+     </div>
+     </a>
+    </div>
+    <hr class="animated flipInX" style="animation-delay: 6.2s;">
+    <div style="text-align:center;">
+    <h1 class="animated flipInX" style="animation-delay: 7s;" ><a href="/courses" style="text-decoration:none;text-align:center;text-align:center;font-weight:500;font-size:25px;">Not Sure What To Start With?</a></h1>
+</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<% include ../partials/footer %> 

@@ -1,0 +1,68 @@
+
+<% include ../../partials/header %> 
+
+
+<style>
+
+body{
+
+}
+
+.box:hover{
+   transform: scale(1.05); 
+   transition: transform 0.7s;
+}
+
+.box{
+ 
+   transition: transform 1s;
+}
+
+</style>
+
+<div class="jumbotron" style="background:#FF8E06;height:350px;">
+    <br><br>
+    <h1 style="color:white;font-size:75px;font-weight:500;text-align:center;">What's your Intrest?</h1>
+    
+    <p style="color:white;font-size:35px;font-weight:100;text-align:center;">You're intrested in: Advancing your skills</p>
+</div>
+<div class="container">
+
+    <div class="row">
+       <a href="/recommendations/advancecodingskills/backend" style=" text-decoration:none;">
+        <div class="box col" class="animated bounceInUp" style="position: relative;border-radius:3%;width:250px;height:280px;background:#FF7800;">
+       <div  style="text-align:center;">
+           <br><br><br>
+         <h1  style="color:white;font-size:35px;font-weight:600;">Learn Backend</h1>
+       </div>
+     </div>
+</a>
+<a href="/recommendations/advancecodingskills/animateanddesign" style=" text-decoration:none;">
+        <div class="box col" class="animated bounceInLeft" style="animation-delay: 1s;position: relative;margin-left:38px;border-radius:3%;width:250px;height:280px;background:#01D897;">
+       <div style="text-align:center;">
+           <br><br>
+         <h1 style="color:white;font-size:35px;font-weight:600;">Learn to animate and design</h1>
+       </div>
+     </div>
+     </a>
+     <a href="/recommendations/advancecodingskills/websites" style=" text-decoration:none;">
+        <div class="box col" class="animated bounceInDown" style="animation-delay: 2s;position: relative;margin-left:38px;border-radius:3%;width:250px;height:280px;background:#FF0000;">
+       <div style="text-align:center;">
+           <br><br>
+         <h1 style="color:white;font-size:35px;font-weight:600;">Create better looking websites</h1>
+       </div>
+     </div>
+     </a>
+     <a href="/recommendations/sitesandgames/notsure" style=" text-decoration:none;">
+        <div class="box col " class="animated bounceInRight" style="animation-delay: 3s;position: relative;margin-left:38px;border-radius:3%;width:250px;height:280px;background:#9700FF;">
+       <div style="text-align:center;">
+           <br><br><br>
+         <h1 style="color:white;font-size:35px;font-weight:600;">I'm still not sure</h1>
+       </div>
+     </div>
+     </a>
+    </div>
+</div>
+
+<br><br><br><br><br>
+<% include ../../partials/footer %> 

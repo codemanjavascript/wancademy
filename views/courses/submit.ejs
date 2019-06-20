@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<div class="jumbotron" style="background:#9A75FF;
+height:350px;">
+    <br><br>
+    <h1 style="font-weight:100;color:white;font-size:80px;text-align:center;">Submit your Course</h1>
+    <h1 style="font-weight:100;color:white;font-size:30px;text-align:center;">Your course will be reviewed by admins before being published.</h1>
+</div>
+
+<div class="container" style="text-align:center;">
+    <br><br>
+    <form action="/courses/submit" method="POST">
+        
+        <input name="title" placeholder="Title of your course (Facebook Login with REACT JS)" required>
+        <br><br>
+        <input name="description" placeholder="Breif description of your course" required>
+        <br><br>
+        <input name="imageLink" placeholder="Picture link for your course" required>
+        <br><br>
+        <button class="btn btn-primary"><i class="fas fa-file-upload"></i> Upload a Sample Video</button>
+        <br><br>
+        <p>A sample video is a part of a tutorial video that you have created.</p>
+        <br>
+        <button class="button3-md">Submit</button>
+    
+    </form>
+</div>
+
+<br><br><br><br><br>
+<% include ../partials/footer %>

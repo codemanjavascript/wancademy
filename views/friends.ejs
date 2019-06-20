@@ -1,0 +1,44 @@
+<% include ./partials/header %>
+<style>
+    .jumbotron{
+        background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/313340/b418ea38c3d62733d41cad41eda39786df10db70.jpg);
+        height:315px;
+    }
+</style>
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <br><div style="padding:12px;"></div>
+                     <img style="height:140px;width:140px;border-radius:50%;" src="<%= user.image %>"/>
+                 </div>
+                 <div class="col-md-10">
+                     <br><br>
+                     <h1 style="font-size:80px;color:white;"><%= user.username %></h1>
+                     <% if (currentUser && user._id.equals(currentUser.id)) { %>
+                     <button class="btn btn-primary"><a style="color:white;text-decoration:none;" href="/users/<%= currentUser._id %>"><i class="fas fa-cog"></i> Settings</a></button>
+                     <% } else{ %><% } %>
+                 </div>
+             </div>
+             <br>
+             <div class="row">
+                 <!--<% if (currentUser && user._id.equals(currentUser.id)) { %>
+                        
+                        <button class="button3-md"><a href="/users/<%= currentUser._id %>" style="color:white;">Edit Profile <i class="fa fa-pencil" aria-hidden="true"></i></a></button>
+                        <form style="display: inline-block;" action="/user/<%= currentUser._id %>?_method=DELETE" method="POST">
+                            <button class="button5-md" id="delete">Delete Profile <i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                        </form>
+                <% } else{ %><% } %>-->
+            </div>
+        </div>
+    </div>
+<div class="container">
+   <h1 style="font-size:45px;font-weight:700;">Acheivements 🏆</h1>
+<hr>
+<br>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<% include ./partials/footer %>

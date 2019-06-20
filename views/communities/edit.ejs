@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <strong><h1 style="font-size:50px; font-family: 'Raleway', sans-serif;font-weight:100;">Edit <%= Class.name %></h1></strong>
+        
+            <form action="/classes/<%= Class.id %>?_method=PUT" method="POST" accept-charset="UTF-8" role="form">
+                <hr><br>
+                <h4>Name of Class</h4>
+                <input class="input-field-new" type="text" name="classes[name]" placeholder="Name of Class" value="<%= Class.name %>" required>
+                <br><br>
+                <h4>Image URL of Class</h4>
+                <input class="input-field-new" type="text" name="classes[image]" placeholder="Image of Class" value="<%= Class.image %>" required>
+                <br><br>
+                <h4>Banner Image of Class</h4>
+                <input class="input-field-new" type="text" name="classes[bannerImage]" placeholder="Banner Image of Class" value="<%= Class.bannerImage %>">
+                <br><br>
+                <h4>Description of Class</h4>
+                <input class="input-field-new" type="text" name="classes[description]" placeholder="Description of Class" value="<%= Class.description %>" required>
+                <br><br>
+                <br>
+                <button class="button button3-md" type="submit">Submit</button>
+                <br><br>
+            
+            </form>
+    </div>
+</div>
+<% include ../partials/footer %>
+

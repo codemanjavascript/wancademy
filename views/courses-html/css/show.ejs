@@ -1,0 +1,127 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<br>
+<style>
+    #max-less{
+        max-height:200px;
+        max-width:400px;
+    }
+    body{
+        
+    font-weight:100;
+    z-index:-10;
+    font-family: 'Open Sans', sans-serif;
+    overflow:visible;
+    }
+    .box {
+        z-index:10;
+  width: 95%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+.overlay {
+    z-index:10;
+  
+  overflow:visible;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  transition: opacity 500ms;
+  opacity: 0;
+}
+.overlay:target {
+    z-index:10;
+ 
+  opacity: 1;
+}
+
+.popup {
+    z-index:10;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 85%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    z-index:10;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  z-index:10;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+@media screen and (max-width: 700px){
+  .box{
+    width: 100%;
+  }
+  .popup{
+      z-index:10;
+    width: 100%;
+  }
+}
+
+
+.fa.fa-plus{
+    margin-top:7px;
+}
+</style>
+
+
+<br>
+<div class="jumbotron" style="height:437px;background:url(https://s14.postimg.org/62ia3ve29/ws_Milky_Way_Scenery_Night_2560x1600.jpg) ;">
+<div class="container">
+    <h1 style="font-size:70px;font-weight:100;"><span style="font-weight:900;color:white;"> <%= cssvideos.name %></span></h1>
+    <h1 style="font-size:30px;font-weight:100;color:white;"><strong style="color:white;">You will learn:</strong> <%= cssvideos.whatwillyoulearn %></h1>
+    <br><br>
+     <div class="delete-form">
+        <a href="/css/<%= cssvideos._id %>/edit"><button  class="button3-md">Edit Video</button ></a>
+            <form class="delete-form" action="/css/<%= cssvideos.id %>/?_method=DELETE" method="POST">
+                <button class="button5-md" id="delete">Delete Video</button>
+            </form>
+    </div>
+    
+    <br><br>
+    <h1 style="font-weight:100;font-size:20px;color:white;"><a href="/css"><i style="color:white;" class="fa fa-chevron-left" aria-hidden="true"></i> <span style="color:white;">Back to html page</span></a></h1>
+<br><br><br><br><br>
+<div class="alert alert-info" role="alert">We recommend having thimble in one tab and the video on another tab! That way, you can code and learn efficently.</div>
+<br>
+
+  <iframe width="1130" height="711" src="<%= cssvideos.video %>" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	<br>
+    <!--popup-->
+    <h3><i class="fa fa-chevron-left" aria-hidden="true"></i> No Last Video | <a href="/html/tagsandheadings">Next Video</a> <i class="fa fa-chevron-right" aria-hidden="true"></i></h3>
+    <br>
+    <h2><strong>Script:</strong></h2>
+    <iframe src="<%= cssvideos.doc %>" style="width:1130px;height:1200px;"></iframe>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--Show video below-->
+<% include ../../partials/footer %> <!-- HEADER PARTIALS -->

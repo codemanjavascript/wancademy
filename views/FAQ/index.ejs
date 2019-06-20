@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+          body{
+        font-family: 'Open Sans', sans-serif;
+    font-weight:200;
+    
+    
+    }
+    .header-wrapper {
+    position: fixed;
+  top:0; left:0;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
+  background: black;
+}
+
+.button-10 {
+    text-align:center;
+    font-weight:100;
+     background-color: white; 
+    color: black; 
+    border: 2px solid #00AAFF;
+    font-size: 20px;
+    transition-duration: 1s;
+     padding:9px;
+     border-radius:5%;
+}
+
+.button-10:hover {
+     background-color: #00AAFF;
+    color: white;
+    transition: 0.4s;
+}
+
+.button-red {
+    text-align:center;
+    font-weight:100;
+     background-color: white; 
+    color: black; 
+    border: 2px solid #FF4949;
+    font-size: 26px;
+    transition-duration: 1s;
+     padding:24px;
+     border-radius:2%;
+}
+
+.button-red:hover {
+     background-color: #FF4949;
+    color: white;
+    transition: 0.4s;
+}
+
+
+      </style>
+
+        <title>Wancademy Help Center</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+         <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!--FAVICON-->
+         <link rel="styleshpo0et" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+        <link rel="shortcut icon" href="https://i.imgur.com/ld1vuvk.png" type="image/x-icon" />
+        <!--BOOTSTRAP CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!--LINK TO APP.CSS-->
+        <link rel="stylesheet" href="/stylesheets/app.css">
+        <!--LINK TO ANIMATE.CSS-->
+        <link rel="stylesheet" href="/stylesheets/animate.css">
+        <!--FONT AWESOME-->
+        <script src="https://use.fontawesome.com/9ce04c304f.js"></script>
+        <!--LINK TO MAIN.JS-->
+        <script type="text/javascript" src="/scripts/main.js"></script>
+        <!--GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css?family=Asar" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+         <link rel="stylesheet" href="animate.min.css">
+        <!--SweetAlert JS-->
+        <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.js" ></script>
+        <!--SweetAlert CSS-->
+        <link rel="stylesheet" src="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
+    </head>
+<body>
+      
+  <header id="h" class="hidden-visible">
+    <div style="z-index:10;background: #FF4949;" class="header-wrapper">
+        <a herf="/campgrounds"><h1 id="logo"><img src="https://i.imgur.com/ld1vuvk.png" style="margin-bottom:5px;height:45px;width:45px;">&nbsp;<span style="color:white;">Wan</span>cademy Help</h1></a>
+        <nav>
+        <a href="/campgrounds" class=" nav-links" style="color:white;">My Dashboard <i class="fa fa-home" aria-hidden="true"></i></a>
+        <% if(!currentUser){ %>
+          <div style="z-index:10;" class="dropdown">
+          <a style="z-index:10;" class="nav-links">Academy <i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+            <a href="/classes" class="nav-links">Communitiess</a>
+            <a href="/courses" class="nav-links">Courses</a>
+             <a href="/collections" class="nav-links">Flashcards</a>
+             <a href="/forums" class="nav-links">Forums</a>
+          </div>
+          
+        </div>
+        <!--Tools-->
+        <div style="z-index:10;" class="dropdown">
+          <a style="z-index:10;" class="nav-links">Tools <i class="fa fa-wrench" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+            <a href="/todos" class="nav-links">Todo List</a>
+            <a href="/calculator" class="nav-links">Calculator</a>
+            <a href="/faq" class="nav-links">Help Center</a>
+          </div>
+          
+        </div>
+        <!--Tools End-->
+        <div style="z-index:10;" class="dropdown">
+          <a class="nav-links" style="nav-links:hover{color:#33FF77;}">Courses <i class="fa fa-book" aria-hidden="true"></i></a>
+          <div style="z-index:10;" class="dropdown-content">
+            <a href="/la" class="nav-links">HTML</a>
+            <a href="/math" class="nav-links">CSS</a>
+            <a href="/art" class="nav-links">Javascript</a>
+            <a href="/music" class="nav-links">Node.js</a>
+            <a href="/science" class="nav-links">Backen</a>
+            <a href="/programming" class="nav-links">Programming</a>
+            <a href="/courses" class="nav-links">View All Courses</a>
+          </div>
+        </div>
+         <a href="/login" class="nav-links">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+         <a href="/register" class="nav-links">Register <i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+         <% } else { %>
+         
+         <div style="z-index:10;" class="dropdown">
+          <a style="z-index:10;" class="nav-links">Academy <i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+            <a href="/classes" class="nav-links">Communities</a>
+            <a href="/courses" class="nav-links">Courses</a>
+             <a href="/collections" class="nav-links">Flashcards</a>
+             <a href="/forums" class="nav-links">Forums</a>
+          </div>
+        </div>
+        <div style="z-index:10;" class="dropdown">
+          <a style="z-index:10;" class="nav-links">Courses <i class="fa fa-address-book" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+           <a href="/la" class="nav-links">HTML</a>
+            <a href="/math" class="nav-links">CSS</a>
+            <a href="/art" class="nav-links">Javascript</a>
+            <a href="/music" class="nav-links">Node.js</a>
+            <a href="/science" class="nav-links">Backen</a>
+            <a href="/programming" class="nav-links">Programming</a>
+            <a href="/courses" class="nav-links">View All Courses</a>
+          </div>
+        </div>
+       <!--Tools-->
+        <div style="z-index:10;" class="dropdown">
+          <a style="z-index:10;" class="nav-links">Tools <i class="fa fa-wrench" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+            <a href="/classes" class="nav-links">My Classrooms</a>
+            <a href="/courses" class="nav-links">My Courses</a>
+             <a href="/collections" class="nav-links">Flashcards</a>
+             <a href="/forums" class="nav-links">Forums</a>
+          </div>
+          
+        </div>
+        <!--Tools End-->
+       
+       <div style="z-index:10;" class="dropdown">
+          <a class="nav-links">Logged in as <%= currentUser.username %></a>
+          <div class="dropdown-content">
+            <a href="/users/friends/<%= currentUser._id %>" class="nav-links">My Profile</a>
+            <a href="/todos" class="nav-links">Todo List</a>
+            <a href="/faq" class="nav-links">Help Center</a>
+            <a href="/calculator" class="nav-links">Calculator</a>
+            <a href="/forums" class="nav-links">View Forums</a>
+            <a href="/faq" class="nav-links">Help Center</a>
+            <a href="/logout" class="nav-links">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+          </div>
+        </div>
+         <% } %>
+      </nav>
+    </div>
+</header>
+
+<style>
+
+  .jumbotron{
+    background:url(https://i.imgur.com/d4WWuGC.jpg);
+    
+    height:720px;
+  }
+  .blinking-cursor {
+  font-weight: 100;
+  font-size: 80px;
+  color: white;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+mark {
+    background-color: yellow;
+    color: black;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
+<style>
+    .jumbotron{
+       background:url("https://i.imgur.com/iKAbpxw.png");
+
+        height:355px;
+        width:100%;
+        -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  backg
+  round-size: cover;
+    }
+ 
+    
+    
+}
+</style>
+<br><br><br><br><br>
+<div class="container">
+<div class="jumbotron">
+
+     <h1 style="color:white;font-weight: 500;font-size:94px;">
+          <span><strong>Help</span> Center</strong>
+    </h1>
+    <br><br>
+    
+
+	<div class="row">
+	      <form action="/classes" method="GET" >
+        <div style="width:45%"class="col-md-6">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                   
+                    <input name="search" type="text" class="form-control input-lg" placeholder="Search For a Question!" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                          </form>
+                    </span>
+                </div>
+            </div>
+        </div>
+         </form>
+	</div>
+</div>
+	    
+
+	</div>
+
+
+<br>
+
+
+<div class="container">
+  
+    <a href="/frequently-asked-questions" class="button-red">Frequently Asked Questions</a>
+
+    <a href="/announcements" class="button-red">Announcements</a>
+    
+    <a  href="/campgrounds" class="button-red">My Dashbaord</a>
+  
+  
+    <% forums.forEach(function(forum){ %>
+    <br><br>
+    <hr>
+        <div class="col-md-3">
+      <strong><%= forum.name %></strong>
+        </div>
+        <div class="col-md-6">
+          
+          <%= forum.question.substring(0,50); %>...<strong><a href="/forums/<%= forum.id %>">Read More</a></strong>
+        </div>
+        <div class="col-md-3">
+          By <%= forum.author.username %>: <%= moment(forum.createdAt).fromNow() %>
+        </div>
+    <% }); %>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</div>
+
+ <style>
+         .page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+	margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+	height: 342px; 
+}
+.site-footer {
+  background: #FF4949;
+}
+ </style>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!--Bootstrap JS-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- Custom JS for search feature -->
+        <script src="/scripts/search.js" async defer></script>
+        <script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css">
+
+<!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+        <!-- AJAX -->
+        <script src="/scripts/ajax.js" async defer></script>
+<!--        <footer class="site-footer">
+  I'm the Sticky Footer.
+</footer>-->
+<div style="height:580px;width:100%;background:#FF4949;">
+  <br><br><br>
+  <div class="container">
+    <h1 style="color:white;"><strong>Learn to code with your own personolized journey!</strong></h1>
+    <hr>
+    
+    <div class="col-md-4">
+      <h3 style="color:white;font-weight:800;">About</h3>
+      <br>
+      <a style="color:white;font-size:16px;" href="/aboutus">About Us</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/contributors">Contributors</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/news">News</a>
+      <br><br>
+      <!--<a style="color:white;font-size:16px;" href="/termsofservice">Terms of Service</a>
+      <br><br>-->
+      <a style="color:white;font-size:16px;" href="/donate">Donate</a>
+      
+    </div>
+    <div class="col-md-4">
+      <h3 style="color:white;font-weight:800;">Resources</h3>
+      <br>
+      <a style="color:white;font-size:16px;" href="/faq">Help Center</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/todos">To-Do List</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/calculator">Calculator</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/collections">Flashcards</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/courses">Courses</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/classes">Classes</a>
+    </div>
+    <div class="col-md-4">
+      <h3 style="color:white;font-weight:800;">Subjects</h3>
+      <br>
+      <a style="color:white;font-size:16px;" href="/code">Programming</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/math">Math</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/la">Reading</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/music">Music</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/science">Science</a>
+      <br><br>
+      <a style="color:white;font-size:16px;" href="/art">Art</a>
+    </div>
+    
+  </div>
+</div>
+    </body>
+</html>

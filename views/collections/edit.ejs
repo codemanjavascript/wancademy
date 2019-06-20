@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+<br><br><br><br>
+<div class="container">
+    <div class="row">
+        <strong><h1 style="font-size:50px; font-family: 'Raleway', sans-serif;font-weight:100;">Edit <%= collection.name %></h1></strong>
+        
+            <form action="/collections/<%= collection.id %>?_method=PUT" method="POST" accept-charset="UTF-8" role="form">
+                <hr><br>
+                <input class="input-field-new" type="text" name="collection[name]" placeholder="Name of Course" value="<%= collection.name %>" required>
+                <br><br>
+                <!--<input class="input-field-new" type="text" name="collection[name]" placeholder="Amount of Flashcards" min="1" max="100" step="1" value="<%= collection.amount %>" required>
+                <br><br>-->
+                <br>
+                <button class="button button3-md" type="submit">Submit</button>
+                <br><br>
+            
+            </form>
+    </div>
+</div>
+<% include ../partials/footer %>
+

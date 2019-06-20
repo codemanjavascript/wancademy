@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+
+<div class="jumbotron" style="height:350px;background: #F00000;  /* fallback for old browsers */background: -webkit-linear-gradient(to right, #DC281E, #F00000);  /* Chrome 10-25, Safari 5.1-6 */background: linear-gradient(to right, #DC281E, #F00000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+    <br><br>
+      <div class="container">
+    <h1 style="font-weight: 200;font-size:85px;color:white;">New FAQ</h1>
+    
+    <div class="alert alert-danger" style="width:300px;" role="alert"><strong>THIS PAGE IS FOR ADMINS ONLY</strong></div>
+    <br>
+    </div>
+</div>
+    
+    <div class="container">
+        <form action="/help/all" method="POST">
+              <div class="group">      
+                <input name="question" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label style="font-weight:400;">Question</label>
+              </div>
+              <div class="group">      
+                <input name="answer" type="text" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label style="font-weight:400;">Answer</label>
+              </div>
+              <br>
+              <button class="button5-md">Create</button>
+              <br><br>
+        </form>
+    </div>
+
+<br><br><br><br>
+   
+<% include ../partials/footer %> 

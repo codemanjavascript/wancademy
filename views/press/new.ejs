@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+
+<% if(currentUser && currentUser.isAdmin) { %>
+<div style="text-align:center;">
+<div class="jumbotron" style="height:320px;background: #FF416C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    <br><br>
+      <div class="container">
+    <h1 style="font-weight: 100;font-size:95px;color:white;">Create Press</h1>
+    <br>
+    </div>
+</div>
+    
+    <div class="container">
+      
+        
+        <form action="/press/all" class="login-form" method="POST">
+              <div class="group">      
+                <input name="name" type="text" placeholder="Name" required>
+              </div>
+              <br>
+              <div class="group">      
+                <input name="image" type="text" placeholder="Image" required>
+              </div>
+              <br>
+              <div class="group">      
+                <input name="description" type="text" placeholder="description" required>
+          
+              </div>
+              <br>
+              <button class="btn btn-lg btn-danger">Create</button>
+              <br><br>
+        </form>
+        </div>
+    
+
+
+<br><br><br><br>
+</div>
+
+<% } else { %>
+
+  <div style="text-align:center;" lass="container">
+    <br><br><br><br>
+    <img src="https://image.flaticon.com/icons/png/512/1014/1014173.png" width="300" height="330"> 
+    <h1 style="font-weight:200;font-size:70px;">Forbidden to access this page</h1>
+    <br>
+    <a href="/" class="button3-md">Back to Dashboard</a>
+    <br><br><br><br><br><br>
+</div>
+
+<% } %>
+
+<% include ../partials/footer %> 

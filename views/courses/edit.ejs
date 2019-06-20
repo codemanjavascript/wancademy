@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <br>
+        <h1 style="font-size:80px;font-weight:100;">Edit "<%= course.name %>"</h1>
+        <br><hr>
+            <form action="/courses/<%= course.id %>?_method=PUT" method="POST" accept-charset="UTF-8" role="form">
+                <input class="input-field-new" type="text" name="course[name]" placeholder="Name of Course" value="<%= course.name %>" required>
+                <br><br>
+            
+                <input class="input-field-new" type="text" name="course[image]" placeholder="Course Image URL" value="<%= course.image %>" required>
+                <br><br>
+            
+                <input class="input-field-new" type="text" name="course[description]" placeholder="Course Description" value="<%= course.description %>" required>
+                <br><br>
+            
+                <button class="button3-md" type="submit">Submit</button>
+                <br><br>
+            
+            </form>
+    </div>
+</div>
+<% include ../partials/footer %>
+

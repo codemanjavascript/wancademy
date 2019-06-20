@@ -1,0 +1,17 @@
+<% include ../partials/header %> <!-- HEADER PARTIALS -->
+
+<div class="container">
+    <br><br><br><br><br><br><br>
+    <form action="/themes/<%= user_id %>?_method=PUT" method="POST">
+        <label for="theme">Color:</label>
+        <select id="theme" name="theme">
+            <option value="orange">Orange</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <input type="submit">
+    </form>
+</div>
+
+<% include ../partials/footer %> <!-- HEADER PARTIALS -->

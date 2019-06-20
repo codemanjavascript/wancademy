@@ -1,0 +1,108 @@
+<% include ../partials/header %>
+
+<style>
+     body{
+        
+    font-weight:100;
+    z-index:-10;
+    font-family: 'Open Sans', sans-serif;
+    }
+    .box {
+        z-index:10;
+  width: 80%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.overlay {
+    z-index:10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+    z-index:10;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+    z-index:10;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 95%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    z-index:10;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  z-index:10;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+@media screen and (max-width: 700px){
+  .box{
+    width: 100%;
+  }
+  .popup{
+      z-index:10;
+    width: 100%;
+  }
+}
+</style>
+<div class="jumbotron" style="background: #00c6ff;  /* fallback for old browsers */background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */height:450px;">
+    <div class="container">
+        <br><br><br>
+        <h1 id="intro-to-programming-jumbotron-h1">Introduction to Programming</h1>
+        <p id="intro-to-programming-jumbotron-p">New to programming? Where should you start? Read more!</p>
+        <br>
+        <a class="button3-md" id="fixedbutton" href="#popup1">Visual learner? Watch the video!</a>
+    </div>
+</div>
+
+<div class="container">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRYmV2P7bhnRZSrVukTBx2-uzUKsG5VgvnpDPPtTxn6F7sHHxsosVKOC9mP1y1Ke7GJIUb1jJDpJae9/embed?start=false&loop=false&delayms=60000" frameborder="0" width="1140" height="669" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<br><br>
+		<a class="close" href="#">&times;</a>
+		<iframe width="1160" height="515" src="https://www.youtube.com/embed/F_ln3XSl4F4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+</div>
+
+<br><br><br><br>
+<% include ../partials/footer %>

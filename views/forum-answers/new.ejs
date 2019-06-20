@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <br><br><br><br><br><br><br>
+        <h1 style="text-align: center;font-weight:100;font-size:50px;">Add New Comment</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/forums/<%= forum._id %>/answers" method="POST">
+                <div class="form-group">
+                    <input class="input-field-comment" type="text" name="answer[text]" placeholder="Your Comment 😂">
+                </div>
+                
+                <div class="form-group">
+                    <button class="button button3-long">Submit!</button>
+                </div>
+            </form>
+            <br>
+            <a href="/forums">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

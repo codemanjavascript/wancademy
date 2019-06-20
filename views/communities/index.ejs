@@ -1,0 +1,247 @@
+
+<% include ../partials/header %>
+<style>
+    #max-less{
+       height:150px;
+    width:240px;
+    }
+    body{
+        
+    font-weight:100;
+    z-index:-10;
+    font-family: 'Open Sans', sans-serif;
+    }
+    .box {
+        z-index:10;
+  width: 80%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+.overlay {
+    z-index:10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+    z-index:10;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+    z-index:10;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 75%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    z-index:10;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  z-index:10;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+@media screen and (max-width: 700px){
+  .box{
+    width: 100%;
+  }
+  .popup{
+      z-index:10;
+    width: 100%;
+  }
+}
+#fixedbutton {
+    height:100px;
+    width:100px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px; 
+    border-radius: 100%;
+    z-index:10;
+}
+
+.fa.fa-plus{
+    margin-top:7px;
+}
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+</style>
+
+<div class="jumbotron" style="height:370px;background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+  <div class="container">
+
+  <h1 style="color:white;font-weight:100;font-size:85px;">Communities <i class="fas fa-user-friends"></i></h1>
+  <h1 style="line-height:35px;color:white;font-weight:100;font-size:29px;">Communities are a place to discuss, ask, and talk in general!<br>Please read the <a href="/community-guidelines" style="text-decoration: none;font-weight:100;color:white;">community guidelines</a> before posting.</h1>
+  <br>
+
+  <br>
+  
+  </div>
+</div>
+
+<br>
+<div class="container">
+	<div class="row">
+	      <form action="/classes" method="GET" >
+        <div class="col-md-6">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                   
+                    <input name="search" type="text" class="form-control input-lg" placeholder="Search For Communities" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                          </form>
+                    </span>
+                </div>
+            </div>
+        </div>
+         </form>
+	</div>
+</div>
+<br>
+
+ 
+
+    
+    
+    <% if(!classes.length) { %>
+    <div class="container">
+        <br><br>
+        <h1> <span style="color:red;font-size:80px;font-family: 'Open Sans', sans-serif;"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <strong>Uh Oh!</strong></span> 
+        <br><br>
+        <span style="color:black;font-size:25px;font-family: 'Open Sans', sans-serif;">There is no classes. Add one your self by clicking on the plus button</span></h1>
+    </div>
+    <% } else { %>
+    
+    <% } %>
+
+<a type="button" id="fixedbutton" href="#popup1" class="button3-md button"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a>
+
+<br>
+<br>
+<br>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h1 style="font-size:60px;font-weight:100;"><strong>Suggest a class</strong></h1>
+		<br>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<form action="/classes" method="POST" accept-charset="UTF-8" role="form">
+    <div>
+            <input class="input-field-new" type="text" name="name" placeholder="Name of Class" required>
+        <br><br>
+    
+    <input class="input-field-new" type="text" name="image" placeholder="Image that represents your class" required>
+  <br><br>
+        <input class="input-field-new" name="description" placeholder="Short Description of your class" required></input>
+        
+  <br><br>
+  <h4>** Your community suggestion will be transferred to our admins to be approved or rejected **</h4>
+  <br>
+        <button class="button3-md">Submit</button>
+        
+        <br>
+        <br>
+        <a href="/classes" style="color:#00B2FF;"><strong>Go back</strong></a>
+</div>
+    </form>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+  <% classes.forEach(function(Class){ %>
+      <div class="col-md-4">
+           <a href="/classes/<%= Class._id %>"><img style="height:200px;width:320px;" src="<%= Class.image %>"></a>
+           <a href="/classes/<%= Class._id %>"><h2><%= Class.name %></h2></a>
+           <br>
+           <a href="/classes/<%= Class._id %>" class="button-green-small" type="button">Read More</a>
+        <br><br><br>
+      </div>
+        
+    <% }); %>
+
+    
+</div>
+     
+<div class="container">
+    <br>
+    
+     <h1><a href="#popup1"  class="button3-md">Suggest a community</a></h1> 
+</div>
+
+</div>
+
+<br><br><br><br>
+
+
+<% include ../partials/footer %> 

@@ -1,0 +1,36 @@
+
+<% include ./partials/header %>
+
+<style>
+	.form-signin-1
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+</style>
+<div class="jumbotron" style="background: #FF416C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ height:330px;">
+	<div class="container">
+		<br><br><br>
+		<h1 style="color:white;font-size:75px;"><strong>Enter your Educators Code</strong></h1>
+		
+	</div>
+	</div>
+</div>
+<div class="container">
+	
+<form action="/entereducatorscode" method="post" class="form-signin-1" id="login-form"  role="form" style="display: block;">
+  
+  <input style="width:900px;" name="teacherCode" type="text" class="form-control input-lg" placeholder="Educators Code (For Teachers)" />
+  <br><br>
+  <button class="button5-md">Submit Teacher Code</button>
+</form>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<% include ./partials/footer %> 

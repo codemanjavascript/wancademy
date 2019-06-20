@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+<style>
+          body{
+        font-family: 'Raleway', sans-serif;
+    font-weight:100;
+    
+    }
+      </style>
+      <div class="container">
+<br><br>
+    <h1 style="font-weight: 100;font-size:60px;" class="h1-title-1">Make Assignment to <span style="color:#22D380;"><strong><%= foundClass.name %></strong></span></h1>
+    <br><br><br>
+     <form action="/classes/<%= foundClass.id %>/posts" method="POST" accept-charset="UTF-8" role="form">
+    <div>
+            <input class="input-field-new" type="text" name="post[name]" placeholder="Name of Assignment" required>
+        <br><br>
+
+            <input class="input-field-new" type="text" name="post[description]" placeholder="Description of your Assignment" required>
+  <br><br>
+    
+    <input class="input-field-new" type="text" name="post[image]" placeholder="Image(s) that represent your Assignment">
+  <br><br>
+        <input class="input-field-new" name="post[video]" placeholder="Video(s) that represent your Assignment"></input>
+        
+  <br><br>
+          <input class="input-field-new" name="post[file]" placeholder="File(s) that represent your Assignment"></input>
+        
+  <br><br>
+        <button class="button button-green">Submit</button>
+        
+        <br>
+        <br>
+        <a href="/classes" style="color:blue"><strong>Go back</strong></a>
+</div>
+    </form>
+</div>
+
+
+<% include ../partials/footer %>

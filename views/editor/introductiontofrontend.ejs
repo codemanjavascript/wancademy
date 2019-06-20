@@ -1,0 +1,313 @@
+<% include ../partials/editorhead %>
+
+<style>
+
+html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
+
+#editor {
+    height: 400px;
+    width:100%;
+    
+}
+
+
+#iframe {
+	height:10000px;
+	overflow: scroll;
+	width:100%;
+	 border: 8px solid #00283F;
+	 padding:9px;
+
+}
+
+#iframe-2 {
+	height:560px;
+	overflow: scroll;
+	width:100%;
+	 padding:9px;
+
+}
+
+#fixedbutton-1 {
+    color:white;
+    position: fixed;
+    bottom: 20px;
+    right: 50px; 
+    z-index:10;
+    background:black;
+}
+
+#fixedbutton-2 {
+    color:white;
+    position: fixed;
+    bottom: 20px;
+    right: 560px; 
+    z-index:10;
+    background:#009EFF;
+}
+
+/* disable tag matching */
+.ace_editor .ace_marker-layer .ace_bracket { display: none }
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+<!--<i style=" z-index:10;font-size:30px;position: fixed;bottom: 205px;left: 570px;" class="fas fa-expand-arrows-alt"></i>-->
+
+<div class="row">
+  <div class="col-6">
+    
+ <textarea type="text" id="txt1"  name="txt1" hidden><h1>Hello World</h1></textarea>
+  <div id="editor">
+  </div>
+  
+  <iframe id='iframe' frameBorder="0">
+     
+  </iframe>
+
+ 
+ <!-- Large modal -->
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+    
+      <div class="modal-body">
+        <iframe id='iframe-2' frameBorder="0"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button onclick="Run()" type="button" class="btn btn-primary">Check Code</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  
+  
+  
+  <div class="col-6">
+  
+        <div style="padding:9px;"></div>
+        <ul class="nav nav-tabs" id="mytabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span style="color:#002439">Instructions</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span style="color:#002439">Video</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><span style="color:#002439">Hints</span></a>
+          </li>
+        </ul>
+        
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div style="padding-right:40px;">
+              <div style="padding:9px;"></div>
+              <div style="overflow:scroll;height:1000px;" >
+              <h1 style="font-size:35px;font-weight:600;">Welcome to Front-End Development! </h1>
+                <div style="padding:9px;"></div>
+               <h1 style="font-size:21px;font-weight:440;">Visual learner? Click the video tab! Before you get started with HTML (Hyper Text Markup Language), you will need to know what is programming! Programming or otherwise known as coding is the process of writing instructions for a computer. Its like instructions for cooking! <div style="padding:7px;"></div>1) Set the oven to 300 degrees <div style="padding:7px;"></div>2) Cook for two hours<br><br>These are basically instructions for the chef. Programming is all around you such as in lamps, stoplights, fridges, etc. <br>A great example of a front-end site is <a style="font-weight:600;color:##00283F;" href="https://www.netflix.com/" target="_blank">netflix.com</a><br><br><i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp;Your turn! Change the &lt;h1&gt; tag in between from <span style="font-weight:600;color:#00388C;">This is a heading</span> to <span style="font-weight:600;color:#00388C;">Hello World</span><br><br>Once you finish, click <strong style="font-weight:700;color:#00388C;">check code</strong> to see if your code is correct!</h1>
+               
+              </div>
+              <br>
+              </div>
+          </div>
+          
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <br>
+             
+            <iframe width="580" height="320" frameBorder="0" src="https://www.youtube-nocookie.com/embed/FSVb41ITpFU?rel=0&amp;showinfo=0"></iframe>
+          <br>
+           <div style="padding-right:40px;">
+          <hr>
+         
+          <h3>Instructions:</h3>
+          <h4 style="font-weight:300;"><i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp;Your turn! Change the &lt;h1&gt; tag in between from "This is a heading" to "Hello World"<br></h4>
+        </div>
+     
+              
+          </div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+             <div class="container">
+                  <br>
+                  <h2 class="one" style="font-size:25px;font-weight:600;"><i style="font-size:38px;color:#3A3939;" class="fas fa-sort-down"></i>&nbsp;1) First Hint </h2>
+        <div style="display:none;" class="two">
+            <div style="padding:5px;"></div>
+                    <p style="font-size:25px;font-weight:300;">Did you make sure to replace "This is a heading" to "Hello World"?</p>
+                    
+               <br>
+                </div>
+    
+        <h2 class="one1" style="font-size:25px;font-weight:600;"><i style="font-size:38px;color:#3A3939;" class="fas fa-sort-down"></i>&nbsp;2) Second Hint </h2>
+        <div style="display:none;" class="two1">
+             <div style="padding:5px;"></div>
+                    <p style="font-size:25px;font-weight:300;">Did you make sure to have capital H and captial W and no quotation marks?</p>
+                    
+
+                <br>
+                </div>
+                 <h2 class="one3" style="font-size:25px;font-weight:600;"><i style="font-size:38px;color:#3A3939;" class="fas fa-sort-down"></i>&nbsp;3) Third Hint </h2>
+        <div style="display:none;" class="two3">
+             <div style="padding:5px;"></div>
+                    <p style="font-size:25px;font-weight:300;">Did you make sure there are not any other lines of code?</p>
+                    
+
+                <br>
+                </div>
+        <h2 class="one2" style="font-size:25px;font-weight:600;"><i style="font-size:38px;color:#3A3939;" class="fas fa-sort-down"></i>&nbsp;3) Solution </h2>
+        <div style="display:none;" class="two2">
+             <div style="padding:5px;"></div>
+                    <p style="font-size:25px;font-weight:300;">&lt;h1&gt;Hello World&lt;/h1&gt;</p>
+                    <div style="padding:5px;"></div>
+
+                <br><br>
+                </div>
+          </div>
+          </div>
+        </div>
+       
+  
+  </div>
+  </div>
+  
+
+<script>
+
+
+  function update()
+{
+	var idoc = document.getElementById('iframe').contentWindow.document;
+var idoc2 = document.getElementById('iframe-2').contentWindow.document;
+	idoc.open();
+	idoc.write(editor.getValue());
+	idoc.close();
+	
+	idoc2.open();
+	idoc2.write(editor.getValue());
+	idoc2.close();
+}
+
+function activaTab(){
+    
+};
+
+function Run(){
+ var editor = ace.edit("editor");
+ var Code = editor.getSession().getValue();
+ var txt1 = document.getElementById("txt1").value;
+ $('.nav-tabs a[href="#contact-tab"]').tab('show');
+
+
+
+
+ if (txt1 == Code){
+      $( "#checkbox" ).addClass( ".far fa-check-square" ).removeClass( ".far fa-square" );
+      
+        swal({
+            title: "Good job!",
+            text: "You've just written your first code snippet!",
+            icon: "success",
+             closeOnClickOutside: false,
+             buttons: {
+                confirm: "Next Lesson",
+              }
+        }).then(function() {
+            window.location.href = "/editor/introductiontohtml/documentandtags";
+            
+            
+    });
+   
+   return false;
+    
+  
+  } else if(Code == "<h1>hello world</h1>"){
+     swal({
+  title: "Uh Oh!",
+  text: "Make sure the H in Hello and W in World are capitalized!",
+  icon: "error",
+  button: "Try Again",
+});
+       return false;
+       
+  } else if(Code == "hello world"){
+     swal({
+  title: "Uh Oh!",
+  text: "Don't forget the <h1></h1> tags!",
+  icon: "error",
+  button: "Try Again",
+});
+       return false;
+       
+  } else{
+            swal({
+          title: "Oh No!",
+          text: "Your code seems to be incorrect",
+          icon: "error",
+          buttons: ["Try Again", "View Solution"],
+          
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+            swal("<h1>Hello World</h1>", {
+              title: "Solution:",
+              icon: "info",
+              button: "Try Again"
+             
+            });
+          } 
+        });
+        
+         return false;
+    }
+
+}
+
+
+$(".one").click(function() {
+        $(".two").toggle();
+    });
+    
+    $(".one1").click(function() {
+        $(".two1").toggle();
+    });
+
+$(".one2").click(function() {
+        $(".two2").toggle();
+    });
+    $(".one3").click(function() {
+        $(".two3").toggle();
+    });
+function setupEditor()
+{
+  window.editor = ace.edit("editor");
+  editor.setTheme("ace/theme/cobalt");
+  editor.getSession().setMode("ace/mode/html");
+  editor.setValue(`<h1>This is a heading</h1>`,1); //1 = moves cursor to end
+   editor.renderer.setScrollMargin(13, 3);
+   
+  editor.getSession().on('change', function() {
+    update();
+  });
+
+  editor.focus();
+  
+  
+  editor.setOptions({
+    fontSize: "13pt",
+    showLineNumbers: true,
+    showGutter: true,
+    autoScrollEditorIntoView: true,
+    enableBasicAutocompletion: false, enableLiveAutocompletion: true
+  });
+
+  editor.setShowPrintMargin(false);
+  editor.setBehavioursEnabled(false);
+}
+
+setupEditor();
+update();
+  
+</script>

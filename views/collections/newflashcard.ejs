@@ -1,0 +1,19 @@
+<% include ../partials/header %> 
+<br><br><br><br><br><br><br>
+<div class="container">
+    <h1 style="font-size:60px;">Add New Flashcard:</h1>
+    <form action="/newflashcard" method="POST" accept-charset="UTF-8" role="form">
+                <hr><br>
+                <input class="input-field-new" type="text" name="flashcard[question]" placeholder="Term"  required>
+                <br><br> 
+                 <input class="input-field-new" type="text" name="flashcard[answer]" placeholder="Definition" required>
+                <br><br>
+                <br>
+                <button class="button button3-md" type="submit">Submit</button>
+                <br><br>
+            
+    </form>
+</div>
+
+
+<% include ../partials/footer %> 

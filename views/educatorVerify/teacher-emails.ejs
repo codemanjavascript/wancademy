@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <br> <br> 
+     <div class="container">
+     <% if(error && error.length > 0) { %>
+       <div class="alert alert-danger"><p><%=error %></p></div>
+     <% } %>
+     
+     <% if(success && success.length > 0) { %>
+       <div class="alert alert-success"><p><%= success %></p></div>
+     <% } %>
+  </div>
+    <br><br><br><br><br>
+    <h1 style="color:black;font-size:60px;"><strong>Get your <span style="color:#33FF77">teacher code</span></strong></h1>
+    <h4>With a teachers code, you will be able to get access to a special dashboard!</h4>
+
+<br>
+<form action="/teacher-email" method="POST">
+    <input class="input-field-new" type="email" name="email" placeholder="Your Email" required>
+    <br><br><br>
+    <input type="submit" class="button-green" value="Get Teacher Code">
+    <br><br>
+    <p>** Instructions will be provided to the email **</p>
+</form>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<% include ../partials/footer %>

@@ -1,0 +1,136 @@
+<% include ../../partials/header %>
+
+    <div style="height:300px;background: #396afc;  /* fallback for old browsers */background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */" class="jumbotron">
+        <br><br><br>
+        <h1 style="color:white;text-align:center;"><strong>Design Your Own Blog!</strong></h1>
+        <p style="color:white;text-align:center;">Article written by <a style="color:white;" href="https://yelp-camp-tommyschool.c9users.io/users/friends/5a5bac8a807ea7a2065901ee">Tommy Wan</a></p>
+    </div>
+
+    <div class="container">
+        <h1 ><strong>Introduction of Design and Blog</strong></h1>
+            <h4 style="font-size:24px;font-weight:100;">Hello all, hope all is well, Welcome to an article for creating your own blog! We will be learning about how to implement the skills you have learnt in the <strong><span style="color:#008FFF">css course</span></strong> to an HTML Site. We will start completely off scratch and feel free to share your creations!</a></h4>
+            <br>
+            <a class="button3-md">Share your Creation!</a>
+            <br>
+        <br><hr>
+        <h1>Prequisites:</h1>
+            <h3>- HTML Beginner Course <a href="/html">(Click here to be redirected)</a></h3>
+            <h3>- CSS Beginner Course <a href="/css">(Click here to be redirected)</a></h3>
+            <h3>- Bootstrap Course <a href="/boostrap">(Click here to be redirected)</a></h3>
+            <h3>- Thimble <a href="/boostrap">(Click here to be redirected)</a></h3>
+            <h3>- Your creative mind!</h3>
+            <br><hr>
+         
+        <h1><strong>Step <span style="color:#0093FF;">One</span>: Choose your code editor!</strong></h1>
+            <h3 style="font-size:22px;font-weight:100;">There are many code editors online and downloadable. Wancademy offers many courses about <strong><a href="/code-editors" style="color:#008FFF;text-decoration: underline;">code editors</a></strong> but today, we will use the beginner online code editor called "thimble."
+            If you are new to thimble, check out our thimble course. Login to Thimble and start a new project. Feel free to use your own code editor too!
+            </h3><br>
+            <img src="https://i.imgur.com/ZnMJmRs.png" style="height:350px;width:900px;">
+            <br>
+        <br><br>
+        
+          <h1><strong>Step <span style="color:#0093FF;">Two</span>: Set up code your portfolio's parameters</strong></h1>
+
+            <h3 style="font-size:22px;font-weight:100;">Delete EVERYTHING but the boilerplate. Css will stay the same</h3>
+            <br>
+            
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;My Blog&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        <br><br>
+        
+    <h1><strong>Step <span style="color:#0093FF;">Three</span>: Add Bootstrap Sources</strong></h1>
+    <h4 style="font-size:24px;font-weight:100;">Add these links and scripts before the end of the head tag</h4>
+    <pre>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot; integrity=&quot;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&quot; crossorigin=&quot;anonymous&quot;&gt;
+    </pre>
+           <h1><strong>Step <span style="color:#0093FF;">Four</span>: Create Thumbnails with Bootstrap</strong></h1>
+            <h3 style="font-size:22px;font-weight:100;"> Now that we have the basic design down, we need some sort of way to express what you want on your portfolio such as photos, videos, or projects you have worked on. Look at the folowing code below using bootstrap. Feel free and personalize it! It's your blog! Put the following code in the body tag
+            <br><br>
+            <pre>
+&lt;div class=&quot;span8&quot;&gt;
+    &lt;h1&gt;Alice in Wonderland, part dos&lt;/h1&gt;
+    &lt;p&gt;'You ought to be ashamed of yourself for asking such a simple question,' added the Gryphon; and then they both sat silent and looked at poor Alice, who felt ready to sink into the earth. At last the Gryphon said to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!' and he went on in these words:
+    'Yes, we went to school in the sea, though you mayn't believe it&mdash;'
+    'I never said I didn't!' interrupted Alice.
+    'You did,' said the Mock Turtle.&lt;/p&gt;
+    &lt;div&gt;
+        &lt;span class=&quot;badge badge-success&quot;&gt;Posted 2012-08-02 20:47:04&lt;/span&gt;&lt;div class=&quot;pull-right&quot;&gt;&lt;span class=&quot;label&quot;&gt;alice&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;story&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;blog&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;personal&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt; 
+    &lt;hr&gt;
+    &lt;h1&gt;Revolution has begun!&lt;/h1&gt;
+    &lt;p&gt;'I am bound to Tahiti for more men.'
+        'Very good. Let me board you a moment&mdash;I come in peace.' With that he leaped from the canoe, swam to the boat; and climbing the gunwale, stood face to face with the captain.
+        'Cross your arms, sir; throw back your head. Now, repeat after me. As soon as Steelkilt leaves me, I swear to beach this boat on yonder island, and remain there six days. If I do not, may lightning strike me!'A pretty scholar,' laughed the Lakeman. 'Adios, Senor!' and leaping into the sea, he swam back to his comrades.&lt;/p&gt;
+    &lt;div&gt;
+        &lt;span class=&quot;badge badge-success&quot;&gt;Posted 2012-08-02 20:47:04&lt;/span&gt;&lt;div class=&quot;pull-right&quot;&gt;&lt;span class=&quot;label&quot;&gt;alice&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;story&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;blog&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;personal&lt;/span&gt;&lt;/div&gt;
+    &lt;/div&gt;     
+    &lt;hr&gt;
+&lt;/div&gt;
+
+            </pre>
+            
+            <h1><strong>Step <span style="color:#0093FF;">Five</span>: Bootstrap UI</strong></h1>
+            <h3 style="font-size:22px;font-weight:100;"> UI Stands for User Interface. That means we will be adding some new design on our page. We will add a jumbotron with a image behind it.</h3>
+                 <pre>
+&lt;div class=&quot;jumbotron&quot; style=&quot;background-color:yellow&quot;&gt;
+    &lt;h1 style=&quot;text-align:center;font-size:80px&quot;&gt;Welcome to my blog!&lt;/h1&gt;
+&lt;/div&gt;
+                 </pre>
+            <h1>Next Steps:</h1>
+            <h3>What are you going to do now with your portfolio? There's not alot of options but to put it online! You can also improve this site with your own skills. Coding is about expeirmenting with new ideas! We also have a follow up project that combines the portfolio with the blog! <a href="/uploadWebsite" target="_blank" style='font-weight:900;'>Click here to learn how to put your portfolio online with your own domain name!</a></h3>
+            
+            <hr><br>
+            <h1>Full Code</h1>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;My Blog&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot; integrity=&quot;sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm&quot; crossorigin=&quot;anonymous&quot;&gt;
+    &lt;div class=&quot;jumbotron&quot; style=&quot;background-color:yellow&quot;&gt;
+      &lt;h1 style=&quot;text-align:center;font-size:80px&quot;&gt;Welcome to my blog!&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;span8&quot;&gt;
+      &lt;h1&gt;Alice in Wonderland, part dos&lt;/h1&gt;
+      &lt;p&gt;'You ought to be ashamed of yourself for asking such a simple question,' added the Gryphon; and then they both sat silent and looked at poor Alice, who felt ready to sink into the earth. At last the Gryphon said to the Mock Turtle, 'Drive on, old fellow! Don't be all day about it!' and he went on in these words:
+        'Yes, we went to school in the sea, though you mayn't believe it&mdash;'
+        'I never said I didn't!' interrupted Alice.
+        'You did,' said the Mock Turtle.&lt;/p&gt;
+      &lt;div&gt;
+        &lt;span class=&quot;badge badge-success&quot;&gt;Posted 2012-08-02 20:47:04&lt;/span&gt;&lt;div class=&quot;pull-right&quot;&gt;&lt;span class=&quot;label&quot;&gt;alice&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;story&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;blog&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;personal&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt; 
+      &lt;hr&gt;
+      &lt;h1&gt;Revolution has begun!&lt;/h1&gt;
+      &lt;p&gt;'I am bound to Tahiti for more men.'
+        'Very good. Let me board you a moment&mdash;I come in peace.' With that he leaped from the canoe, swam to the boat; and climbing the gunwale, stood face to face with the captain.
+        'Cross your arms, sir; throw back your head. Now, repeat after me. As soon as Steelkilt leaves me, I swear to beach this boat on yonder island, and remain there six days. If I do not, may lightning strike me!'A pretty scholar,' laughed the Lakeman. 'Adios, Senor!' and leaping into the sea, he swam back to his comrades.&lt;/p&gt;
+      &lt;div&gt;
+        &lt;span class=&quot;badge badge-success&quot;&gt;Posted 2012-08-02 20:47:04&lt;/span&gt;&lt;div class=&quot;pull-right&quot;&gt;&lt;span class=&quot;label&quot;&gt;alice&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;story&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;blog&lt;/span&gt; &lt;span class=&quot;label&quot;&gt;personal&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;     
+      &lt;hr&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+</html>
+    </div>
+
+
+<br><br><br><br><br>
+<% include ../../partials/footer %> <!-- HEADER PARTIALS -->

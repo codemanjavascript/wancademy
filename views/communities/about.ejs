@@ -1,0 +1,200 @@
+<% include ../partials/header %>
+
+<style>
+    .jumbotron{
+       background:url(https://s26.postimg.org/wpbctzlbt/darkness.png);
+        height:320px;
+        margin-bottom:0px;
+    }
+    .main-nav,
+.main {
+  position: relative; 
+}
+.main-nav {
+  background: #fff;
+  height: 80px;
+  z-index: 1;
+  margin-bottom: -80px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#28ea6f+0,28ea6f+100 */
+background: #28ea6f; /* Old browsers */
+background: -moz-linear-gradient(top, #28ea6f 0%, #28ea6f 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #28ea6f 0%,#28ea6f 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #28ea6f 0%,#28ea6f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28ea6f', endColorstr='#28ea6f',GradientType=0 ); /* IE6-9 */
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+.main-nav div {
+  text-align: center;
+  
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+.main-nav div a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform:uppercase;
+  color: rgba(0, 35, 122, 0.5);
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+}
+.main-nav div a:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+#center{
+    text-align:center;
+}
+   .box {
+        z-index:10;
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+.overlay {
+    z-index:10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+    z-index:10;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+    z-index:10;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 75%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    z-index:10;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  z-index:10;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  
+}
+@media screen and (max-width: 700px){
+  .box{
+    width: 100%;
+  }
+  .popup{
+      z-index:10;
+    width: 100%;
+  }
+}
+</style>
+
+
+<div class="jumbotron">
+  <div style="text-align:center;">
+    <br><br><br>
+      <h1 style="color:white;font-size:90px;"><%= classes.name %></h1>
+  </div>
+</div>
+<nav class="main-nav">
+  <div>
+    <a href="/classes/<%= classes._id %>" style="font-family: 'Raleway', sans-serif;">Assignments</a>
+    <a style="font-family: 'Raleway', sans-serif;" class="#">Classroom</a>
+    <a style="font-family: 'Raleway', sans-serif;" class="#"><strong>About</strong></a>
+  </div>
+</nav>
+
+
+<div class="container">
+    
+     <div id="popup1" class="overlay">
+	<div class="popup">
+	  <a class="close" href="#">&times;</a>
+		<div class="content">
+		 
+		 <h1 style="font-size:60px;color:red;"><strong>404 Error</strong></h1>
+	  <div class="container">
+    <br><br><br><br><br><br><br>
+    <<!--form action="/themes/<%= currentUser.id %>?_method=PUT" method="POST">
+        <label for="theme">Color:</label>
+        <select id="theme" name="theme">
+            <option value="orange">Orange</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <input type="submit">
+    </form>-->
+</div>
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+	  </div>
+	  </div>
+    
+    
+    <br><br><br>
+    
+    <div class="col-md-6 col-md-offset-3">
+      <br><br>
+    <h1 style="text-align:center;"><strong>Description of this class:</strong></h1>
+    
+    <h3 style="text-align:center;"><%= classes.description %> </h3>
+    <br><br> 
+    
+    <% if(currentUser && classes.author.id.equals(currentUser.id)) { %>
+    <div  id="center">
+                    <a href="/classes/<%= classes._id %>/edit"><button  class="button3-md">Edit Class</button ></a>
+                    <a href="#popup1"><button  class="button4-md">Edit Theme</button ></a>
+                    <form class="delete-form" action="/classes/<%= classes._id %>?_method=DELETE" method="POST">
+                            <button class="button5-md" id="delete">Delete Class</button>
+                        </form>
+            </div>
+            
+      </div>   
+      <% } %>
+   
+    <br><br><br><br><br><br>
+  
+
+    
+    
+</div>

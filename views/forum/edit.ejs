@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+          body{
+        font-family: 'Raleway', sans-serif;
+    font-weight:200;
+    
+    }
+      </style>
+        <% if(!currentUser){ %>
+        <title>Wancademy Forums</title>
+        <% } else { %>
+        <title>Welcome back <%= currentUser.username %></title>
+        <% } %>
+        
+         <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//bookmark1600.png" type="image/x-icon" />
+        <!--BOOTSTRAP CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+        <!--LINK TO ANIMATE.CSS-->
+        <link rel="stylesheet" href="/stylesheets/animate.css">
+        <!--FONT AWESOME-->
+        <script src="https://use.fontawesome.com/9ce04c304f.js"></script>
+        <!--LINK TO MAIN.JS-->
+        <script type="text/javascript" src="/scripts/main.js"></script>
+        <!--GOOGLE FONTS-->
+        <link href="https://fonts.googleapis.com/css?family=Asar" rel="stylesheet">
+        <!--SweetAlert JS-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.js" ></script>
+        <!--SweetAlert CSS-->
+        <link rel="stylesheet" src="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
+    </head>
+<body>
+        <style>
+            /*Header Styles*/
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  z-index:5;
+  justify-content: space-between;
+  padding: 12px 30px;
+  background: #000000;
+}
+@media (max-width: 740px) {
+  .header-wrapper {
+     z-index:-1;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  header nav {
+    margin-top: 20px; 
+  }
+  .container {
+     padding-top: 20px; 
+  }
+  header {
+    position: relative;
+    margin-bottom: 0;
+  }
+  .container {
+    padding-top: 100px; 
+  }
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+header a {
+  padding: 0 12px;
+  margin: 0;
+}
+.nav-links {
+  color: #33FF77;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.4s
+}
+.nav-links:hover {
+  color: #33FF77;
+  text-decoration: none;
+}
+.nav-links.active {
+  color: #33FF77; 
+  text-decoration: none;
+}
+
+.dropdown {
+  display: inline-block; 
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #111;
+  padding: 10px 0;
+}
+.dropdown:hover .dropdown-content,
+.dropdown span:focus ~ .dropdown-content
+{
+  display: block; 
+}
+.dropdown-content > a {
+ display: block;
+ margin: 10px 0;
+}
+.nav-links {
+  color: white;
+  font-size: 20px;
+}
+.nav-links:hover {
+  color: #69f;
+}
+.nav-links.active {
+  color: #69f; 
+}
+.thumbnail img{
+    width:100%;
+}
+.thumbnail{
+    padding: 0;
+}
+.thumbnail .caption-full{
+    padding:12px;
+}
+.green{
+    color:#33FF77;
+}
+.green-dark{
+    color:#26DB73;
+}
+.hidden{
+    display:hidden;
+}
+#z{
+  z-index:1;
+}
+.button3-md {
+    text-align:center;
+    font-weight:200;
+     background-color: white; 
+    color: black; 
+    border: 2px solid #06B6F9;
+    font-size: 25px;
+    transition-duration: 1s;
+     padding:15px;
+}
+
+.button3-md:hover {
+     background-color: blue;
+    color: white;
+    transition: 0.4s;
+}
+hr{
+  border-top: 1px solid #8c8b8b;
+}
+.input-field-new{
+    font-size:18px;
+    width:80%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    color:black;
+    border: 3px solid black;
+
+}
+.input-field-new:focus{
+    transition-duration: 0.4s;
+    background:white;
+    border:3px solid black;
+    outline: none;
+}
+
+        </style>
+  <header>
+    <div class="header-wrapper" style="z-index:5;">
+        <a herf="/campgrounds"><h1 id="logo"><i class="fa fa-bookmark-o" aria-hidden="true"></i>&nbsp;<span style="color:#00B2FF;">Wan</span>cademy <span style="color:#00B2FF;">Forums</span></h1></a>
+        <nav>
+        <a href="/" class=" nav-links" style="color:#00B2FF;"> Home <i class="fa fa-home" aria-hidden="true"></i></a>
+        <% if(!currentUser){ %>
+        <div class="dropdown">
+          <a class="nav-links" style="nav-links:hover{color:#33FF77;}">Courses <i class="fa fa-book" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+            <a href="/la" class="nav-links">Reading</a>
+            <a href="/math" class="nav-links">Mathamatics</a>
+            <a href="/art" class="nav-links">Art</a>
+            <a href="/music" class="nav-links">Music</a>
+            <a href="/science" class="nav-links">Science</a>
+            <a href="/code" class="nav-links">Programming</a>
+          </div>
+        </div>
+         <a href="/login" class="nav-links">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+         <a href="/register" class="nav-links">Register <i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+         <% } else { %>
+         
+         <div style="z-index:1;" class="dropdown">
+          <a style="z-index:1;" class="nav-links">Academy <i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+            <a href="/classes" class="nav-links">My Classrooms</a>
+            <a href="/courses" class="nav-links">My Courses</a>
+             <a href="/collections" class="nav-links">Flashcards</a>
+             <a href="/forums" class="nav-links">Forums</a>
+          </div>
+        </div>
+        <div style="z-index:1;" class="dropdown">
+          <a style="z-index:1;" class="nav-links">Courses <i class="fa fa-address-book" aria-hidden="true"></i></a>
+          <div class="dropdown-content">
+            <a href="/la" class="nav-links">Reading</a>
+            <a href="/math" class="nav-links">Mathamatics</a>
+            <a href="/art" class="nav-links">Art</a>
+            <a href="/music" class="nav-links">Music</a>
+            <a href="/science" class="nav-links">Science</a>
+            <a href="/programming" class="nav-links">Programming</a>
+            <a href="/courses" class="nav-links">View All Courses</a>
+          </div>
+        </div>
+       
+       
+       <div class="dropdown">
+          <a class="nav-links">Logged in as <%= currentUser.username %></a>
+          <div class="dropdown-content">
+            <a href="/users/friends/<%= currentUser._id %>" class="nav-links">My Profile</a>
+            <a href="/todos" class="nav-links">Todo List</a>
+            <a href="/forums" class="nav-links">Forums</a>
+            <a href="/logout" class="nav-links">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+          </div>
+        </div>
+         <% } %>
+      </nav>
+    </div>
+</header>
+<br><br>
+<div class="container">
+    <div class="row">
+        <h1 style="font-size:67px;"><strong>Edit Your Post!</strong></h1>
+        <div style="width: 100%; margin: 25px auto;">
+            <form action="/forums/<%= forum._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="input-field-new" type="text" name="forum[name]" value="<%= forum.name %>">
+                </div>
+                <div class="form-group">
+                    <input class="input-field-new" type="text" name="forum[question]" value="<%= forum.question %>">
+                </div>
+                <div class="form-group">
+                    <button class="button3-md">Submit!</button>
+                </div>
+            </form>
+            <a href="/forums">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

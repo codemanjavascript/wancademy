@@ -1,0 +1,14 @@
+<title>Stripe Donation | Wancademy</title>
+<link rel="shortcut icon" href="https://i.imgur.com/z28blXz.png" type="image/x-icon" />
+<div style="text-align:center;">
+    
+<br><br><br>    
+<br><br><br>
+<form action="/charge" method="POST">
+    <article>
+        <label>Amount: $5.00</label>
+    </article>
+    <script src="//checkout.stripe.com/v2/checkout.js" class="stripe-button" data-key="<%= keyPublishable %>"  data-locale="auto" data-description="Sample Charge"data-amount="500"> </script>
+</form>
+<a href="/donate">Back to donate page</a>
+</div>
