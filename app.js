@@ -50,7 +50,7 @@ var commentRoutes    = require("./routes/comments"),
 require('dotenv').config()
 //Mongo connect locally    
  mongoose.connect("mongodb://localhost/yelp_camp_v10");
- 
+ //ef
 //Mongo using Mlab
 //mongoose.connect("mongodb://Tommy:8328783999@ds147681.mlab.com:47681/wancademy");
 
