@@ -58,7 +58,7 @@ Current To-Do (as of June 3,2018)
 1) Css Projects
 1) Javascript Projects
 Middle ware for all lessons so they must login to access lessons
-
+add animations to landing
 
 use brillant as a tool for landing 
 2) Finish path curriculums and create pages for them
