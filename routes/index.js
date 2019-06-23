@@ -20,6 +20,33 @@ function escapeRegex(text){
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");  
 }
 
+//////*Mathematical Courses*//////
+
+/*pre-algebra*/
+router.get("/pre-algebra", function(req, res) {
+    res.render("mathematics/pre-algebra") 
+ });
+
+/*algebra 1*/
+router.get("/algebra-1", function(req, res) {
+    res.render("mathematics/algebra-1") 
+ });
+
+ /*geometry*/
+router.get("/geometry", function(req, res) {
+    res.render("mathematics/geometry") 
+ });
+
+ /*algebra 2*/
+router.get("/algebra-2", function(req, res) {
+    res.render("mathematics/algebra-2") 
+ });
+
+
+
+
+
+
 /*biology*/
 router.get("/biology", function(req, res) {
    res.render("biology/index") 
