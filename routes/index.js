@@ -95,6 +95,17 @@ router.get("/culture", function(req, res) {
     res.render("spanish/culture") 
  });
 
+//////*History Courses*//////
+
+/*World History*/
+router.get("/world-history", function(req, res) {
+    res.render("history/world-history") 
+ });
+/*U.S History*/
+ router.get("/us-history", function(req, res) {
+    res.render("history/us-history") 
+ });
+
 
 router.get("/editor/introduction-to-frontend", function(req, res) {
    res.render("editor/introductiontofrontend") ;
