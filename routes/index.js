@@ -117,6 +117,17 @@ router.get("/comp-sci", function(req, res) {
     res.render("coding/ai") 
  });
 
+//////*Music Courses*//////
+
+/*Composition*/
+router.get("/composition", function(req, res) {
+    res.render("music/composition") 
+ });
+/*Theory*/
+ router.get("/theory", function(req, res) {
+    res.render("music/theory") 
+ });
+
 
 router.get("/editor/introduction-to-frontend", function(req, res) {
    res.render("editor/introductiontofrontend") ;
