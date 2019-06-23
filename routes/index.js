@@ -106,6 +106,17 @@ router.get("/world-history", function(req, res) {
     res.render("history/us-history") 
  });
 
+//////*Coding Courses*//////
+
+/*Introduction to Computer Science*/
+router.get("/comp-sci", function(req, res) {
+    res.render("codingy/comp-sci") 
+ });
+/*Artificial Inteligence*/
+ router.get("/ai", function(req, res) {
+    res.render("coding/ai") 
+ });
+
 
 router.get("/editor/introduction-to-frontend", function(req, res) {
    res.render("editor/introductiontofrontend") ;
