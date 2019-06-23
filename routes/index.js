@@ -44,16 +44,18 @@ router.get("/algebra-2", function(req, res) {
 
 
 //////*English Courses*//////
+
+/*English 1*/
 router.get("/english-1", function(req, res) {
     res.render("english/english-1") 
  });
 
-/*algebra 1*/
+/*English 2*/
 router.get("/english-2", function(req, res) {
     res.render("english/english-2") 
  });
 
- /*geometry*/
+ /*English 3*/
 router.get("/english-3", function(req, res) {
     res.render("english/english-3") 
  });
@@ -72,6 +74,26 @@ router.get("/chemistry", function(req, res) {
 router.get("/physics", function(req, res) {
    res.render("physics/index") 
 });
+
+//////*Spanish Courses*//////
+
+/*Spanish 1*/
+router.get("/spanish-1", function(req, res) {
+    res.render("spanish/spanish-1") 
+ });
+/*Spanish 2*/
+ router.get("/spanish-2", function(req, res) {
+    res.render("spanish/spanish-2") 
+ });
+/*Spanish 3*/
+ router.get("/spanish-3", function(req, res) {
+    res.render("spanish/spanish-3") 
+ });
+
+/*Culture*/
+router.get("/culture", function(req, res) {
+    res.render("spanish/culture") 
+ });
 
 
 router.get("/editor/introduction-to-frontend", function(req, res) {
