@@ -43,9 +43,22 @@ router.get("/algebra-2", function(req, res) {
  });
 
 
+//////*English Courses*//////
+router.get("/english-1", function(req, res) {
+    res.render("english/english-1") 
+ });
 
+/*algebra 1*/
+router.get("/english-2", function(req, res) {
+    res.render("english/english-2") 
+ });
 
+ /*geometry*/
+router.get("/english-3", function(req, res) {
+    res.render("english/english-3") 
+ });
 
+//////*Science Courses*//////
 
 /*biology*/
 router.get("/biology", function(req, res) {
