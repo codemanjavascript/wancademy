@@ -24,7 +24,7 @@ function escapeRegex(text){
 
 /*pre-algebra*/
 router.get("/pre-algebra", function(req, res) {
-    res.render("mathematics/pre-algebra") 
+    res.render("mathematics/pre-algebra.ejs") 
  });
 
 /*algebra 1*/
