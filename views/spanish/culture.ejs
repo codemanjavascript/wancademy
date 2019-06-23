@@ -1,0 +1,172 @@
+<% include ../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #0931C5;  /* fallback for old browsers */
+        height:250px;
+    }
+    a:hover{
+        color:#009BFF;
+        transition:0.2s;
+    }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #D10101;
+      border-color: #D10101;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:6px;"></div>
+        <h1 style="text-align:center;color:white;font-size:80px;font-weight:600;">Culture</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#doctags" role="tab" aria-controls="home">1) What is Physics?</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#hp" role="tab" aria-controls="profile">2) Why Physics Matter</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#links" role="tab" aria-controls="messages">3) Careers in Physics</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#images" role="tab" aria-controls="settings">4) How to Study for Physics</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#buttons" role="tab" aria-controls="settings">5) One Dimensional Physics</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#lists" role="tab" aria-controls="messages">6) Two Dimensional Physics?</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#inline" role="tab" aria-controls="messages">7) Forces</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#commentsdivs" role="tab" aria-controls="settings">8) Newtons Laws</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">9) Centrietal Force and Gravitation</a>
+                <!--Change everything here and beyond-->
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">10) Impacts</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">11) Linear Momentum</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">12) Torque and angular momentum</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">13) Oscillations and mechanical waves</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">14) Thermodynamics</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">15) Fluids</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">16) Electricity</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">17) Circuits</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">18) Electromagnets</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">19) Optics</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">20) Relativity</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">21) Quantam Physics</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">22) Astronomy</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">23) Applications of Physics</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">24) Final Assesment</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                <!--Documents and Tags-->
+                <div class="tab-pane fade show active" id="doctags" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>An Introduction to Biology</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to tags and you learn how to declare an HTML document and you'll apply to some simple examples!</h5>
+                    <br>
+                    <img src="https://i.imgur.com/b3kyHDn.png" width="510" height="300">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/documentandtags" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Heading and paragraphs-->
+                <div class="tab-pane fade" id="hp" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Headings and Paragraphs</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to different types of headings <br>(h1-h6) and the paragraph tag (p), using the tags formula used in the previous lesson. </h5>
+                    <br>
+                    <img src="https://i.imgur.com/M2m5iu3.png" width="350" height="320">
+                    <img src="https://i.imgur.com/S8ecvbn.png" width="360" height="220">
+                    <br><br>
+                    <a href="/html" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Links-->
+                <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Introduction to Links</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to links: Locally and Externally</h5>
+                        <br>
+                        <img src="https://i.imgur.com/8YvCdxj.png" width="630" height="160">
+                        <br><br>
+                        <a href="/editor/introductiontohtml/links" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Images-->
+                <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="list-settings-list">
+                    <h1>Introduction to Images</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to create an image from online and locally. You will also use the "alt" attribute, width, height, and integrate image and links. </h5>
+                    <br>
+                    <img src="https://i.imgur.com/3UZdxuF.png" width="598" height="210">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/images" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Buttons-->
+                <div class="tab-pane fade" id="buttons" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Introduction to Buttons</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will create buttons, use them as links, and learn to style them!</h5>
+                        <br>
+                        <img src="https://i.imgur.com/Djrgg8z.png" width="430" height="330">
+                        <br><br>
+                        <a href="/editor/introductiontohtml/buttons" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Lists-->
+                <div class="tab-pane fade" id="lists" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Introduction to Lists</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to use tags such as unordered and ordered lists along with list-style-types.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/HkexHEn.png" width="430" height="330">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/lists" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <!--Inline-->
+                <div class="tab-pane fade" id="inline" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Inline Stylings</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the style attribute, background color, text color, fonts, text-size, and alignments.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/Jgd3bRG.png" width="550" height="430">
+                        <br><br>
+                        <a href="/editor/introductiontohtml/inline-style" href="/html" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Comments and Divs-->
+                <div class="tab-pane fade" id="commentsdivs" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Comments and Divs</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished the beginner HTML course! Here are what we recommend for you to do next:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary disabled" style="color:white;"><i class="fas fa-lock"></i> HTML Quiz #1</a>
+                    <a class="btn btn-primary" style="color:white;">Introduction to CSS</a>
+                    <a class="btn btn-primary" style="color:white;">Code Your Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../partials/footer %>
