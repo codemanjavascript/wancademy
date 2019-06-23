@@ -110,7 +110,7 @@ router.get("/world-history", function(req, res) {
 
 /*Introduction to Computer Science*/
 router.get("/comp-sci", function(req, res) {
-    res.render("codingy/comp-sci") 
+    res.render("coding/comp-sci") 
  });
 /*Artificial Inteligence*/
  router.get("/ai", function(req, res) {
