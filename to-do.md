@@ -50,18 +50,10 @@ Change to Learn Science and Code?
 
 Current To-Do (as of June 3,2018)
 ----------------------
-1) Consistancy in font size, jumbotron size, font weight
-1) HTML, CSS, JS Beginner Courses
-1) HTML, CSS, JS Intermediate Courses
-2) HTML, CSS, JS Advanced Courses
-1) HTML Projects
-1) Css Projects
-1) Javascript Projects
+
 Middle ware for all lessons so they must login to access lessons
 add animations to landing
-
-use brillant as a tool for landing 
-2) Finish path curriculums and create pages for them
+1) Make Algebra 1, Geometry, Spanish 1, Spanish 3, etc. cuirriculum
 2) put stuff on profile
 3) premium
 4) Forum Redo and filters (bans)

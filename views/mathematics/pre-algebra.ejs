@@ -1,7 +1,7 @@
 <% include ../partials/header %> <!-- HEADER PARTIALS -->
 <style>
     .jumbotron{
-        background: #FF4D4D;  /* fallback for old browsers */
+        background: #B47AFE;  /* fallback for old browsers */
         height:250px;
     }
     a:hover{
@@ -11,8 +11,8 @@
     .list-group-item.active {
       z-index: 2;
       color: #fff;
-      background-color: #00B55D;
-      border-color: #00B55D;
+      background-color: #B47AFE;
+      border-color: #B47AFE;
     }
 </style>
 <div class="jumbotron">
@@ -30,41 +30,35 @@
         <!--Vertical Buttons-->
         <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#doctags" role="tab" aria-controls="home">1) What is Biology?</a> <!-- how to study biology-->
-                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#hp" role="tab" aria-controls="profile">2) Why Biology Matters</a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#links" role="tab" aria-controls="messages">3) Careers in Biology</a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#links" role="tab" aria-controls="messages">4) How to Study for Biology/a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#images" role="tab" aria-controls="settings">4) Basic Chemistry in Biology</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#buttons" role="tab" aria-controls="settings">6) pH Scale, Acids, & Bases</a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#lists" role="tab" aria-controls="messages">7) What is Carbon?</a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#inline" role="tab" aria-controls="messages">8) The Biomolecues</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#commentsdivs" role="tab" aria-controls="settings">9) Energy and Enzymes</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">10) The Cell</a>
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) What is Algebra?</a> <!-- how to study biology-->
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#whole" role="tab" aria-controls="profile">2) Whole Numbers</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#integers" role="tab" aria-controls="messages">3) Integers</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#negative" role="tab" aria-controls="messages">4) Negative Numbers</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#fractions" role="tab" aria-controls="messages">5) Fractions</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#decimals" role="tab" aria-controls="settings">6) Decimals</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#method" role="tab" aria-controls="settings">7) Algebraic Method</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#ratio" role="tab" aria-controls="messages">8) Ratio</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#proportions" role="tab" aria-controls="messages">9) Proportions</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#percent" role="tab" aria-controls="settings">10) Percents</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#geometry" role="tab" aria-controls="settings">11) Geometry Basics</a>
                 <!--Change everything here and beyond-->
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">11) Transportation through the Membrane</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">12) Celluar Respiration</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">13) Mitosis</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">14) Miosis</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">15) Genetics</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">16) DNA</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">17) The Central Dogma</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">18) Gene Regulation</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">19) Biotechnology</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">20) Bacteria and Viruses</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">21) Classification</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">22) Evolution</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">23) Earth's Magnificant Story</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">24) Plants</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">25) Human Systems</a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">26) Final Assesment</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#measurement" role="tab" aria-controls="settings">12) Measurement Basics</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#probability" role="tab" aria-controls="settings">13) Probability</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#statistics" role="tab" aria-controls="settings">14) Statistics</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#plane" role="tab" aria-controls="settings">15) Coordinate Plane</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#exponents" role="tab" aria-controls="settings">16) Exponents</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#radicals" role="tab" aria-controls="settings">17) Radicals</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#sn" role="tab" aria-controls="settings">18) Scientific Notation</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#final" role="tab" aria-controls="settings">19) Final Assesment</a>
+                
             </div>
         </div>
         <!--Info about lesson-->
         <div class="col-8">
             <div class="tab-content" id="nav-tabContent">
-                <!--Documents and Tags-->
-                <div class="tab-pane fade show active" id="doctags" role="tabpanel" aria-labelledby="list-home-list">
-                    <h1>An Introduction to Biology</h1>
+               
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>What is Algebra?</h1>
                     <hr>
                     <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to tags and you learn how to declare an HTML document and you'll apply to some simple examples!</h5>
                     <br>
@@ -72,9 +66,9 @@
                     <br><br>
                     <a href="/editor/introductiontohtml/documentandtags" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
-                <!--Heading and paragraphs-->
-                <div class="tab-pane fade" id="hp" role="tabpanel" aria-labelledby="list-profile-list">
-                    <h1>Headings and Paragraphs</h1>
+                
+                <div class="tab-pane fade" id="whole" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Whole Numbers</h1>
                     <hr>
                     <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to different types of headings <br>(h1-h6) and the paragraph tag (p), using the tags formula used in the previous lesson. </h5>
                     <br>
@@ -83,9 +77,9 @@
                     <br><br>
                     <a href="/html" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
-                <!--Links-->
-                <div class="tab-pane fade" id="links" role="tabpanel" aria-labelledby="list-messages-list">
-                    <h1>Introduction to Links</h1>
+          
+                <div class="tab-pane fade" id="integers" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Integers</h1>
                         <hr>
                         <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to links: Locally and Externally</h5>
                         <br>
@@ -93,9 +87,9 @@
                         <br><br>
                         <a href="/editor/introductiontohtml/links" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
-                <!--Images-->
-                <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="list-settings-list">
-                    <h1>Introduction to Images</h1>
+       
+                <div class="tab-pane fade" id="negative" role="tabpanel" aria-labelledby="list-settings-list">
+                    <h1>Negative Numbers</h1>
                     <hr>
                     <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to create an image from online and locally. You will also use the "alt" attribute, width, height, and integrate image and links. </h5>
                     <br>
@@ -103,9 +97,9 @@
                     <br><br>
                     <a href="/editor/introductiontohtml/images" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
-                <!--Buttons-->
-                <div class="tab-pane fade" id="buttons" role="tabpanel" aria-labelledby="list-messages-list">
-                    <h1>Introduction to Buttons</h1>
+  
+                <div class="tab-pane fade" id="fractions" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Fractions</h1>
                         <hr>
                         <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will create buttons, use them as links, and learn to style them!</h5>
                         <br>
@@ -113,9 +107,9 @@
                         <br><br>
                         <a href="/editor/introductiontohtml/buttons" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
-                <!--Lists-->
-                <div class="tab-pane fade" id="lists" role="tabpanel" aria-labelledby="list-profile-list">
-                    <h1>Introduction to Lists</h1>
+     
+                <div class="tab-pane fade" id="decimals" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Decimals</h1>
                     <hr>
                     <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to use tags such as unordered and ordered lists along with list-style-types.</h5>
                     <br>
@@ -124,9 +118,9 @@
                     <a href="/editor/introductiontohtml/lists" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
 
-                <!--Inline-->
-                <div class="tab-pane fade" id="inline" role="tabpanel" aria-labelledby="list-messages-list">
-                    <h1>Inline Stylings</h1>
+       
+                <div class="tab-pane fade" id="method" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Algebraic Method</h1>
                         <hr>
                         <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the style attribute, background color, text color, fonts, text-size, and alignments.</h5>
                         <br>
@@ -134,9 +128,9 @@
                         <br><br>
                         <a href="/editor/introductiontohtml/inline-style" href="/html" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
-                <!--Comments and Divs-->
-                <div class="tab-pane fade" id="commentsdivs" role="tabpanel" aria-labelledby="list-profile-list">
-                    <h1>Comments and Divs</h1>
+        
+                <div class="tab-pane fade" id="ratio" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Ratio</h1>
                     <hr>
                     <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
                     <br>
@@ -144,9 +138,9 @@
                     <br><br>
                     <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
-                <!--Wrap up-->
-                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
-                    <h1>Wrap Up</h1>
+          
+                <div class="tab-pane fade" id="proportions" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Proportions</h1>
                     <hr>
                     <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished the beginner HTML course! Here are what we recommend for you to do next:</h5>
                     <br>
@@ -155,6 +149,106 @@
                     <a class="btn btn-primary disabled" style="color:white;"><i class="fas fa-lock"></i> HTML Quiz #1</a>
                     <a class="btn btn-primary" style="color:white;">Introduction to CSS</a>
                     <a class="btn btn-primary" style="color:white;">Code Your Portfolio</a>
+                </div>
+
+                <div class="tab-pane fade" id="percent" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Percents</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="geometry" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Geometry Basics</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="measurement" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Measurement Basics</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="probability" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Probability</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="statistics" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Statistics</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="plane" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Coordinate Plane</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="exponents" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Exponents</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="radicals" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Radicals</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="sn" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Scientific Notation</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <div class="tab-pane fade" id="final" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Final Assesment</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the function of comments, how to use them, and the purpose of divs and their use.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZvV4uVi.png" width="470" height="430">
+                    <br><br>
+                    <a href="/editor/introductiontohtml/commentdivs" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
                 </div>
             </div>
         </div>
