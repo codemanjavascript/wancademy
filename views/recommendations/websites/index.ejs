@@ -1,0 +1,167 @@
+<% include ../../partials/header %> 
+
+<style>
+    .jumbotron{
+        background: #31A2FF;  /* fallback for old browsers */
+        height:300px;
+    }
+    a:hover{
+        color:#009BFF;
+        transition:0.2s;
+    }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #31A2FF;
+      border-color: #31A2FF;
+    }
+    .explore-title{
+   font-family: 'Raleway', sans-serif;
+   font-weight:100;
+}
+.explore-sub-title{
+  font-family: 'Raleway', sans-serif;
+   font-weight:100;
+}
+
+.pic-frontend{ 
+    width: 100%; 
+    height: 100%;
+    background: url(https://i.imgur.com/wlQRFKX.jpg) no-repeat; 
+    transition-duration: 0.6s;
+    transition:0.4s;
+    text-align:center;
+    
+    
+} 
+.pic-frontend:hover .text{ 
+    opacity:0.95; 
+    text-align:justify;
+    color:#000000;
+    font-size:19px;
+    font-family: 'Raleway', sans-serif;
+    font-weight:100;
+    padding:23px; 
+    transition:0.4s;
+    
+} 
+
+.text{ 
+    width:100%;
+    height:217px;
+    background:#FFF; 
+    opacity:0; 
+    transition:0.4s;
+    
+} 
+</style>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">Front End Developer Path</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       This path will teach you everything you need to create websites, portfolios, company sites, and games. This course covers the entirety of Web Development Basics, HTML, CSS, Javascript, Bootstrap, and Deploying.
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;">None: This course is for the beginning programmer or programmers who want to review their front-end skills.</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 1) Introduction to Front End</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 2) Introduction to HTML</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 3) Html Quiz #1</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 4) Introduction to CSS</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 5) Design a blog</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 6) Introduction to Javascript</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 7) JS Quiz #1</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 8) Counting Game </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 9) Functional Clock </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 10) jQuery </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 11) Bootstrap 4 </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 12) Intermediate Html</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 13) Website layout</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 14) Html Quiz #2</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 15) Intermediate CSS </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 16) Design: Website layout</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 17) CSS Quiz #2 </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 18) Intermediate JS </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 19) Js Quiz #2 </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 20) Advanced Html </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 21) Netflix Clone layout: HTML </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 22) Html Quiz #3 </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 23) Advanced CSS </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 24) Netflix Clone layout: CSS </h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 25) CSS Quiz #3</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 26) Advanced JS</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 27) Netflix Clone layout: JS and animations</h5>
+      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 28) Javascript Quiz #3 </h5>
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> Icon means that it is a <a href="/premium">Premium Lesson</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> Icon indicates a Free Lesson</h6>
+      
+      
+      <h6>After this course, skills may be applied to the "Backend Developer Path"</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/paths/front-end" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron">
+    <br>
+    <div style="padding:13px;"></div>
+        <h1 style="text-align:center;color:white;font-size:100px;font-weight:600;">Websites</h1>
+        <br>
+        
+</div>
+
+
+
+<div class="container" >
+ <div class="alert alert-warning alert-dismissible fade show" style="text-align:center;" role="alert">
+  Awesome, we recommend for you to take the front-end developer path for a full curriculum, or you can take the individual courses.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+    <div class="row">
+
+        <div class="pic-frontend"> <div class="text"> 
+            <strong>Front-End Developers Path</strong> ~ This path will teach you everything you need to create websites, portfolios, company sites, and games. This course covers the entirety of Web Development Basics, HTML, CSS, Javascript, Bootstrap, and Deploying. <br>
+         <div style="padding:7px;"></div>
+            <button class="btn btn-primary">Start Now</button>
+            <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong"> <i class="far fa-bookmark"></i> Curriculum </button>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+</div>
+
+<div style="padding-left:180px;padding-right:180px;">
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<% include ../../partials/footer %> 

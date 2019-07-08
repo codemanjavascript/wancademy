@@ -20,113 +20,11 @@ function escapeRegex(text){
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");  
 }
 
-//////*Mathematical Courses*//////
-
-/*pre-algebra*/
-router.get("/pre-algebra", function(req, res) {
-    res.render("mathematics/pre-algebra.ejs") 
- });
-
-/*algebra 1*/
-router.get("/algebra-1", function(req, res) {
-    res.render("mathematics/algebra-1") 
- });
-
- /*geometry*/
-router.get("/geometry", function(req, res) {
-    res.render("mathematics/geometry") 
- });
-
- /*algebra 2*/
-router.get("/algebra-2", function(req, res) {
-    res.render("mathematics/algebra-2") 
- });
-
-
-//////*English Courses*//////
-
-/*English 1*/
-router.get("/english-1", function(req, res) {
-    res.render("english/english-1") 
- });
-
-/*English 2*/
-router.get("/english-2", function(req, res) {
-    res.render("english/english-2") 
- });
-
- /*English 3*/
-router.get("/english-3", function(req, res) {
-    res.render("english/english-3") 
- });
-
-//////*Science Courses*//////
-
-/*biology*/
-router.get("/biology", function(req, res) {
-   res.render("biology/index") 
-});
-/*chemistry*/
-router.get("/chemistry", function(req, res) {
-   res.render("chemistry/index") 
-});
-/*physics*/
-router.get("/physics", function(req, res) {
-   res.render("physics/index") 
+router.get("/websites", function (req, res){
+    res.render("recommendations/websites/index") ;
 });
 
-//////*Spanish Courses*//////
 
-/*Spanish 1*/
-router.get("/spanish-1", function(req, res) {
-    res.render("spanish/spanish-1") 
- });
-/*Spanish 2*/
- router.get("/spanish-2", function(req, res) {
-    res.render("spanish/spanish-2") 
- });
-/*Spanish 3*/
- router.get("/spanish-3", function(req, res) {
-    res.render("spanish/spanish-3") 
- });
-
-/*Culture*/
-router.get("/culture", function(req, res) {
-    res.render("spanish/culture") 
- });
-
-//////*History Courses*//////
-
-/*World History*/
-router.get("/world-history", function(req, res) {
-    res.render("history/world-history") 
- });
-/*U.S History*/
- router.get("/us-history", function(req, res) {
-    res.render("history/us-history") 
- });
-
-//////*Coding Courses*//////
-
-/*Introduction to Computer Science*/
-router.get("/comp-sci", function(req, res) {
-    res.render("coding/comp-sci") 
- });
-/*Artificial Inteligence*/
- router.get("/ai", function(req, res) {
-    res.render("coding/ai") 
- });
-
-//////*Music Courses*//////
-
-/*Composition*/
-router.get("/composition", function(req, res) {
-    res.render("music/composition") 
- });
-/*Theory*/
- router.get("/theory", function(req, res) {
-    res.render("music/theory") 
- });
 
 
 router.get("/editor/introduction-to-frontend", function(req, res) {
@@ -1494,7 +1392,113 @@ function isLoggedIn(req, res, next) {
 }
 
 
+//////*Mathematical Courses*//////
 
+/*pre-algebra*/
+router.get("/pre-algebra", function(req, res) {
+    res.render("mathematics/pre-algebra.ejs") 
+ });
+
+/*algebra 1*/
+router.get("/algebra-1", function(req, res) {
+    res.render("mathematics/algebra-1") 
+ });
+
+ /*geometry*/
+router.get("/geometry", function(req, res) {
+    res.render("mathematics/geometry") 
+ });
+
+ /*algebra 2*/
+router.get("/algebra-2", function(req, res) {
+    res.render("mathematics/algebra-2") 
+ });
+
+
+//////*English Courses*//////
+
+/*English 1*/
+router.get("/english-1", function(req, res) {
+    res.render("english/english-1") 
+ });
+
+/*English 2*/
+router.get("/english-2", function(req, res) {
+    res.render("english/english-2") 
+ });
+
+ /*English 3*/
+router.get("/english-3", function(req, res) {
+    res.render("english/english-3") 
+ });
+
+//////*Science Courses*//////
+
+/*biology*/
+router.get("/biology", function(req, res) {
+   res.render("biology/index") 
+});
+/*chemistry*/
+router.get("/chemistry", function(req, res) {
+   res.render("chemistry/index") 
+});
+/*physics*/
+router.get("/physics", function(req, res) {
+   res.render("physics/index") 
+});
+
+//////*Spanish Courses*//////
+
+/*Spanish 1*/
+router.get("/spanish-1", function(req, res) {
+    res.render("spanish/spanish-1") 
+ });
+/*Spanish 2*/
+ router.get("/spanish-2", function(req, res) {
+    res.render("spanish/spanish-2") 
+ });
+/*Spanish 3*/
+ router.get("/spanish-3", function(req, res) {
+    res.render("spanish/spanish-3") 
+ });
+
+/*Culture*/
+router.get("/culture", function(req, res) {
+    res.render("spanish/culture") 
+ });
+
+//////*History Courses*//////
+
+/*World History*/
+router.get("/world-history", function(req, res) {
+    res.render("history/world-history") 
+ });
+/*U.S History*/
+ router.get("/us-history", function(req, res) {
+    res.render("history/us-history") 
+ });
+
+//////*Coding Courses*//////
+
+/*Introduction to Computer Science*/
+router.get("/comp-sci", function(req, res) {
+    res.render("coding/comp-sci") 
+ });
+/*Artificial Inteligence*/
+ router.get("/ai", function(req, res) {
+    res.render("coding/ai") 
+ });
+
+//////*Music Courses*//////
+
+/*Composition*/
+router.get("/composition", function(req, res) {
+    res.render("music/composition") 
+ });
+/*Theory*/
+ router.get("/theory", function(req, res) {
+    res.render("music/theory") 
+ });
 
 
 

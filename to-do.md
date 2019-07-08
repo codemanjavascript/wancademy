@@ -1,5 +1,7 @@
 Dear future tommy, if you ever need to start this workspace, either go on git and download the files and upload them to visual studio code, or get the USB with the files in it and load it in to visual studio code. After, you need to install mongod, and to do that, make a new terminal on the bottom, then use the correct instructions to start it (check c9 or search google "c9 mongoDB set up"). With VSC, you need to start it by tying "mongod" in terminal 2. After, in terminal 1, write "node app.js", which will take then make localhost:3000 work. Just type that in the web address, then it should be working!
 
+Dear Future Tommy, this is July 8, 2019, and I have decided not to go all subjects. Well because it would be too hard, khan academy already exists, and i have lots going on. Anyways, One conflicting thought is codecademy. Am I just copying them? Well idk, but I'll keep going with this and see where it goes. Hoping it will be a non profit or something people can use for free
+
 Goodluck, tommy from china in june 3,2019
 
 Github: codemanjavascript

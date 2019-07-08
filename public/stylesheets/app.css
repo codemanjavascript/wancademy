@@ -449,22 +449,7 @@ nav.navbar.shrink .navbar-toggle {
 }
 
 /* Discover Categories.*/
-.pic-animals{ 
-    width:350px; 
-    height:217px; 
-    background: url(https://i.guim.co.uk/img/media/14c0689b0d4c960e5eff2ed766bc0d3317d15a2f/0_0_1500_900/500.jpg?q=55&auto=format&usm=12&fit=max&s=89d42635e792102fac3321e2d364d568) no-repeat; 
-    transition-duration: 0.6s;
-    transition:0.4s;
-    
-} 
-.text{ 
-    width:340px;
-    height:217px;
-    background:#FFF; 
-    opacity:0; 
-    transition:0.4s;
-    
-} 
+
 .pic-animals:hover .text { 
     opacity:0.8; 
     text-align:justify;
