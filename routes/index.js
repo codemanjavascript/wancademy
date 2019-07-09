@@ -24,6 +24,10 @@ router.get("/websites", function (req, res){
     res.render("recommendations/websites/index") ;
 });
 
+router.get("/games", function (req, res){
+    res.render("recommendations/games/index") ;
+});
+
 
 
 
