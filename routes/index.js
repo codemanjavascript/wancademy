@@ -28,6 +28,14 @@ router.get("/games", function (req, res){
     res.render("recommendations/games/index") ;
 });
 
+router.get("/apps", function (req, res){
+    res.render("recommendations/apps/index") ;
+});
+
+router.get("/design", function (req, res){
+    res.render("recommendations/design/index") ;
+});
+
 
 
 

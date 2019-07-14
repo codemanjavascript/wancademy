@@ -2,7 +2,7 @@
 
 <style>
     .jumbotron{
-        background: #31A2FF;  /* fallback for old browsers */
+        background: #FF4444;  /* fallback for old browsers */
         height:300px;
     }
     a:hover{
@@ -27,7 +27,7 @@
 .pic-frontend{ 
     width: 100%; 
     height: 100%;
-    background: url(https://i.imgur.com/ma55JLe.jpg) no-repeat; 
+    background: url(https://i.imgur.com/ljOwBUm.jpg) no-repeat; 
     transition-duration: 0.6s;
     transition:0.4s;
     text-align:center;
@@ -38,7 +38,7 @@
     opacity:0.95; 
     text-align:justify;
     color:#000000;
-    font-size:19px;
+    font-size:15px;
     font-family: 'Raleway', sans-serif;
     font-weight:100;
     padding-top:23px; 
@@ -59,67 +59,518 @@
 } 
 </style>
 
-<!-- Modal -->
-<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+<!-- Game Developers Path Modal -->
+<div class="modal fade bd-example-modal-lg" style="padding:17px;" id="games" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog " role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title" id="exampleModalLongTitle">Front End Developer Path</h1>
+        <h1 class="modal-title" id="exampleModalLongTitle">Game Developers Path</h1>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       This path will teach you everything you need to create websites, portfolios, company sites, and games. This course covers the entirety of the Basics, HTML, CSS, Javascript, jQuery, Bootstrap, and Deploying.
+       This path will teach you everything you need to create online games. You will learn the basics of HTML, CSS, Javascript, Bootstrap, and jQuery, then start on projects that focuses on online game development. This course is a great stepping stone into 3D Game Development (Unity, Unreal, etc).
       <br> <br>
       <h3>Prerequisites:</h3>
       
-      <h5 style="font-weight:400;font-size:17px;">None: This course is for the beginning programmer or programmers who want to review their front-end skills.</h5>
+      <h5 style="font-weight:400;font-size:17px;">None: This course is for the beginning programmer or programmers who wants to build online games.</h5>
     
       <h5></h5>
       <br>
       <h2>Curriculum:</h2>
       <hr>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 1) Introduction to Front End</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 2) Introduction to HTML</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 3) Html Quiz #1</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 4) Introduction to CSS</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 5) Design a blog</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 6) Introduction to Javascript</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 7) JS Quiz #1</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 8) Counting Game </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 9) Functional Clock </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 10) jQuery </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 11) Bootstrap 4 </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 12) Intermediate Html</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 13) Website layout</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 14) Html Quiz #2</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 15) Intermediate CSS </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 16) Design: Website layout</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 17) CSS Quiz #2 </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 18) Intermediate JS </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 19) Js Quiz #2 </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 20) Advanced Html </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-check-circle"></i> 21) Netflix Clone layout: HTML </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 22) Html Quiz #3 </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 23) Advanced CSS </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 24) Netflix Clone layout: CSS </h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 25) CSS Quiz #3</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 26) Advanced JS</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 27) Netflix Clone layout: JS and animations</h5>
-      <h5 style="font-weight:400;"><i class="fas fa-lock"></i> 28) Javascript Quiz #3 </h5>
+      <h5 style="font-weight:400;">1) Introduction to the Front-End</h5>
+      <h5 style="font-weight:400;">2) Introduction to HTML</h5>
+      <h5 style="font-weight:400;">3) Html Quiz #1</h5>
+      <h5 style="font-weight:400;">4) Counting Game</h5>
+      <h5 style="font-weight:400;">5) Introduction to CSS</h5>
+      <h5 style="font-weight:400;">6) CSS Quiz #1</h5>
+      <h5 style="font-weight:400;">7) Introduction to Javascript</h5>
+      <h5 style="font-weight:400;">8) JS Quiz #1 </h5>
+      <h5 style="font-weight:400;">9) Functional Clock </h5>
+      <h5 style="font-weight:400;">10) jQuery </h5>
+      <h5 style="font-weight:400;">11) jQuery Quiz #1 </h5>
+      <h5 style="font-weight:400;">12) Intermediate Html</h5>
+      <h5 style="font-weight:400;">13) Website layout</h5>
+      <h5 style="font-weight:400;">14) Html Quiz #2</h5>
+      <h5 style="font-weight:400;">15) Intermediate CSS </h5>
+      <h5 style="font-weight:400;">16) Design: Game Portfolio</h5>
+      <h5 style="font-weight:400;">17) CSS Quiz #2 </h5>
+      <h5 style="font-weight:400;">18) Intermediate JS </h5>
+      <h5 style="font-weight:400;">19) Js Quiz #2 </h5>
+      <h5 style="font-weight:400;">20) Advanced Html </h5>
+      <h5 style="font-weight:400;">21) Html Quiz #3 </h5>
+      <h5 style="font-weight:400;">22) Advanced CSS </h5>
+      <h5 style="font-weight:400;">23) CSS Quiz #3 </h5>
+      <h5 style="font-weight:400;">24) Advanced JS </h5>
+      <h5 style="font-weight:400;">25) Javascript Quiz #3</h5>
+      <h5 style="font-weight:400;">26) Advanced Word Game Adventure</h5>
+      <h5 style="font-weight:400;">27) Cookie Clicker Clone</h5>
+      <h5 style="font-weight:400;">28) Design, create, and publish your own game</h5>
+      <h5 style="font-weight:400;">28) Deploying Your Games</h5>
       <hr>
       
       <h6>Lessons with <i class="fas fa-lock"></i> Icon means that it is a <a href="/premium">Premium Lesson</a></h6>
 
       <h6>Lessons with <i class="fas fa-check-circle"></i> Icon indicates a Free Lesson</h6>
       
-      
-      <h6>After this course, skills may be applied to the "Backend Developer Path"</h6>
+    
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="/paths/front-end" class="btn btn-primary">Start Now</a>
+        <a href="/paths/games" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HTML Modal -->
+<div class="modal fade bd-example-modal-lg" id="html" style="padding:17px;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" >
+      <div class="modal-header" >
+        <h1 class="modal-title" id="exampleModalLongTitle">HTML</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       HTML, known as hypertext markup language, is a universal web language. This course will cover extensively the material you will need to build web applications. 
+
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;">None: This course is for the beginning programmer with no prior experience.</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+      <h5 style="font-weight:400;"> 1) Introduction to HTML and Programming</h5>
+      <h5 style="font-weight:400;"> 2) Document Setup & Introduction to Tags</h5>
+      <h5 style="font-weight:400;"> 3) Headings and Paragraphs</h5>
+      <h5 style="font-weight:400;"> 4) Links</h5>
+      <h5 style="font-weight:400;"> 5) Images</h5>
+      <h5 style="font-weight:400;"> 6) Buttons</h5>
+      <h5 style="font-weight:400;"> 7) Lists</h5>
+      <h5 style="font-weight:400;"> 8) Attributes</h5>
+      <h5 style="font-weight:400;"> 9) Inline styling </h5>
+      <h5 style="font-weight:400;"> 10) Comments </h5>
+      <h5 style="font-weight:400;"> 11) Defining Div</h5>
+      <h5 style="font-weight:400;"> 12) HTML Quiz #1</h5>
+      <h5 style="font-weight:400;"> 13) Image Attributes</h5>
+      <h5 style="font-weight:400;"> 14) Link Attributes</h5>
+      <h5 style="font-weight:400;"> 15) Tables </h5>
+      <h5 style="font-weight:400;"> 16) Blocks and Spans</h5>
+      <h5 style="font-weight:400;"> 17) IFrames and Attributes </h5>
+      <h5 style="font-weight:400;"> 18) File Paths</h5>
+      <h5 style="font-weight:400;"> 19) Meta Tags</h5>
+      <h5 style="font-weight:400;"> 20) HTML Quiz #2 </h5>
+      <h5 style="font-weight:400;"> 21) Responsive Site Properties</h5>
+      <h5 style="font-weight:400;"> 22) Computer Code </h5>
+      <h5 style="font-weight:400;"> 23) Entities </h5>
+      <h5 style="font-weight:400;"> 24) Charsets </h5>
+      <h5 style="font-weight:400;"> 25) XHTML</h5>
+      <h5 style="font-weight:400;"> 26) HTML5 Support</h5>
+      <h5 style="font-weight:400;"> 27) HTML Quiz #3</h5>
+   
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> icon indicates <a href="/premium">premium content</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> icon indicates a free lesson</h6>
+      
+      
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/html" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS Modal -->
+<div class="modal fade bd-example-modal-lg" style="padding:17px;" id="css" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">CSS</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       CSS, known as cascading style sheets, is the language used to style HTML pages. CSS focuses on the design aspect of web pages, such as color and fonts. This course covers extensively the knowledge needed to style HTML pages. 
+
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;">To take this course, we recommend taking the HTML Course first</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+       <h5 style="font-weight:400;">1) Introduction to CSS and Its Uses</h5>
+      <h5 style="font-weight:400;"> 2) Css Syntax</h5>
+      <h5 style="font-weight:400;"> 3) Element Selectors</h5>
+      <h5 style="font-weight:400;"> 4) Id Selectors</h5>
+      <h5 style="font-weight:400;"> 5) Class Selectors</h5>
+      <h5 style="font-weight:400;"> 6) Css Comments</h5>
+      <h5 style="font-weight:400;"> 7) Colors</h5>
+      <h5 style="font-weight:400;"> 8) Borders</h5>
+      <h5 style="font-weight:400;"> 9) RGB and Hex</h5>
+      <h5 style="font-weight:400;"> 10) Backgrounds </h5>
+      <h5 style="font-weight:400;"> 11) Margin, Padding, and Floats</h5>
+      <h5 style="font-weight:400;"> 12) Box Model</h5>
+      <h5 style="font-weight:400;"> 13) Fonts and Text Styles</h5>
+      <h5 style="font-weight:400;"> 14) Text Alignment</h5>
+      <h5 style="font-weight:400;"> 15) CSS Quiz #1 </h5>
+      <h5 style="font-weight:400;"> 16) Positions</h5>
+      <h5 style="font-weight:400;"> 17) Overflow </h5>
+      <h5 style="font-weight:400;"> 18) Floats</h5>
+      <h5 style="font-weight:400;"> 19) In-line Blocks</h5>
+      <h5 style="font-weight:400;"> 20) Pseudo Classes </h5>
+      <h5 style="font-weight:400;"> 21) Opacity</h5>
+      <h5 style="font-weight:400;"> 22) Forms In-Depth </h5>
+      <h5 style="font-weight:400;"> 23) Counters </h5>
+      <h5 style="font-weight:400;"> 24) Units </h5>
+      <h5 style="font-weight:400;"> 25) CSS Quiz #2</h5>
+      <h5 style="font-weight:400;"> 26) Rounded Corners</h5>
+      <h5 style="font-weight:400;"> 27) Border Radius</h5>
+      <h5 style="font-weight:400;"> 28) Borders</h5>
+      <h5 style="font-weight:400;"> 29) In-depth Background</h5>
+      <h5 style="font-weight:400;"> 30) In-depth Colors</h5>
+      <h5 style="font-weight:400;"> 31) Creating Gradients</h5>
+      <h5 style="font-weight:400;"> 32) Shadow Effects</h5>
+      <h5 style="font-weight:400;"> 33) Text Effects</h5>
+      <h5 style="font-weight:400;"> 34) Transformation</h5>
+      <h5 style="font-weight:400;"> 35) Transitions</h5>
+      <h5 style="font-weight:400;"> 36) Animations and Keyframes</h5>
+      <h5 style="font-weight:400;"> 37) Image Styling</h5>
+      <h5 style="font-weight:400;"> 38) Pagination</h5>
+      <h5 style="font-weight:400;"> 39) Flex Boxes</h5>
+      <h5 style="font-weight:400;"> 40) CSS Quiz #3</h5>
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> icon indicates <a href="/premium">premium content</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> icon indicates a free lesson</h6>
+      
+      
+   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/css" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS Modal -->
+<div class="modal fade bd-example-modal-lg" style="padding:17px;" id="js" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">Javascript</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      Javascript is one of the most popular languages to learn, and this course will cover all necessary material regarding javascript. You will create fun web games, practical applications, and you will be able to integrate javascript into your programming.
+
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;"> We recommend you take the HTML and CSS course before learning Javascript</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+       <h5 style="font-weight:400;">1) What is Javascript and Its Uses?</h5>
+      <h5 style="font-weight:400;"> 2) Introduction to Get element by ID and syntax</h5>
+      <h5 style="font-weight:400;"> 3) Creating a Working Switch</h5>
+      <h5 style="font-weight:400;"> 4) Hide and Show HTML Elements</h5>
+      <h5 style="font-weight:400;"> 5) Script Tags</h5>
+      <h5 style="font-weight:400;"> 6) External files and Advantages</h5>
+      <h5 style="font-weight:400;"> 7) Alert and Console.log</h5>
+      <h5 style="font-weight:400;"> 8) Operators</h5>
+      <h5 style="font-weight:400;"> 9) Variables</h5>
+      <h5 style="font-weight:400;"> 10) Comments </h5>
+      <h5 style="font-weight:400;"> 11) Comparisons, Logic, and Booleans</h5>
+      <h5 style="font-weight:400;"> 12) Data Type</h5>
+      <h5 style="font-weight:400;"> 13) Functions</h5>
+      <h5 style="font-weight:400;"> 14) JS Quiz #1</h5>
+      <h5 style="font-weight:400;"> 15) Object Oriented Programming </h5>
+      <h5 style="font-weight:400;"> 16) Events Review</h5>
+      <h5 style="font-weight:400;"> 17) Strings Review </h5>
+      <h5 style="font-weight:400;"> 18) Number and Bits Review</h5>
+      <h5 style="font-weight:400;"> 19) Arrays</h5>
+      <h5 style="font-weight:400;"> 20) Array Methods</h5>
+      <h5 style="font-weight:400;"> 21) Sorting Arrays</h5>
+      <h5 style="font-weight:400;"> 22) Javascript Dates and Methods </h5>
+      <h5 style="font-weight:400;"> 23) JS Quiz #2</h5>
+      <h5 style="font-weight:400;"> 24) Javascript Errors </h5>
+      <h5 style="font-weight:400;"> 25) Scopes</h5>
+      <h5 style="font-weight:400;"> 26) Hoistings</h5>
+      <h5 style="font-weight:400;"> 27) This</h5>
+      <h5 style="font-weight:400;"> 27) Let</h5>
+      <h5 style="font-weight:400;"> 27) Const</h5>
+      <h5 style="font-weight:400;"> 27) Debugging</h5>
+      <h5 style="font-weight:400;"> 27) Versions</h5>
+      <h5 style="font-weight:400;"> 27) JS Quiz #3</h5>
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> icon indicates <a href="/premium">premium content</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> icon indicates a free lesson</h6>
+      
+ 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/javascript" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Blog Modal -->
+<div class="modal fade bd-example-modal-lg" style="padding:17px;" id="counting-game" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">Counting Game</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      In this project, we will combine your skills of HTML, CSS, and Javascript to create a simple counter that goes up and down. 
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;">To take this course, you will need to know HTML, CSS, and Javascript.</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+       <h5 style="font-weight:400;">1) Introduction to the Project</h5>
+      <h5 style="font-weight:400;"> 2) Creating the Heading</h5>
+      <h5 style="font-weight:400;"> 3) Creating Up and Down</h5>
+      <h5 style="font-weight:400;"> 4) Styling the Counter</h5>
+      <h5 style="font-weight:400;"> 5) Functionality through JS</h5>
+      <h5 style="font-weight:400;"> 6) Testing</h5>
+      <h5 style="font-weight:400;"> 7) Wrap Up</h5>
+      
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> icon indicates <a href="/premium">premium content</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> icon indicates a free lesson</h6>
+      
+      
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/counting-game" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade bd-example-modal-lg" style="padding:17px;" id="text-adventure" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">Text Adventure</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          In this project, you will create a fun text adventure game where a player will have to save the princess from the dragon. You will combine and utilize your knowledge from HTML, CSS, and Javascript.
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;">For this course, you would need to know HMTL, CSS, and Javascript.</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+       <h5 style="font-weight:400;">1) Introduction to The Project</h5>
+      <h5 style="font-weight:400;"> 2) Conditions</h5>
+      <h5 style="font-weight:400;"> 3) Booleans</h5>
+      <h5 style="font-weight:400;"> 4) Comparisons</h5>
+      <h5 style="font-weight:400;"> 5) Loops</h5>
+      <h5 style="font-weight:400;"> 6) Foundation of the Project</h5>
+      <h5 style="font-weight:400;"> 7) Creating a Story Line</h5>
+      <h5 style="font-weight:400;"> 8) Creating conditionals</h5>
+      <h5 style="font-weight:400;"> 9) Creating an ending </h5>
+      <h5 style="font-weight:400;"> 10) Testing</h5>
+      <h5 style="font-weight:400;"> 11) Wrap Up</h5>
+    
+   
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> icon indicates <a href="/premium">premium content</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> icon indicates a free lesson</h6>
+
+      
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/text-adventure" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery Modal -->
+<div class="modal fade bd-example-modal-lg" style="padding:17px;" id="jquery" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">jQuery</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      jQuery is a useful language/library when using javascript. jQuery creates an easier environment, a more effective environment, and is great when programming. 
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;">For jQuery, we recommend you know javascript and html.</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+      <h5 style="font-weight:400;"> 1) Introduction to jQuery</h5>
+      <h5 style="font-weight:400;"> 2) Installment (CDN)</h5>
+      <h5 style="font-weight:400;"> 3) Setting up the Document</h5>
+      <h5 style="font-weight:400;"> 4) Selectors: Id, Class, Element</h5>
+      <h5 style="font-weight:400;"> 5) Commonly Used Events</h5>
+      <h5 style="font-weight:400;"> 6) Hide and Show</h5>
+      <h5 style="font-weight:400;"> 7) Introduction to DOM Manipulation</h5>
+      <h5 style="font-weight:400;"> 8) Wrap Up</h5>
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> icon indicates <a href="/premium">premium content</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> icon indicates a free lesson</h6>
+      
+      
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/jquery" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio Modal -->
+<div class="modal fade bd-example-modal-lg" style="padding:17px;" id="cookie-clicker-clone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">Cookie Clicker Clone</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       Ever played the game cookie clicker? Let’s make a clone, but instead of cookies, bananas! This project is a great way to learn integration of HTML, CSS, and Javascript while making a fun game.
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;">For this course, you should know HTML, CSS, jQuery, and Javascript.</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+       <h5 style="font-weight:400;">1) Introduction to the Project</h5>
+      <h5 style="font-weight:400;"> 2) Playing the Game</h5>
+      <h5 style="font-weight:400;"> 3) Layout using HTML</h5>
+      <h5 style="font-weight:400;"> 4) Positioning of Images</h5>
+      <h5 style="font-weight:400;"> 5) Creating and finalizing layout</h5>
+      <h5 style="font-weight:400;"> 6) Adding Javascript and jQuery</h5>
+      <h5 style="font-weight:400;"> 7) Testing the Game</h5>
+      <h5 style="font-weight:400;"> 8) Wrap Up</h5>
+      
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> icon indicates <a href="/premium">premium content</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> icon indicates a free lesson</h6>
+      
+      
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/cookie-clicker-clone" class="btn btn-primary">Start Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Deploying Modal -->
+<div class="modal fade bd-example-modal-lg" style="padding:17px;" id="deploy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLongTitle">Deploying Online</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       You have just created the next billion dollar website. How will you get it to the public? This course will teach you everything about deploying your creation online where billions of people can access.
+
+      <br> <br>
+      <h3>Prerequisites:</h3>
+      
+      <h5 style="font-weight:400;font-size:17px;">This course is recommended for the programmer who has created a project, and wants to publish online.</h5>
+    
+      <h5></h5>
+      <br>
+      <h2>Curriculum:</h2>
+      <hr>
+       <h5 style="font-weight:400;">1) Creating a Website</h5>
+      <h5 style="font-weight:400;"> 2) Deploying the Website</h5>
+      <h5 style="font-weight:400;"> 3) Custom Domain Names</h5>
+      <h5 style="font-weight:400;"> 4) Wrap Up</h5>
+    
+   
+      <hr>
+      
+      <h6>Lessons with <i class="fas fa-lock"></i> icon indicates <a href="/premium">premium content</a></h6>
+
+      <h6>Lessons with <i class="fas fa-check-circle"></i> icon indicates a free lesson</h6>
+      
+      
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/deploying" class="btn btn-primary">Start Now</a>
       </div>
     </div>
   </div>
@@ -128,7 +579,7 @@
 <div class="jumbotron">
     <br>
     <div style="padding:13px;"></div>
-        <h1 style="text-align:center;color:white;font-size:100px;font-weight:600;">Websites</h1>
+        <h1 style="text-align:center;color:white;font-size:100px;font-weight:600;">Games</h1>
         <br>
         
 </div>
@@ -136,8 +587,8 @@
 
 
     <div class="container" >
-        <div class="alert alert-primary alert-dismissible fade show" style="text-align:center;" role="alert">
-            Great choice, we recommend for you to take the front-end developers path, or you can take each individual course as shown below.
+        <div class="alert alert-danger alert-dismissible fade show" style="text-align:center;" role="alert">
+            Awesome. We recommend for you to take the game developers path, or you can take each individual course as shown below.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -146,10 +597,10 @@
         <div class="row">
 
             <div class="pic-frontend"> <div class="text"> 
-                <strong>Front-End Developers Path</strong> ~ This path will teach you everything you need to create websites, portfolios, company sites, and games. This course covers the entirety of Web Development Basics, HTML, CSS, Javascript, Bootstrap, and Deploying. <br>
+                <strong>Game Developers Path</strong> ~ This path will teach you everything you need to create online games. You will learn the basics of HTML, CSS, Javascript, Bootstrap, and jQuery, then start on projects that focuses on online game development. This course is a great stepping stone into 3D Game Development (Unity, Unreal, etc).<br>
             <div style="padding:7px;"></div>
-                <a href="/paths/front-end" style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-                <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong"> <i class="far fa-bookmark"></i> Curriculum </button>
+                <a href="/paths/games" style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+                <button class="btn btn-success" data-toggle="modal" data-target="#games"> <i class="far fa-bookmark"></i> Curriculum </button>
            
             </div>
    
@@ -157,31 +608,31 @@
 
     <div class="card-deck">
   <div class="animated zoomIn card">
-    <img class="card-img-top"  src="https://i.imgur.com/FDUyR1Q.jpg" alt="Card image cap">
+    <img class="card-img-top"  src="https://i.imgur.com/LQMqpfy.jpg" alt="Card image cap">
      <div class="card-body">
-      <a style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-      <a style="color:white;" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
+      <a style="color:white;" href="/html" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+      <a style="color:white;" data-toggle="modal" data-target="#html" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
     </div>
   </div>
-  <div class=" animated zoomIn card" style="animation-delay: 0.4s;">
-    <img class="card-img-top" src="https://i.imgur.com/Se4wdpf.jpg" alt="Card image cap">
+  <div class=" animated zoomIn card" style="animation-delay: 0.3s;">
+    <img class="card-img-top" src="https://i.imgur.com/70dDeQi.jpg" alt="Card image cap">
      <div class="card-body">
-            <a style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-      <a style="color:white;" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
+            <a style="color:white;" href="/css" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+      <a style="color:white;" data-toggle="modal" data-target="#css" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
     </div>
   </div>
-  <div class="animated zoomIn card" style="animation-delay: 1s;">
-    <img class="card-img-top" src="https://i.imgur.com/pti48H0.jpg" alt="Card image cap">
+  <div class="animated zoomIn card" style="animation-delay: 0.6s;">
+    <img class="card-img-top" src="https://i.imgur.com/6XtqUmr.jpg" alt="Card image cap">
      <div class="card-body">
-            <a style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-      <a style="color:white;" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
+            <a style="color:white;" href="/javascript" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+      <a style="color:white;" data-toggle="modal" data-target="#js" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
     </div>
   </div>
-  <div class="animated zoomIn card" style="animation-delay: 1.7s;">
-    <img class="card-img-top" src="https://i.imgur.com/7x2ANKh.jpg" alt="Card image cap">
+  <div class="animated zoomIn card" style="animation-delay: 0.9s;">
+    <img class="card-img-top" src="https://i.imgur.com/iqbtycN.jpg" alt="Card image cap">
     <div class="card-body">
-            <a style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-      <a style="color:white;" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
+            <a style="color:white;" href="/counting-game" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+      <a style="color:white;" data-toggle="modal" data-target="#counting-game" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
     </div>
   </div>
 </div>
@@ -189,32 +640,32 @@
 <br>
 
  <div class="card-deck">
-  <div class="animated zoomIn card" style="animation-delay: 2.4s;">
-    <img class="card-img-top"  src="https://i.imgur.com/mAMSqwR.jpg" alt="Card image cap">
+  <div class="animated zoomIn card" style="animation-delay: 1.2s;">
+    <img class="card-img-top"  src="https://i.imgur.com/c6U1akG.jpg" alt="Card image cap">
      <div class="card-body">
-      <a style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-      <a style="color:white;" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
+      <a style="color:white;" href="/text-adventure" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+      <a style="color:white;" data-toggle="modal" data-target="#text-adventure" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
     </div>
   </div>
-  <div class=" animated zoomIn card" style="animation-delay: 3.1s;">
+  <div class=" animated zoomIn card" style="animation-delay: 1.5s;">
     <img class="card-img-top" src="https://i.imgur.com/1peKHrA.jpg" alt="Card image cap">
      <div class="card-body">
-            <a style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-      <a style="color:white;" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
+            <a style="color:white;" href="/jquery" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+      <a style="color:white;" data-toggle="modal" data-target="#jquery" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
     </div>
   </div>
-  <div class="animated zoomIn card" style="animation-delay: 3.8s;">
+  <div class="animated zoomIn card" style="animation-delay: 1.8s;">
     <img class="card-img-top" src="https://i.imgur.com/Ku2G4WV.jpg" alt="Card image cap">
      <div class="card-body">
-            <a style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-      <a style="color:white;" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
+            <a style="color:white;" href="/cookie-clicker-clone" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+      <a style="color:white;" data-toggle="modal" data-target="#cookie-clicker-clone" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
     </div>
   </div>
-  <div class="animated zoomIn card" style="animation-delay: 4.5s;">
+  <div class="animated zoomIn card" style="animation-delay: 2.1s;">
     <img class="card-img-top" src="https://i.imgur.com/8K4oyAZ.jpg" alt="Card image cap">
     <div class="card-body">
-            <a style="color:white;" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
-      <a style="color:white;" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
+            <a style="color:white;" href="/deploying" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start</a>
+      <a style="color:white;" data-toggle="modal" data-target="#deploy" class="btn btn-success"><i class="far fa-bookmark"></i> Curriculum</a>
     </div>
   </div>
 </div>
