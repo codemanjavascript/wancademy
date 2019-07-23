@@ -1,52 +1,229 @@
 <% include ../../partials/header %> <!-- HEADER PARTIALS -->
-
 <style>
     .jumbotron{
-        background:url(https://blog.brandfolder.com/wp-content/uploads/2016/04/Material_Design_Wallpaper_WALLPAPERDNA-3-1.png);
-        height:470px;
+        background: #0093FF;  /* fallback for old browsers */
+        height:275px;
     }
     a:hover{
-        color:#009BFF;
+        color:#0093FF;
         transition:0.2s;
     }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #0093FF;
+      border-color: #0093FF;
+    }
+    h1 {
+        font-size:45px;
+    }
 </style>
-
-<div class="jumbotron" >
-    <br><br><br>
-    <h1 style="text-align:center;color:white;font-size:70px;font-weight:900;">Learn Beginner CSS</h1>
-    <p style="font-size:30px;text-align:center;color:white;">Click on any video that suits you to get started!</p>
+<div class="jumbotron">
     <br>
-    <div style="text-align:center;">
-        <a class="button3-md" href="/getstarted/students"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Course Selection</a>
-        <a class="button3-md" href="/new-video-css">Create a video</a>
-    </div>
+    <div style="padding:7px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:90px;font-weight:600;">CSS</h1>
+        <br>
+        
 </div>
+
+
 <div class="container">
-    <br>
-    <div class="alert alert-info" role="alert">
-    <h1 style="font-size:45px;font-weight:900;">Unlock your <span style="color:#009BFF;">Personalized</span> Journey! <i class="fa fa-space-shuttle" aria-hidden="true"></i></h1>
-    <p style="font-size:25px;">Start by taking a simple quiz and we will recommend you some courses to take!</p>
-    <br>
-
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to CSS</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#selectors" role="tab" aria-controls="home">2) CSS Selectors</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#comments" role="tab" aria-controls="profile">3) CSS Comments</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#colors" role="tab" aria-controls="messages">4) CSS Colors</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#borders" role="tab" aria-controls="settings">5) CSS Borders</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#backgrounds" role="tab" aria-controls="settings">6) CSS Backgrounds</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#mpf" role="tab" aria-controls="messages">7) Margin, Padding, and Floats</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#fonts" role="tab" aria-controls="messages">8) Fonts and Text Styles</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#positions" role="tab" aria-controls="messages">9) CSS Positions</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#alignment" role="tab" aria-controls="settings">10) CSS Text-Alignment</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#gradients" role="tab" aria-controls="messages">11) CSS Graidents</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#animation" role="tab" aria-controls="messages">12) Animations and Keyframes</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#tidbits" role="tab" aria-controls="messages">13) CSS Useful Tidbits</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#quiz1" role="tab" aria-controls="messages">14) CSS Quiz #1</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">15) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to CSS</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this first lesson, you will be introduced to CSS, its uses, how it connects to HTML, and some examples of websites created using CSS.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/f1pxya6.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/css/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Selectors-->
+                <div class="tab-pane fade " id="selectors" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>CSS Selectors</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to the different types of CSS Selectors: Elements, ID, and Class.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/AVDfBtb.png" width="310" height="300">
+                    <br><br>
+                    <a href="/editor/css/selectors" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Comments-->
+                <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>CSS Comments</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to CSS Comments, their uses, and how to use them.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/PhS6gUa.png" width="400" height="220">
+                    <br><br>
+                    <a href="/editor/css/comments" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Colors-->
+                <div class="tab-pane fade" id="colors" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>CSS Colors</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to the CSS Colors. You will be using HEX, and common color names to style different types of html.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/OQhqTaJ.png" width="440" height="220">
+                        <br><br>
+                        <a href="/editor/css/colors" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Borders-->
+                <div class="tab-pane fade" id="borders" role="tabpanel" aria-labelledby="list-settings-list">
+                    <h1>CSS Borders</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be exposed to CSS Borders, how to use them, and their uses. </h5>
+                    <br>
+                    <img src="https://i.imgur.com/EHrMeT4.png" width="658" height="300">
+                    <br><br>
+                    <a href="/editor/css/borders" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Backgrounds-->
+                <div class="tab-pane fade" id="backgrounds" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>CSS Backgrounds</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to manipulate the background, change the style, and apply its uses.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/2XOJFBy.png" width="520" height="200">
+                        <br><br>
+                        <a href="/editor/css/backgrounds" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--mpf-->
+                <div class="tab-pane fade" id="mpf" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Margin, Paddings, Floats</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to use margins, paddings, and floats in your own applications.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/Hb733J9.png" width="380" height="330">
+                    <br><br>
+                    <a href="/editor/css/mpf" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--fonts and text styles-->
+                <div class="tab-pane fade" id="fonts" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Fonts and Text Styles</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Fonts and Text Styles are one of the most important aspects of a webpage. In this lesson, you will learn the different types of font types, and how to use them.</h5>
+                    <br>
+           
+                    <img src="https://i.imgur.com/1PNUXi8.png" width="660" height="200">
+                    <br><br>
+                    <a href="/editor/css/fonts" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--positions-->
+                <div class="tab-pane fade" id="positions" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>CSS Positions</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the main types of positions, including: Static, Relative, Fixed, and Absolute.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/bIYJggW.png" width="750" height="230">
+                        <br><br>
+                        <a href="/editor/html/stylings" href="/html" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--text alignment-->
+                <div class="tab-pane fade" id="alignment" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>CSS Text-Alignment</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the use of text-alignment, how to use them, and applying them.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/o1bAW5p.png" width="600" height="220">
+                    <br><br>
+                    <a href="/editor/css/align" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+               
+                <!--gradients-->
+                <div class="tab-pane fade" id="gradients" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>CSS Gradients</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the basics of creating gradients, where to get gradients, and how to apply them.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/31vLlAL.jpg" width="300" height="300">
+                    <br><br>
+                    <a href="/editor/css/gradients" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+              
+                <!--animations-->
+                <div class="tab-pane fade" id="animation" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Animations and Keyframes</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the basics of animation, using keyframes to animate, and their uses.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/RByoUEd.png" width="500" height="300">
+                    <br><br>
+                    <a href="/editor/html/responsiveness" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--useful tidbits-->
+                <div class="tab-pane fade" id="tidbits" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>CSS Useful Tidbits</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, learn the many cool and useful CSS Tidbits that you can use in your own development.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/wjZRKeo.png" width="250" height="250">
+                    <br><br>
+                    <a href="/editor/css/tidbits" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Quiz 1-->
+                <div class="tab-pane fade" id="quiz1" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>CSS Quiz #1</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Great job so far! Take this quiz to test your new knowledge:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/sqdCKsF.png" width="570" height="100">
+                    <br><br>
+                    <a href="/editor/css/quiz1" class="btn btn-primary" style="color:white;">CSS Quiz #1</a>
+                </div>
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished the CSS course! With your knowledge of HTML and CSS, you could create amazing webpages. There is so much more to learn, which is best learnt through personal projects and experience. Here are what we recommend for you to do next:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" style="color:white;">Learn Javascript</a>
+                    <a class="btn btn-primary" style="color:white;">Code Your Portfolio</a>
+                    <a class="btn btn-primary" style="color:white;">Design a Blog</a>
+                </div>
+            </div>
+        </div>
     </div>
     <br>
-        <a href="#" class="button3-md">Quizzes</a>
-        <a href="#" class="button3-md">Beginner CSS Certificate Test</a>
-        <a href="#" class="button3-md">CSS and HTML Projects</a>
-        <a href="#" class="button3-md">Videos</a>
-        <a href="#" class="button3-md">Articles</a>
-        <br><br>
-    <br>
-    
-<% cssvideos.forEach(function(cssVideo){ %>
-    <h1 style="font-weight:100;font-size:40px;"><a href="/css/<%= cssVideo._id %>"><%= cssVideo.name %></a></h1>
     <hr>
-<% }); %>
-<br><br>
-
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
 
 </div>
 
-<br><br><br><br><br><br><br>
 
-<% include ../../partials/footer %> <!-- HEADER PARTIALS -->
+
+
+<br><br><br>
+<% include ../../partials/footer %>

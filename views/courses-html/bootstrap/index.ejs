@@ -1,0 +1,216 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #C561FF;  /* fallback for old browsers */
+        height:275px;
+    }
+    a:hover{
+        color:#C561FF;
+        transition:0.2s;
+    }
+
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #C561FF;
+      border-color: #C561FF;
+    }
+
+
+    h1 {
+        font-size:45px;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:7px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:90px;font-weight:600;">Bootstrap</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to Bootstrap</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#grid" role="tab" aria-controls="home">2) Grid Basics</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#typography" role="tab" aria-controls="profile">3) Typography</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#images" role="tab" aria-controls="messages">4) Image Types</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#jumbotrons" role="tab" aria-controls="settings">5) Jumbotrons</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#alerts" role="tab" aria-controls="settings">6) Alerts</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#buttons" role="tab" aria-controls="messages">7) Buttons</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#fontawesome" role="tab" aria-controls="messages">8) Using Font Awesome</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#navbar" role="tab" aria-controls="settings">10) Navbar</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#dropdowns" role="tab" aria-controls="messages">11) Dropdowns</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#forms" role="tab" aria-controls="messages">12) Forms</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#quiz1" role="tab" aria-controls="messages">13) Bootstrap Quiz #1</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">14) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to Bootstrap</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to javascript, what it's used for, and how it connects to HTML and CSS.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/xYJUeah.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/bootstrap/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Grid-->
+                <div class="tab-pane fade " id="grid" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Grid Basics</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learning how to use the get element function on a simple HTML page. You will learn their uses, and how to apply them. (Manipulating the DOM)</h5>
+                    <br>
+                    <img src="https://i.imgur.com/XsVo90d.png" width="580" height="150">
+                    <br><br>
+                    <a href="/editor/bootstrap/grid" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Typography-->
+                <div class="tab-pane fade" id="typography" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Typography</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be creating a simple working light bulb switch powered by a button, using the Get Element function.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/3TIQhik.jpg" width="250" height="320">
+                
+                    <br><br>
+                    <a href="/editor/bootstrap/typography" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Images-->
+                <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Image Types</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to how to toggle a hide and show function.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/4cRdZs6.png" width="520" height="220">
+                        <br><br>
+                        <a href="/editor/bootstrap/images" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Jumbotron-->
+                <div class="tab-pane fade" id="jumbotrons" role="tabpanel" aria-labelledby="list-settings-list">
+                    <h1>Jumbotrons</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to use the script tag, so you can create javascript code. </h5>
+                    <br>
+                    <img src="https://i.imgur.com/djqXS8t.png" width="338" height="210">
+                    <br><br>
+                    <a href="/editor/bootstrap/jumbotrons" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Alerts-->
+                <div class="tab-pane fade" id="alerts" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Alerts</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will get to know the use of external files, their uses, and how they are importnat. </h5>
+                        <br>
+                        <img src="https://i.imgur.com/GOPCDQr.png" width="470" height="330">
+                        <br><br>
+                        <a href="/editor/bootstrap/alerts" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Buttons-->
+                <div class="tab-pane fade" id="buttons" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Buttons</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to use the alert function, the console.log function, and how it's useful.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/FWx9fyR.png" width="430" height="220">
+                    <br><br>
+                    <a href="/editor/bootstrap/buttons" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Fontawesome-->
+                <div class="tab-pane fade" id="fontawesome" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Using Font Awesome</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this quick lesson, you will be exposed to the different types of basic math functions and what they are used for. </h5>
+                    <br>
+                 
+                    <img src="https://i.imgur.com/QxGEr6y.jpg" width="600" height="400">
+                    <br><br>
+                    <a href="/editor/bootstrap/fontawesome" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+               
+                <!--Navbar-->
+                <div class="tab-pane fade" id="navbar" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Navbars</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Comparisons, Logic, and Booleans are the one of the most important parts of programming, and many programs are depended on these. In this lesson, you will learn what they are and how to use them. </h5>
+                    <br>
+                    <img src="https://i.imgur.com/0z5yNer.png" width="220" height="330">
+                    <br><br>
+                    <a href="/editor/bootstrap/navbar" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+               
+                <!--Dropdowns-->
+                <div class="tab-pane fade" id="dropdowns" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Dropdowns</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to create functions, their uses, and how to apply functions to your application.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/71CERKd.png" width="500" height="330">
+                    <br><br>
+                    <a href="/editor/bootstrap/dropdowns" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+              
+                <!--Forms-->
+                <div class="tab-pane fade" id="forms" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Forms</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Like functions, arrays are also very important. In this lesson, you will learn the basics of arrays, how to use them, and their uses.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/ocFcOd3.jpg" width="530" height="360">
+                    <br><br>
+                    <a href="/editor/bootstrap/forms" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <!--Quiz 1-->
+                <div class="tab-pane fade" id="quiz1" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Javascript Quiz #1</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Awesome job learning! Take this quiz to test your new knowledge:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/sqdCKsF.png" width="570" height="100">
+                    <br><br>
+                    <a href="/editor/bootstrap/quiz1" class="btn btn-primary" style="color:white;">Javascript Quiz #1</a>
+                </div>
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished the Javascript course! There is so much more to learn, which is best learnt through personal projects and experience. Here are what we recommend for you to do next:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" style="color:white;">Learn Bootstrap</a>
+                    <a class="btn btn-primary" style="color:white;">Code Your Portfolio</a>
+                    <a class="btn btn-primary" style="color:white;">Design a Blog</a>
+                    <a class="btn btn-primary" style="color:white;">Cookie Clicker Clone</a>
+
+                    <!-- Add other option like games, etc.-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../../partials/footer %>

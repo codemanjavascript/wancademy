@@ -10,9 +10,7 @@ router.get("/introduction-to-programming", isLoggedIn, function(req, res) {
 router.get("/1-getstarted", isLoggedIn, function(req, res){
   res.render("courses-html/html/getstarted");
 });
-/*router.get("/html", function(req, res) {
-    res.render("courses-html/html/index");
-});*/
+
 router.get("/html/attributes", isLoggedIn,function(req, res) {
    res.render("courses-html/html/attributes") 
 });
@@ -23,9 +21,24 @@ router.get("/html/tagsandheadings", isLoggedIn,function(req, res){
    res.render("courses-html/html/tags&head");
 });
 
+/*HTML*/
+router.get("/html", function(req, res) {
+    res.render("courses-html/html/index");
+});
+
 /*CSS*/
 router.get("/css", function(req, res){
-    res.render("courses-html/css/hub");
+    res.render("courses-html/css/index");
+});
+
+/*Javascript*/
+router.get("/javascript", function(req, res){
+    res.render("courses-html/javascript/index");
+});
+
+/*Bootstrap*/
+router.get("/bootstrap", function(req, res){
+    res.render("courses-html/bootstrap/index");
 });
 
 // route middleware to make sure a user is logged in

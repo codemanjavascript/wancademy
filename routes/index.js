@@ -43,42 +43,46 @@ router.get("/editor/introduction-to-frontend", function(req, res) {
    res.render("editor/introductiontofrontend") ;
 });
 
-router.get("/editor/introductiontohtml/documentandtags", function(req, res) {
-   res.render("editor/documentandheading") ;
+router.get("/editor/html/introduction", function(req, res) {
+    res.render("editor/html/documentandheading") ;
+ });
+
+router.get("/editor/html/documentandtags", function(req, res) {
+   res.render("editor/html/documentandheading") ;
 });
 
-router.get("/editor/introductiontohtml/headingsandparagraph", function(req, res) {
-    res.render("editor/headingsandparagraph");
+router.get("/editor/html/headingsandparagraph", function(req, res) {
+    res.render("editor/html/headingsandparagraph");
 });
 
-router.get("/editor/introductiontohtml/links", function(req, res) {
-    res.render("editor/links");
+router.get("/editor/html/links", function(req, res) {
+    res.render("editor/html/links");
 });
 
-router.get("/editor/introductiontohtml/images", function(req, res) {
-    res.render("editor/images");
+router.get("/editor/html/images", function(req, res) {
+    res.render("editor/html/images");
 });
 
-router.get("/editor/introductiontohtml/buttons", function(req, res) {
-    res.render("editor/buttons");
+router.get("/editor/html/buttons", function(req, res) {
+    res.render("editor/html/buttons");
 });
 
-router.get("/editor/introductiontohtml/lists", function(req, res) {
-    res.render("editor/lists");
+router.get("/editor/html/lists", function(req, res) {
+    res.render("editor/html/lists");
 });
 
 
 
 router.get("/editor/introductiontohtml/inline-style", function(req, res) {
-    res.render("editor/inline-style");
+    res.render("editor/html/inline-style");
 });
 
 router.get("/editor/introductiontohtml/commentdivs", function(req, res) {
-    res.render("editor/commentdivs");
+    res.render("editor/html/commentdivs");
 });
 
 router.get("/editor/introductiontohtml/wrap", function(req, res) {
-    res.render("editor/wrap");
+    res.render("editor/html/wrap");
 });
 
 
