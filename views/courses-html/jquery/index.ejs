@@ -1,0 +1,178 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #8EDFFF;  /* fallback for old browsers */
+        height:275px;
+    }
+    a:hover{
+        color:#8EDFFF;
+        transition:0.2s;
+    }
+
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #8EDFFF;
+      border-color: #8EDFFF;
+    }
+
+
+    h1 {
+        font-size:45px;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:7px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:90px;font-weight:600;">jQuery</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to jQuery</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#install" role="tab" aria-controls="home">2) Installment</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#syntax" role="tab" aria-controls="profile">3) Basic Syntax</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#selectors" role="tab" aria-controls="messages">4) Selectors</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#events" role="tab" aria-controls="settings">5) Events</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#hideshow" role="tab" aria-controls="settings">6) Hide and Show</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#dom" role="tab" aria-controls="messages">7) DOM Manipulation</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#resources" role="tab" aria-controls="messages">8) Resources</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#quiz1" role="tab" aria-controls="messages">9) jQuery Quiz #1</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">10) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to jQuery</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">jQuery is a useful language/library when using javascript. jQuery creates an easier environment, a more effective environment, and is great when programming. In this lesson, you willl be introduced to jQuery, its uses, and some examples.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/DMy3vWE.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/jquery/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Installment-->
+                <div class="tab-pane fade " id="install" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Installment</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to install jQuery using a CDN to your code.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/f0DfD1e.jpg" width="500" height="330">
+                    <br><br>
+                    <a href="/editor/jquery/install" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Syntax-->
+                <div class="tab-pane fade" id="syntax" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Basic Syntax</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be learning the basic syntax of jQuery, how to set up the document, and some tips.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/jjzstS6.png" width="400" height="250">
+                
+                    <br><br>
+                    <a href="/editor/jquery/syntax" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                 <!--Selectors-->
+                <div class="tab-pane fade" id="selectors" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Selectors</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to some common selectors used in jQuery, its uses, and some examples.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/Kpa0Qi6.jpg" width="500" height="220">
+                        <br><br>
+                        <a href="/editor/jquery/selectors" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Events-->
+                <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Events</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced and taught the most commonly used and useful events in jQuery.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/g7Ul8g1.png" width="520" height="290">
+                        <br><br>
+                        <a href="/editor/jquery/events" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Hide and Show-->
+                <div class="tab-pane fade" id="hideshow" role="tabpanel" aria-labelledby="list-settings-list">
+                    <h1>Hide and Show</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will create a simple application that hides and shows a box. </h5>
+                    <br>
+                    <img src="https://i.imgur.com/4cRdZs6.png" width="520" height="220">
+                    <br><br>
+                    <a href="/editor/jquery/hideshow" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--DOM-->
+                <div class="tab-pane fade" id="dom" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>DOM Manipulation</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to utilize the DOM, how to manipulate it, and its uses. </h5>
+                        <br>
+                        <img src="https://i.imgur.com/xXztpen.png" width="500" height="320">
+                        <br><br>
+                        <a href="/editor/jquery/dom" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Resources-->
+                <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Resources</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">You will be introduced to some resources to better further your jQuery knowledge, as well as some project ideas.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/5VQKtkY.jpg" width="530" height="300">
+                    <br><br>
+                    <a href="/editor/jquery/resources" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+
+                <!--Quiz 1-->
+                <div class="tab-pane fade" id="quiz1" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>jQuery Quiz #1</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Great job so far! Take this quiz to test your new knowledge:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/sqdCKsF.png" width="570" height="100">
+                    <br><br>
+                    <a href="/editor/jquery/quiz1" class="btn btn-primary" style="color:white;">Javascript Quiz #1</a>
+                </div>
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished the jQuery course! There is so much more to learn, which is best learnt through personal projects and experience. Here are what we recommend for you to do next:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" style="color:white;">Code Your Portfolio</a>
+                    <a class="btn btn-primary" style="color:white;">Design a Blog</a>
+                    <a class="btn btn-primary" style="color:white;">Cookie Clicker Clone</a>
+
+                    <!-- Add other option like games, etc.-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../../partials/footer %>

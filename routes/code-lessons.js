@@ -41,6 +41,28 @@ router.get("/bootstrap", function(req, res){
     res.render("courses-html/bootstrap/index");
 });
 
+/*jQuery*/
+router.get("/jquery", function(req, res){
+    res.render("courses-html/jquery/index");
+});
+
+/*Design a Blog*/
+router.get("/design-a-blog", function(req, res){
+    res.render("courses-html/design-a-blog/index");
+});
+
+/*Code Your Portfolio*/
+router.get("/code-your-portfolio", function(req, res){
+    res.render("courses-html/code-your-portfolio/index");
+});
+
+/*Deploy*/
+router.get("/deploy", function(req, res){
+    res.render("courses-html/deploy/index");
+});
+
+
+
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
 
