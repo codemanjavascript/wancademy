@@ -1,0 +1,161 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #FF4141;  /* fallback for old browsers */
+        height:275px;
+    }
+    a:hover{
+        color:#FF4141;
+        transition:0.2s;
+    }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #FF4141;
+      border-color: #FF4141;
+    }
+    h1 {
+        font-size:45px;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:7px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:90px;font-weight:600;">Design a Blog</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to the Project</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#html1" role="tab" aria-controls="home">2) HTML Layout #1</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#html2" role="tab" aria-controls="profile">3) HTML Layout #2</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#css1" role="tab" aria-controls="messages">4) Adding CSS #1</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#css2" role="tab" aria-controls="settings">5) Adding CSS #2</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#photos" role="tab" aria-controls="settings">6) Installing Photos</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#fonts" role="tab" aria-controls="messages">7) Adding Google Fonts</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#fontawesome" role="tab" aria-controls="messages">8) Using Font Awesome</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">15) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to The Project</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Welcome to this project! You will learn to design a blog for any topic you desire. We will go over the plan to tackle this project, the final result, and how long this should take.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/1qcDPmE.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/design-a-blog/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Html #1-->
+                <div class="tab-pane fade " id="html1" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>HTML Layout #1</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be creating the basic layout of your blog. You will set up the document, be introduced to bootstrap, and creating a navbar.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/AVDfBtb.png" width="310" height="300">
+                    <br><br>
+                    <a href="/editor/design-a-blog/html1" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Html #2-->
+                <div class="tab-pane fade" id="html2" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>HTML Layout #2</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be creating the jumbotron, creating the thumbnails, creating the text, and adding a footer.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/PhS6gUa.png" width="400" height="220">
+                    <br><br>
+                    <a href="/editor/design-a-blog/html2" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Css #1-->
+                <div class="tab-pane fade" id="css1" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Adding CSS #1</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be using your CSS skills to design the navbar, add a logo, and setting the colors.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/OQhqTaJ.png" width="440" height="220">
+                        <br><br>
+                        <a href="/editor/design-a-blog/css1" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Css #2-->
+                <div class="tab-pane fade" id="css2" role="tabpanel" aria-labelledby="list-settings-list">
+                    <h1>Adding CSS #2</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be finishing up the main design for the blog. </h5>
+                    <br>
+                    <img src="https://i.imgur.com/EHrMeT4.png" width="658" height="300">
+                    <br><br>
+                    <a href="/editor/design-a-blog/css2" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Photo installation-->
+                <div class="tab-pane fade" id="photos" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Photo Installations</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will implement images that are relevant to your blog, and you will add text to your first entry!</h5>
+                        <br>
+                        <img src="https://i.imgur.com/2XOJFBy.png" width="520" height="200">
+                        <br><br>
+                        <a href="/editor/design-a-blog/photos" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--fonts google-->
+                <div class="tab-pane fade" id="fonts" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Adding Google Fonts</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how to use google fonts, then apply google fonts to the blog.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/Hb733J9.png" width="380" height="330">
+                    <br><br>
+                    <a href="/editor/design-a-blog/fonts" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--font awesome-->
+                <div class="tab-pane fade" id="fontawesome" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Using Font Awesome</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn the basics of font awesome, then you will install it. After, you will add icons to style your blog.</h5>
+                    <br>
+           
+                    <img src="https://i.imgur.com/1PNUXi8.png" width="660" height="200">
+                    <br><br>
+                    <a href="/editor/design-a-blog/fontawesome" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished this project! Creating projects are great to furthur your knowledge. Make sure to share your completed Here are what we recommend for you to do next:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" style="color:white;">Learn Javascript</a>
+                    <a class="btn btn-primary" style="color:white;">Code Your Portfolio</a>
+                    <a class="btn btn-primary" style="color:white;">Design a Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../../partials/footer %>

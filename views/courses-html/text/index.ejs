@@ -1,0 +1,137 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #FF4B4B;  /* fallback for old browsers */
+        height:275px;
+    }
+    a:hover{
+        color:#FF4B4B;
+        transition:0.2s;
+    }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #FF4B4B;
+      border-color: #FF4B4B;
+    }
+    h1 {
+        font-size:45px;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:9px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:85px;font-weight:600;">Text Adventure</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to the Project</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#conditions" role="tab" aria-controls="home">2) Conditions</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#booleans" role="tab" aria-controls="profile">3) Booleans</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#comparisons" role="tab" aria-controls="messages">4) Comparisons</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#loops" role="tab" aria-controls="messages">5) Loops</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#test" role="tab" aria-controls="messages">6) Testing and Play</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">7) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to The Project</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Welcome to this project! You will create a fun and interesting word text adventure game using HTML and Javascript. In this lesson, you will go over the final project, curriculum, and what to expect.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/69qGQRw.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/counting/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Conditions -->
+                <div class="tab-pane fade " id="conditions" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Conditions</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn and refresh the basics of javascript conditions, how they are used, and using them in your game.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/AVDfBtb.png" width="310" height="300">
+                    <br><br>
+                    <a href="/editor/text/conditions" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Booleans-->
+                <div class="tab-pane fade" id="booleans" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Booleans</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn and refresh the basics of javascript booleans, how they are used, and using them in your game.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/PhS6gUa.png" width="400" height="220">
+                    <br><br>
+                    <a href="/editor/text/booleans" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Comparisons-->
+                <div class="tab-pane fade" id="comparisons" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Comparisons</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn and refresh the basics of javascript comparisons, how they are used, and using them in your game.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/OQhqTaJ.png" width="440" height="220">
+                        <br><br>
+                        <a href="/editor/text/comparisons" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Loops-->
+                <div class="tab-pane fade" id="loops" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Loops</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn and refresh the basics of javascript loops, how they are used, and using them in your game.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/OQhqTaJ.png" width="440" height="220">
+                        <br><br>
+                        <a href="/editor/text/loops" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Test and Play-->
+                <div class="tab-pane fade" id="test" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Testing and Play</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, we will test the final result of out game, and some interesting tidbits.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/OQhqTaJ.png" width="440" height="220">
+                        <br><br>
+                        <a href="/editor/text/test" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished this project! Creating projects are great to furthur your knowledge. Make sure to share your completed Here are what we recommend for you to do next:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" style="color:white;">Learn Javascript</a>
+                    <a class="btn btn-primary" style="color:white;">Design a Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../../partials/footer %>

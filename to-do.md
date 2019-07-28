@@ -56,6 +56,7 @@ Current To-Do (as of June 3,2018)
 Middle ware for all lessons so they must login to access lessons
 add animations to landing
 update html curricula
+add the the rest of the photos of projects
 1) Make Algebra 1, Geometry, Spanish 1, Spanish 3, etc. cuirriculum
 2) put stuff on profile
 3) premium

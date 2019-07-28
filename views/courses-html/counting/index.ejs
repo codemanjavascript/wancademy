@@ -1,0 +1,115 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #FFAA00;  /* fallback for old browsers */
+        height:275px;
+    }
+    a:hover{
+        color:#FFAA00;
+        transition:0.2s;
+    }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #FFAA00;
+      border-color: #FFAA00;
+    }
+    h1 {
+        font-size:45px;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:7px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:90px;font-weight:600;">Counting Game</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to the Project</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#html" role="tab" aria-controls="home">2) HTML Layout</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#css" role="tab" aria-controls="profile">3) Adding CSS</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#js" role="tab" aria-controls="messages">4) Adding Javascript</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">5) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to The Project</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Welcome to this project! You will a very simple and practical HTML and Javascript counter. There will be a up and down button, and a display that shows the number.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/69qGQRw.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/counting/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--HTML -->
+                <div class="tab-pane fade " id="html" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>HTML Layout</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be creating the basic buttons and the number display.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/AVDfBtb.png" width="310" height="300">
+                    <br><br>
+                    <a href="/editor/counting/html" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--CSS-->
+                <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Adding CSS</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be styling the HTML page, adding button styling, and fonts.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/PhS6gUa.png" width="400" height="220">
+                    <br><br>
+                    <a href="/editor/counting/css" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--JS-->
+                <div class="tab-pane fade" id="js" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Adding Javascript</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be adding the javascript function to your counting game/app.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/OQhqTaJ.png" width="440" height="220">
+                        <br><br>
+                        <a href="/editor/counting/js" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished this project! Creating projects are great to furthur your knowledge. Make sure to share your completed Here are what we recommend for you to do next:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" style="color:white;">Learn Javascript</a>
+                    <a class="btn btn-primary" style="color:white;">Design a Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../../partials/footer %>

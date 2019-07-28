@@ -1,0 +1,127 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #094466;  /* fallback for old browsers */
+        height:275px;
+    }
+    a:hover{
+        color:#094466;
+        transition:0.2s;
+    }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #0E537C;
+      border-color: #0E537C;
+    }
+    h1 {
+        font-size:45px;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:7px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:90px;font-weight:600;">Deploying Online</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to Deploying</a>
+            <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#site" role="tab" aria-controls="home">2) Creating a Website</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#domains" role="tab" aria-controls="home">2) Domains</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#deploy" role="tab" aria-controls="profile">3) Deploying the Website</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#resources" role="tab" aria-controls="messages">4) Resources</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">5) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to Deploying</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Welcome to this deploying! Whenever you are ready to take a static (front-end) website online, this is the perfect course for you. In this introduction we will go over the differences of static and dynamic, and an overview of the course.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/fFMHq6n.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/code-your-portfolio/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Intro-->
+                <div class="tab-pane fade" id="site" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Creating a Website</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, we will create a simple site as a model for deployment.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/1QZIMWM.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/code-your-portfolio/site" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--domains-->
+                <div class="tab-pane fade " id="domains" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Domains</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced on the different types of domains, where you can register for them, and some popular services.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/Tp0b27v.png" width="610" height="200">
+                    <br><br>
+                    <a href="/editor/code-your-portfolio/domains" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--deploying the site-->
+                <div class="tab-pane fade" id="deploy" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Deploying the Website</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be deploying your website through multiple shown ways.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/DOCWKPo.png" width="500" height="280">
+                    <br><br>
+                    <a href="/editor/code-your-portfolio/deploy" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Resources-->
+                <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Resources</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn some more valuable resources that you can use to furthur enhance your knowledge of deploying online.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/IfJqPD3.png" width="440" height="300">
+                        <br><br>
+                        <a href="/editor/code-your-portfolio/resources" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+              
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Woo! We hope you have your website online now! Make sure to share your online site with the community here:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" style="color:white;">Learn Javascript</a>
+                    <a class="btn btn-primary" style="color:white;">Design a Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../../partials/footer %>

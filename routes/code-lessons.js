@@ -61,6 +61,40 @@ router.get("/deploy", function(req, res){
     res.render("courses-html/deploy/index");
 });
 
+/*Counting Game*/
+router.get("/counting", function(req, res){
+    res.render("courses-html/counting/index");
+});
+
+/*Cookie Clicker Clone*/
+router.get("/cookie", function(req, res){
+    res.render("courses-html/cookie/index");
+});
+
+/*Text Game*/
+router.get("/text", function(req, res){
+    res.render("courses-html/text/index");
+});
+
+/*Functional Clock*/
+router.get("/clock", function(req, res){
+    res.render("courses-html/clock/index");
+});
+
+/*Functional Calculator*/
+router.get("/calculator", function(req, res){
+    res.render("courses-html/calculator/index");
+});
+
+/*Skateboard ecommerce*/
+router.get("/skateboard", function(req, res){
+    res.render("courses-html/skateboard/index");
+});
+
+/*Animate.css*/
+router.get("/animate", function(req, res){
+    res.render("courses-html/animate/index");
+});
 
 
 // route middleware to make sure a user is logged in
