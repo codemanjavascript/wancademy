@@ -1,4 +1,4 @@
-<% include ../partials/editorhead %>
+<% include ../../partials/editorhead %>
 
 <style>
 
@@ -131,13 +131,24 @@ html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
                            <strong>Example:</strong>
                            <br><br><img src="https://i.imgur.com/EoAonU7.png" height="30" width="370">
                            <img src="https://i.imgur.com/44rCjuN.png" height="60" width="100">
-                           <br><br><strong style="font-size:40px;">Common Properties:</strong>
-                           <br>
-                           <strong>Background Color</strong>: use the property "background-color:color type;"
+                           <br><br><strong style="font-size:30px;">Common Properties:</strong>
+                           
+                           <br><br>
+                           <strong>Background Color</strong>: use the property "background-color:color type;
+                           <br><br>
+                            <strong>Text Color</strong>: use the property "style="color:blue;"
+                            <br><br>
+                            <strong>Text Color</strong>: use the property "style="color:blue;"
+                            <br><br>
+                            <strong>Fonts</strong>: use the property "style="font-family:verdana;". Find more font styles <a target="_blank" href="https://www.cssfontstack.com/">here</a>
+                            <br><br>
+                            <strong>Text Size</strong>: use the property "style="font-size:100px;". Works also in percentages.
+                            <br><br>
+                            <strong>Text Alignment</strong>: use the property "style="text-align:center;"
                         </p>
                        
                         <br><hr><h3><strong>Your Turn!</strong></h3>
-                        <i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp; <span style="font-size:21px;font-weight:440">Create an ordered list for a grocery trip under the heading. Click "Check Code" once you are finished</span>
+                        <i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp; <span style="font-size:21px;font-weight:440">Add an inline style to make the paragraphs font-size bigger.</span>
                         
                         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         
@@ -237,7 +248,7 @@ function Run(){
  $('.nav-tabs a[href="#contact-tab"]').tab('show');
 
 
- if (Code.includes('<ol>','</ol>','<li>','<li>')){
+ if (Code.includes('style="','font-size:')){
       $( "#checkbox" ).addClass( ".far fa-check-square" ).removeClass( ".far fa-square" );
       
         swal({
@@ -249,7 +260,7 @@ function Run(){
                 confirm: "Next Lesson",
               }
         }).then(function() {
-            window.location.href = "/editor/introductiontohtml/headingsandparagraph";
+            window.location.href = "/editor/html/commentdivs";
             
             
     });
@@ -322,7 +333,7 @@ function setupEditor()
   editor.setValue(`<!DOCTYPE html>
 <html>
     <body>
-        <h1>Grocery List:</h1>
+        <p>Make me bigger!</p>
     </body>
 </html>`,1); //1 = moves cursor to end
    editor.renderer.setScrollMargin(13, 3);

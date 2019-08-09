@@ -1,0 +1,96 @@
+<% include ../../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #FF6F41;  /* fallback for old browsers */
+        height:275px;
+    }
+    a:hover{
+        color:#FF6F41;
+        transition:0.2s;
+    }
+
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #FF6F41;
+      border-color: #FF6F41;
+    }
+
+
+    h1 {
+        font-size:45px;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:12px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:80px;font-weight:600;">Animate.css</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to Animate.css</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#html" role="tab" aria-controls="home">2) Installing and Use</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">3) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to Animate.css</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this first lesson, you will be introduced to HTML, its uses, and some examples of websites created using HTML.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/e47rAgQ.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/editor/html/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--HTML Layout-->
+                <div class="tab-pane fade " id="html" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Installing and Uses</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to tags and you learn how to declare an HTML document and you'll apply to some simple examples!</h5>
+                    <br>
+                    <img src="https://i.imgur.com/b3kyHDn.png" width="510" height="300">
+                    <br><br>
+                    <a href="/editor/html/documentandtags" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Congrats! You have finished the HTML course! There is so much more to learn, which is best learnt through personal projects and experience. Here are what we recommend for you to do next:</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" style="color:white;">Learn CSS</a>
+                    <a class="btn btn-primary" style="color:white;">Code Your Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../../partials/footer %>

@@ -39,51 +39,6 @@ router.get("/design", function (req, res){
 
 
 
-router.get("/editor/introduction-to-frontend", function(req, res) {
-   res.render("editor/introductiontofrontend") ;
-});
-
-router.get("/editor/html/introduction", function(req, res) {
-    res.render("editor/html/documentandheading") ;
- });
-
-router.get("/editor/html/documentandtags", function(req, res) {
-   res.render("editor/html/documentandheading") ;
-});
-
-router.get("/editor/html/headingsandparagraph", function(req, res) {
-    res.render("editor/html/headingsandparagraph");
-});
-
-router.get("/editor/html/links", function(req, res) {
-    res.render("editor/html/links");
-});
-
-router.get("/editor/html/images", function(req, res) {
-    res.render("editor/html/images");
-});
-
-router.get("/editor/html/buttons", function(req, res) {
-    res.render("editor/html/buttons");
-});
-
-router.get("/editor/html/lists", function(req, res) {
-    res.render("editor/html/lists");
-});
-
-
-
-router.get("/editor/introductiontohtml/inline-style", function(req, res) {
-    res.render("editor/html/inline-style");
-});
-
-router.get("/editor/introductiontohtml/commentdivs", function(req, res) {
-    res.render("editor/html/commentdivs");
-});
-
-router.get("/editor/introductiontohtml/wrap", function(req, res) {
-    res.render("editor/html/wrap");
-});
 
 
 router.get("/paths/front-end", function(req, res) {

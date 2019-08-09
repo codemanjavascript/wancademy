@@ -1,100 +1,52 @@
 <% include ../../partials/editorhead %>
 
-<style>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+            overflow:hidden;
+        }
+        
+        #htmleditor {
+            height:360px;
+            width:44%;
+            display:inline-block;
+        }
+        #csseditor {
+            height:360px;
+            width:55%;
+            display:inline-block;
+        }
 
-html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
-
-#left {
-    float: left;
-    width: 45%;
-    height: 100%;
-    overflow: auto;
-    box-sizing: border-box;
-    
-}
-#right {
-    float: left;
-    width: 55%;
-    height: 100%;
-    overflow: auto;
-    box-sizing: border-box;
-   
-}
-
-#editor {
-    height: 400px;
-    width:100%;
-}
-
-
-#iframe {
-	height:10000px;
-	overflow: scroll;
-	width:100%;
-	 border: 8px solid #00283F;
-	 padding:9px;
-
-}
-
-#iframe-2 {
-	height:560px;
-	overflow: scroll;
-	width:100%;
-	 padding:9px;
-
-}
-
-#fixedbutton-1 {
-    color:white;
-    position: fixed;
-    bottom: 20px;
-    right: 50px; 
-    z-index:10;
-    background:black;
-}
-
-#fixedbutton-2 {
-    color:white;
-    position: fixed;
-    bottom: 20px;
-    right: 560px; 
-    z-index:10;
-    background:#009EFF;
-}
-
-/* disable tag matching */
-.ace_editor .ace_marker-layer .ace_bracket { display: none }
-
-</style>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
-<div id="content">
+       
+        #result{
+            position:absolute;
+            border-right: 8px solid #00283F;
+	 
+            width:95.4%;
+            height:100%;
+        }
+        
+    </style>
 <div class="row">
-    
-    <div id="left" style="overflow: hidden;">
-        <!--Answer to check-->
-        <textarea type="text" id="txt1"  name="txt1" hidden></textarea>
-        <!--Actual Editor-->
-        <div id="editor"></div>
-        <!--Result of Code-->
-        <iframe id='iframe' frameBorder="0"></iframe>
-        <!-- Large Modal -->
-        <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"  aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <iframe id='iframe-2' frameBorder="0"></iframe>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button onclick="Run()" type="button" class="btn btn-primary">Check Code</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+<div class="col-6">
+    <div id="container">
+        <div style="background:black;height:100%;">
+        <div id="htmleditor"></div>
+        
+        <div id="csseditor"></div>
+      
+       </div>
     </div>
-    <div id="right" style="overflow: hidden;padding-left:35px;">
+    
+    <iframe id="result" frameBorder="0"></iframe>
+ </div>   
+
+
+
+<div class="col-6" style="overflow: hidden;">
         
         <!--Menu-->
         <div style="padding:9px;"></div>
@@ -118,7 +70,7 @@ html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
                 <div style="padding-right:40px;">
                 <div style="padding:9px;"></div>
                     <div style="overflow:scroll;height:1000px;">
-                        <h1 style="font-size:35px;font-weight:600;">Links<br><div style="padding:7px;"></div>
+                        <h1 style="font-size:35px;font-weight:600;">Selectors<br><div style="padding:7px;"></div>
                         <p style="font-weight:440;font-size:21px;">
                             Links are the way that users move from page to page through the internet. Links can also be referred to as "hyperlinks", which can be applied to text, images, or any other HTML element.
                             <br><br>
@@ -204,151 +156,92 @@ html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
             </div>
             
         </div>
-       
+  </div>     
     </div>
-    
-</div>
-</div>
-
-<!--Backend Javascript-->
-<script>
-
-
-  function update()
-{
-	var idoc = document.getElementById('iframe').contentWindow.document;
-var idoc2 = document.getElementById('iframe-2').contentWindow.document;
-	idoc.open();
-	idoc.write(editor.getValue());
-	idoc.close();
-	
-	idoc2.open();
-	idoc2.write(editor.getValue());
-	idoc2.close();
-}
-
-function activaTab(){
-    
-};
-
-function Run(){
- var editor = ace.edit("editor");
- var Code = editor.getSession().getValue();
- var txt1 = document.getElementById("txt1").value;
- $('.nav-tabs a[href="#contact-tab"]').tab('show');
-
-
- if (Code.includes('<a','</a>','href')){
-      $( "#checkbox" ).addClass( ".far fa-check-square" ).removeClass( ".far fa-square" );
-      
-        swal({
-            title: "Good job!",
-            text: "Continue to the next lesson!",
-            icon: "success",
-             closeOnClickOutside: false,
-             buttons: {
-                confirm: "Next Lesson",
-              }
-        }).then(function() {
-            window.location.href = "/editor/introductiontohtml/headingsandparagraph";
-            
-            
-    });
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
    
-   return false;
+<script>
     
-  
-  } else if(Code == "<h1>hello world</h1>"){
-     swal({
-  title: "Uh Oh!",
-  text: "Make sure the H in Hello and W in World are capitalized!",
-  icon: "error",
-  button: "Try Again",
-});
-       return false;
-       
-  } else if(Code == "hello world"){
-     swal({
-  title: "Uh Oh!",
-  text: "Don't forget the <h1></h1> tags!",
-  icon: "error",
-  button: "Try Again",
-});
-       return false;
-       
-  } else{
-            swal({
-          title: "Oh No!",
-          text: "Your code seems to be incorrect",
-          icon: "error",
-          buttons: ["Try Again", "View Solution"],
-          
-        })
-        .then((willDelete) => {
-          if (willDelete) {
-            swal("<h1>Hello World</h1>", {
-              title: "Solution:",
-              icon: "info",
-              button: "Try Again"
-             
-            });
-          } 
-        });
+function update(){
+            var res = document.getElementById("result").contentWindow.document;
+            res.open();
+            res.write(eh.getValue());
+            //for css
+            res.write('<style>'+ec.getValue()+'</style>');
+           
+            res.close();
+        }
         
-         return false;
-    }
-
-}
-
-
-$(".one").click(function() {
-        $(".two").toggle();
-    });
-    
-    $(".one1").click(function() {
-        $(".two1").toggle();
-    });
-
-$(".one2").click(function() {
-        $(".two2").toggle();
-    });
-    $(".one3").click(function() {
-        $(".two3").toggle();
-    });
-function setupEditor()
-{
-  window.editor = ace.edit("editor");
-  editor.setTheme("ace/theme/cobalt");
-  editor.getSession().setMode("ace/mode/html");
-  editor.setValue(`<!DOCTYPE html>
+        function seteditor(){
+            //HTML
+            window.eh = ace.edit("htmleditor");
+            eh.setTheme("ace/theme/cobalt");
+            eh.session.setMode("ace/mode/html");
+            //CSS
+            window.ec = ace.edit("csseditor");
+            ec.setTheme("ace/theme/merbivore");
+            ec.session.setMode("ace/mode/css");
+           
+            eh.setValue(`<!DOCTYPE html>
 <html>
     <body>
-        <h1>Links</h1>
-        <p>Links are very useful!</p>
+    
     </body>
 </html>`,1); //1 = moves cursor to end
-   editor.renderer.setScrollMargin(13, 3);
+   eh.renderer.setScrollMargin(13, 3);
    
-  editor.getSession().on('change', function() {
+  eh.getSession().on('change', function() {
     update();
   });
 
-  editor.focus();
+  eh.focus();
   
   
-  editor.setOptions({
-    fontSize: "13pt",
+  eh.setOptions({
+    fontSize: "11pt",
     showLineNumbers: true,
     showGutter: true,
     autoScrollEditorIntoView: true,
     enableBasicAutocompletion: false, enableLiveAutocompletion: true
   });
 
-  editor.setShowPrintMargin(false);
-  editor.setBehavioursEnabled(false);
-}
+  eh.setShowPrintMargin(false);
+  eh.setBehavioursEnabled(false);
 
-setupEditor();
-update();
+
+  ec.setValue(``,1); //1 = moves cursor to end
+   ec.renderer.setScrollMargin(13, 3);
+   
+  ec.getSession().on('change', function() {
+    update();
+  });
+
+  ec.focus();
   
+  
+  ec.setOptions({
+    fontSize: "11pt",
+    showLineNumbers: true,
+    showGutter: true,
+    autoScrollEditorIntoView: true,
+    enableBasicAutocompletion: false, enableLiveAutocompletion: true
+  });
+
+  ec.setShowPrintMargin(false);
+  ec.setBehavioursEnabled(false);
+
+
+            eh.getSession().on("change", function(){
+               update(); 
+            });
+            
+            ec.getSession().on("change", function(){
+               update(); 
+            });
+            
+           
+        }
+        seteditor();
+        update();
 </script>
