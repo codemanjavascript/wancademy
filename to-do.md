@@ -1,5 +1,45 @@
 Dear future tommy, if you ever need to start this workspace, either go on git and download the files and upload them to visual studio code, or get the USB with the files in it and load it in to visual studio code. After, you need to install mongod, and to do that, make a new terminal on the bottom, then use the correct instructions to start it (check c9 or search google "c9 mongoDB set up"). With VSC, you need to start it by tying "mongod" in terminal 2. After, in terminal 1, write "node app.js", which will take then make localhost:3000 work. Just type that in the web address, then it should be working!
 
+Update: November 12, 2019. Hello Tommy, so I got a new macbook air since I accidentally spilled coffee on my last one. So that meant I had to actually download the code and get it running. In case something ever happens again, this is the process that worked for me:
+
+1) Go to : https://github.com/codemanjavascript/wancademy and download the master file. Download Node.js, Visual studio code.
+
+2) Upload the new folder by dragging and dropping on to the empty vsc layout. Having that you have your packages now.  
+
+3) Go to main terminal on the laptop and type:
+- xcode-select --install
+- ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- enter password for computer
+- brew install mongodb-community
+
+then to start: brew services start mongodb-community 
+to stop: brew services stop mongodb-community
+
+refer to these:
+https://github.com/mongodb/homebrew-brew
+https://stackoverflow.com/questions/57856809/installing-mongodb-with-homebrew
+https://appuals.com/how-to-fix-sudo-apt-get-command-not-found-on-macos/
+https://treehouse.github.io/installation-guides/mac/mongo-mac.html
+
+4) Then, make a terminal in vsc by going to terminal tab, new, and type in all the npm packgages. To do this, go to npm.com (or whatever the site is), go to the package.json file, and download and type everything in. 
+
+5) Then to start the program, make another terminal, and say node app.js
+
+6) To connect to the github as shown above, do
+- command shift p
+- type git clone
+- paste https://github.com/codemanjavascript/wancademy
+- and then there should be a refresh icon in the blue stuff at the very bottm. make some changes, click on the git tab, and test it out. 
+
+That should be working for now
+
+
+
+
+
+
+
+
 Dear Future Tommy, this is July 8, 2019, and I have decided not to go all subjects. Well because it would be too hard, khan academy already exists, and i have lots going on. Anyways, One conflicting thought is codecademy. Am I just copying them? Well idk, but I'll keep going with this and see where it goes. Hoping it will be a non profit or something people can use for free
 
 Goodluck, tommy from china in june 3,2019
