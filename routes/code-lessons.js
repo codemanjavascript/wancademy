@@ -63,8 +63,8 @@ router.get("/html", function(req, res) {
     res.render("editor/html/tables");
 });
 
-router.get("/editor/html/responsive", function(req, res) {
-    res.render("editor/html/responsive");
+router.get("/editor/html/span", function(req, res) {
+    res.render("editor/html/span");
 });
 
 router.get("/quizzes/html/quiz1", function(req, res) {
