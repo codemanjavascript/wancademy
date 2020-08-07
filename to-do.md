@@ -1,3 +1,4 @@
+test
 Dear future tommy, if you ever need to start this workspace, either go on git and download the files and upload them to visual studio code, or get the USB with the files in it and load it in to visual studio code. After, you need to install mongod, and to do that, make a new terminal on the bottom, then use the correct instructions to start it (check c9 or search google "c9 mongoDB set up"). With VSC, you need to start it by tying "mongod" in terminal 2. After, in terminal 1, write "node app.js", which will take then make localhost:3000 work. Just type that in the web address, then it should be working!
 
 Update: November 12, 2019. Hello Tommy, so I got a new macbook air since I accidentally spilled coffee on my last one. So that meant I had to actually download the code and get it running. In case something ever happens again, this is the process that worked for me:
