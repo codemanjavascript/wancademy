@@ -1,4 +1,3 @@
-=================================== 
 General Information and Todo List 
 ----------------------------------- 
 
@@ -36,7 +35,7 @@ Go on github and download the files and upload them to visual studio code, or ge
         
 References/Tutorials: https://github.com/mongodb/homebrew-brew https://stackoverflow.com/questions/57856809/installing-mongodb-with-homebrew https://appuals.com/how-to-fix-sudo-apt-get-command-not-found-on-macos/ https://treehouse.github.io/installation-guides/mac/mongo-mac.html 
 
-====================== 
+
 Info About Project 
 ---------------------- 
 General: Learn to code by creating your own company, game, or app. 100% Free. 
@@ -51,7 +50,7 @@ Possiible Slogans:
 * Learn The Simple Way
 * Simple Learning Made Free 
 
-====================== 
+
 Minimum Launch List: 
 ---------------------- 
 * The features that are present and working in initial launch 
@@ -71,7 +70,7 @@ Minimum Launch List:
 14) Contact/Support Page 
 15) Possible future release/update: CSS Course 
 
-====================== 
+
 3 Day “Workshop” 
 ---------------------- 
 * August 7, 2020 to August 10, 2020 
@@ -87,7 +86,7 @@ Goal: Finish Wancademy with the minimum launch list, and ready for deployment. N
 
 5) Optional w/ Time: Forum and CSS Course
 
-====================== 
+
 Old Code (that may be useful): 
 ---------------------- 
 1) ~ 
