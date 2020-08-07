@@ -20,6 +20,10 @@ function escapeRegex(text){
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");  
 }
 
+router.get("/plannedUpdates", function (req, res){
+    res.render("plannedUpdates.ejs") ;
+});
+
 router.get("/websites", function (req, res){
     res.render("recommendations/websites/index") ;
 });
