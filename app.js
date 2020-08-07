@@ -74,7 +74,6 @@ app.use(flash());
 //Moment Use
 app.locals.moment = require('moment');
 
-
 //Use express-session
 app.use(require("express-session")({
     secret: "Once again Rusty wins cutest dog!",
@@ -128,8 +127,7 @@ app.post("/charge", (req, res) => {
 app.listen(4567);*/
 
 
-//Use shorcut on routes
-
+//Shorcuts on routes
 app.use("/", indexRoutes);
 app.use("/", code_lessonsRoutes);
 /*app.use("/", authRoutes);*/
@@ -157,7 +155,6 @@ var todoSchema = new mongoose.Schema({
 });
 
 var Todo = mongoose.model("Todo", todoSchema);
-
 
 app.get("/todos", function(req, res){
   Todo.find({}, function(err, todos){
@@ -217,17 +214,7 @@ app.delete("/todos/:id", function(req, res){
  }); 
 });
 
-
-
-
-
-
-
-
-
-
-
-// route middleware to make sure a user is logged in
+//Route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
 
     // if user is authenticated in the session, carry on
@@ -238,10 +225,8 @@ function isLoggedIn(req, res, next) {
     res.redirect('/');
 }
 
-
 //Start up the app
 app.listen(3000, '127.0.0.1', function(){
    console.log("Wancademy Server Started");
 });
 
-//commit note

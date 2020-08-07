@@ -1,3 +1,5 @@
+//Middleware
+
 var Campground = require("../models/campground");
 var Comment = require("../models/comment");
 
@@ -12,7 +14,6 @@ middlewareObj.isTeacher = function(req, res, next) {
         next();
     }
 }
-
 
 middlewareObj.checkCampgroundOwnership = function(req, res, next) {
  if(req.isAuthenticated()){
