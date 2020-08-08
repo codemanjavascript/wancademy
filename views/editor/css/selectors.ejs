@@ -19,6 +19,22 @@
             width:55%;
             display:inline-block;
         }
+        #iframe {
+            height:10000px;
+            overflow: scroll;
+            width:100%;
+            border: 8px solid #00283F;
+            padding:9px;
+
+        }
+
+        #iframe-2 {
+            height:560px;
+            overflow: scroll;
+            width:100%;
+            padding:9px;
+
+        }
 
        
         #result{
@@ -30,19 +46,41 @@
         }
         
     </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
 <div class="row">
 <div class="col-6">
     <div id="container">
-        <div style="background:black;height:100%;">
+        <div style="background:black;height:100%;width:99.5%;">
+        <!--Answer to check-->
+        <textarea type="text" id="txt1"  name="txt1" hidden></textarea>
+        <!--Actual Editor-->
         <div id="htmleditor"></div>
         
+        <!--Answer to check-->
+        <textarea type="text" id="txt2"  name="txt2" hidden></textarea>
+        <!--Actual Editor-->
         <div id="csseditor"></div>
-      
+        <!-- Large Modal -->
+        <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"  aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <iframe id='iframe-2' frameBorder="0"></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button onclick="Run()" type="button" class="btn btn-primary">Check Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
        </div>
     </div>
-    
     <iframe id="result" frameBorder="0"></iframe>
  </div>   
+ 
 
 
 
@@ -84,15 +122,15 @@
                             <br><br>
                             To create <strong>Local Links</strong> (links in the same application/without www.), use "/page" and for an image, use "picture.png" (both inside href).
                             <br><br>
-                            In the Intermediate HTML course, you will learn target attributes, links as images, external links, and styling links
+                            As you advnace in programming, will learn target attributes, links as images, external links, and styling links.
 
 
                         </p>
-                       
-                        <br><hr><h3><strong>Your Turn!</strong></h3>
+                       <br>
+                        <hr><h3><strong>Your Turn!</strong></h3>
                         <i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp; <span style="font-size:21px;font-weight:440">Under the paragraph tag, create a link directing to your favorite website! However, the link won't work as we are in a learning editor. Click "check code" once you are done.</span>
                         
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         
                         </h1>
                         
@@ -164,40 +202,114 @@
 <script>
     
 function update(){
-            var res = document.getElementById("result").contentWindow.document;
-            res.open();
-            res.write(eh.getValue());
-            //for css
-            res.write('<style>'+ec.getValue()+'</style>');
-           
-            res.close();
-        }
+    var idoc = document.getElementById('result').contentWindow.document;
+    var idoc2 = document.getElementById('iframe-2').contentWindow.document;
+    
+    idoc.open();
+    idoc.write(eh.getValue());
+    idoc.write('<style>'+ec.getValue()+'</style>');
+	idoc.close();
+	
+	idoc2.open();
+    idoc2.write(eh.getValue());
+    idoc2.write('<style>'+ec.getValue()+'</style>');
+    idoc2.close();
+}
         
-        function seteditor(){
-            //HTML
-            window.eh = ace.edit("htmleditor");
-            eh.setTheme("ace/theme/cobalt");
-            eh.session.setMode("ace/mode/html");
-            //CSS
-            window.ec = ace.edit("csseditor");
-            ec.setTheme("ace/theme/merbivore");
-            ec.session.setMode("ace/mode/css");
-           
-            eh.setValue(`<!DOCTYPE html>
+function activaTab(){
+    
+};
+
+function Run(){
+ var eh = ace.edit("htmleditor");
+ var ec = ace.edit("csseditor");
+ var HTMLCode = eh.getSession().getValue();
+ var CSSCode = ec.getSession().getValue();
+ var txt1 = document.getElementById("txt1").value;
+ var txt2 = document.getElementById("txt2").value;
+ $('.nav-tabs a[href="#contact-tab"]').tab('show');
+
+
+ if (HTMLCode.includes('test')){
+      $( "#checkbox" ).addClass( ".far fa-check-square" ).removeClass( ".far fa-square" );
+        swal({
+            title: "Good job!",
+            text: "Continue to the next lesson!",
+            icon: "success",
+             closeOnClickOutside: false,
+             buttons: {
+                confirm: "Next Lesson",
+              }
+        }).then(function() {
+            window.location.href = "/editor/css/comments";
+    });
+   
+   return false;
+  } else{
+            swal({
+          title: "Oh No!",
+          text: "Your code seems to be incorrect",
+          icon: "error",
+          buttons: ["Try Again", "View Solution"],
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+            swal("<h1>Hello World</h1>", {
+              title: "Solution:",
+              icon: "info",
+              button: "Try Again" 
+            });
+          } 
+        });
+         return false;
+    }
+}
+
+$(".one").click(function() {
+        $(".two").toggle();
+    });
+    
+    $(".one1").click(function() {
+        $(".two1").toggle();
+    });
+
+$(".one2").click(function() {
+        $(".two2").toggle();
+    });
+    $(".one3").click(function() {
+        $(".two3").toggle();
+    });
+
+function seteditor(){
+    //HTML
+    window.eh = ace.edit("htmleditor");
+    eh.setTheme("ace/theme/cobalt");
+    eh.getSession().setMode("ace/mode/html");
+    //CSS
+    window.ec = ace.edit("csseditor");
+    ec.setTheme("ace/theme/merbivore");
+    ec.getSession().setMode("ace/mode/css");
+    
+    //Set values for html
+    eh.setValue(`<!DOCTYPE html>
 <html>
     <body>
-    
+        
     </body>
 </html>`,1); //1 = moves cursor to end
-   eh.renderer.setScrollMargin(13, 3);
-   
+    eh.renderer.setScrollMargin(13, 3);
+
+    //Set values for css
+    ec.setValue(`HI`,1); //1 = moves cursor to end
+    ec.renderer.setScrollMargin(13, 3);
+
+//HTML Settings
   eh.getSession().on('change', function() {
     update();
   });
 
   eh.focus();
-  
-  
+
   eh.setOptions({
     fontSize: "11pt",
     showLineNumbers: true,
@@ -208,18 +320,14 @@ function update(){
 
   eh.setShowPrintMargin(false);
   eh.setBehavioursEnabled(false);
-
-
-  ec.setValue(``,1); //1 = moves cursor to end
-   ec.renderer.setScrollMargin(13, 3);
    
+ //CSS Settings
   ec.getSession().on('change', function() {
     update();
   });
 
   ec.focus();
-  
-  
+
   ec.setOptions({
     fontSize: "11pt",
     showLineNumbers: true,
@@ -230,18 +338,8 @@ function update(){
 
   ec.setShowPrintMargin(false);
   ec.setBehavioursEnabled(false);
-
-
-            eh.getSession().on("change", function(){
-               update(); 
-            });
-            
-            ec.getSession().on("change", function(){
-               update(); 
-            });
-            
            
-        }
-        seteditor();
-        update();
+}
+seteditor();
+update();
 </script>

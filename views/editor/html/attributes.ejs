@@ -229,7 +229,7 @@ html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
   function update()
 {
 	var idoc = document.getElementById('iframe').contentWindow.document;
-var idoc2 = document.getElementById('iframe-2').contentWindow.document;
+    var idoc2 = document.getElementById('iframe-2').contentWindow.document;
 	idoc.open();
 	idoc.write(editor.getValue());
 	idoc.close();
@@ -314,6 +314,8 @@ function setupEditor()
   window.editor = ace.edit("editor");
   editor.setTheme("ace/theme/cobalt");
   editor.getSession().setMode("ace/mode/html");
+
+  //Set values for html defaults
   editor.setValue(`<!DOCTYPE html>
 <html>
     <body>
@@ -327,8 +329,7 @@ function setupEditor()
   });
 
   editor.focus();
-  
-  
+
   editor.setOptions({
     fontSize: "13pt",
     showLineNumbers: true,
