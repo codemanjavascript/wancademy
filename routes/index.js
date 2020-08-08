@@ -16,6 +16,7 @@ var middleware = require("../middleware");
 var Approve = require("../models/approve");
 var courseApprove = require("../models/courseApprove");
 
+
 function escapeRegex(text){
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");  
 }
@@ -915,23 +916,23 @@ router.post("/register", function(req, res){
     User.register(newUser, req.body.password, function(err, user){
         if(err){
              req.flash("error", err.message);
-             res.redirect("/404");
              console.log(err);
+             res.redirect("/register");
         } else {
-            var mailOptionsRegister = {
-              from: 'wancademy@gmail.com',
-              to: newUser.email,
-              subject: 'Welcome to Wancademy!  🤖',
-              html: '<img src="https://i.imgur.com/Soq3GtW.png" style="width:520px;height:150px;"><h1 style="  color:#00AAFF;font-size:45px;">Hello <span style="color:black;font-size:45px;">'+ newUser.username + '!</span></h1> <h5  style="font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; font-weight:100;font-size:25px;color:#232323;">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From our developers, we warmly welcome you to our site. To access you dashboard, you can click <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/campgrounds">here</a>. <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io">Wancademy</a> is a free tool (and always free) where you can learn to code, design, ask questions of forums, and much more. <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now it is time to start learning: Some features our site has that you can use are <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/classes"> communities </a>, <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/forums">forums</a>, and <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/courses">courses</a>. Courses can be found in your <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/campgrounds">dashboard</a>. We suggest either you take a <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/course-help">quick quiz</a> to help us recommend you some courses, or you can follow a progressional beginners to advanced coding path we designed. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If you are looking for articles instead of courses, <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/articles">visit our articles section </a>. <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/classes">communities</a> are a place where users can freely talk about subjects related to coding or learning. You can discuss and ask questions, converse freely, make new friends, and your limits are endless! <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/forums">Forums</a> are a place where you can ask questions or answer them. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here are some useful sources:<br><br> - If you ever need help, <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/faq">our help center is always open.</a> We love to hear any comments or complaints, you can email our support team by replying to this email or at <a style="text-decoration:none;color:#0068FF;" href="wancademy@gmail.com">wancademy@gmail.com</a> </h5> <h5 style=" font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;font-weight:100;font-size:24px;color:#292929;"><br> ------------- <br><br> Best wishes and to your success, <br> &nbsp;&nbsp;&nbsp;&nbsp; Tommy Wan, Founder of Wancademy</h5><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h5 style="font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; font-weight:100;font-size:24px;color:#292929;">Since wancademy is free, we depend on donations to create new tutorials, courses, features, and to generally maintain our site. Please consider <a style="text-decoration:none;color:#FF0000;" href="yelp-camp-tommyschool.c9users.io/donate">donating</a> to keep our lowly site running. <br><br></h5>'
+            // var mailOptionsRegister = {
+            //   from: 'wancademy@gmail.com',
+            //   to: newUser.email,
+            //   subject: 'Welcome to Wancademy!  🤖',
+            //   html: '<img src="https://i.imgur.com/Soq3GtW.png" style="width:520px;height:150px;"><h1 style="  color:#00AAFF;font-size:45px;">Hello <span style="color:black;font-size:45px;">'+ newUser.username + '!</span></h1> <h5  style="font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; font-weight:100;font-size:25px;color:#232323;">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From our developers, we warmly welcome you to our site. To access you dashboard, you can click <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/campgrounds">here</a>. <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io">Wancademy</a> is a free tool (and always free) where you can learn to code, design, ask questions of forums, and much more. <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now it is time to start learning: Some features our site has that you can use are <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/classes"> communities </a>, <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/forums">forums</a>, and <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/courses">courses</a>. Courses can be found in your <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/campgrounds">dashboard</a>. We suggest either you take a <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/course-help">quick quiz</a> to help us recommend you some courses, or you can follow a progressional beginners to advanced coding path we designed. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If you are looking for articles instead of courses, <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/articles">visit our articles section </a>. <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/classes">communities</a> are a place where users can freely talk about subjects related to coding or learning. You can discuss and ask questions, converse freely, make new friends, and your limits are endless! <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/forums">Forums</a> are a place where you can ask questions or answer them. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here are some useful sources:<br><br> - If you ever need help, <a style="text-decoration:none;color:#0068FF;" href="www.yelp-camp-tommyschool.c9users.io/faq">our help center is always open.</a> We love to hear any comments or complaints, you can email our support team by replying to this email or at <a style="text-decoration:none;color:#0068FF;" href="wancademy@gmail.com">wancademy@gmail.com</a> </h5> <h5 style=" font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;font-weight:100;font-size:24px;color:#292929;"><br> ------------- <br><br> Best wishes and to your success, <br> &nbsp;&nbsp;&nbsp;&nbsp; Tommy Wan, Founder of Wancademy</h5><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h5 style="font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; font-weight:100;font-size:24px;color:#292929;">Since wancademy is free, we depend on donations to create new tutorials, courses, features, and to generally maintain our site. Please consider <a style="text-decoration:none;color:#FF0000;" href="yelp-camp-tommyschool.c9users.io/donate">donating</a> to keep our lowly site running. <br><br></h5>'
               
-            };
-            transporter.sendMail(mailOptionsRegister, function(error, info){
-              if (error) {
-                console.log(error);
-              } else {
-                console.log('Email sent: ' + info.response);
-              }
-            });
+            // };
+            // transporter.sendMail(mailOptionsRegister, function(error, info){
+            //   if (error) {
+            //     console.log(error);
+            //   } else {
+            //     console.log('Email sent: ' + info.response);
+            //   }
+            // });
 
              passport.authenticate("local")(req, res, function(){
                    req.flash("success", "Successfully Signed Up! Welcome to Wancademy!");
@@ -1197,11 +1198,10 @@ router.get("/login", function(req, res){
 router.post("/login", passport.authenticate("local", 
     {
         successRedirect: "/campgrounds",
-        failureRedirect: "/404",
+        failureRedirect: "/login",
         successFlash: "Login was successful, welcome back to wancademy! ",
-        failureFlash: "Invalid username or password. **Capitilize and space sensitive** "
+        failureFlash: "Invalid username or password. Please try again. "
     }), function(req, res){
-        
 });
 
 // logout route

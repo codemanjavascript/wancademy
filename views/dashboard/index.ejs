@@ -830,10 +830,9 @@ background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, F
         <h1 style="font-weight:600;font-size:95px;color:white; display:inline-block;vertical-align:middle;"><%= currentUser.username %></h1>
       <br><div style="padding:8px;"></div>
       <a href="/users/friends/<%= currentUser._id %>" class="btn btn-success btn-lg" style="color:white;"><i class="fas fa-user-alt"></i> My Profile</a>
-      <a href="/explore" class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-globe-asia"></i> Explore </a>
-      <a href="/courses" class="btn btn-secondary btn-lg" style="color:white;"><i class="fas fa-bookmark"></i> All Courses </a>
-<a href="/classes" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-users"></i> Communities</a>
-<a href="/forums" class="btn btn-danger btn-lg" style="color:white;"><i class="fas fa-bookmark"></i> Forums</a>
+      <a href="/courses" class="btn btn-secondary btn-lg" style="color:white;"><i class="fas fa-bookmark"></i> Courses </a>
+      <a href="/help" class="btn btn-primary btn-lg" style="color:white;"><i class="fas fa-hands-helping"></i> Help Center </a>
+      <!-- <a href="/forums" class="btn btn-danger btn-lg" style="color:white;"><i class="fas fa-bookmark"></i> Forums</a> -->
 
       <br><br>
     </div>
@@ -856,10 +855,26 @@ background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, F
                 <%= success %>
             </div>
 <% } %>
-<h1 style="font-size:45px;font-weight:700;">My Science Courses 🔭</h1>
+<h1 style="font-size:45px;font-weight:700;">All Courses</h1>
 <hr>
-<br>
-<div class="card-deck">    
+<div class="row">
+    <div class="box col">
+        <a href="/html"><img  src="https://i.imgur.com/nFahwqw.jpg" alt="HTML" height="235" width="350"></a>
+    </div>
+    <div class="box col">
+        <a href="/css"><img src="https://i.imgur.com/Am7PUfR.jpg" alt="CSS" height="235" width="350"></a>
+    </div>
+    <div class="box col">
+        <a href="/aviation"><img src="https://i.imgur.com/YyNss4e.jpg" alt="Aviation" height="235" width="350"></a>
+    </div>  
+ </div>
+<hr>
+
+
+ <h2 style="text-align:center;font-size:16px;font-weight:400;color:#B2B2B2;">Note: For initial launch, the dashboard is minimal. Features such as progress tracking are in the works.</h2>
+
+ 
+<!-- <div class="card-deck">    
     <div class="col-3">
               <div class="card">
                 <a href=""><img class="card-img-top" src="https://i.imgur.com/VCpeaMt.jpg" alt="Card image cap"></a>
@@ -959,12 +974,11 @@ background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, F
               </div>
     </div>
     
-</div>
-<br>
+</div> -->
+
 
 <br>
 </div>
-<br><br><br>
   
 </student-dashboard>
 <% } %>

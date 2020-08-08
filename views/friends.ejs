@@ -1,24 +1,27 @@
 <% include ./partials/header %>
 <style>
     .jumbotron{
-        background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/313340/b418ea38c3d62733d41cad41eda39786df10db70.jpg);
-        height:315px;
+        background: #2C8FFE;
+        height:100%;
+        width:100%;
     }
 </style>
 
 
     <div class="jumbotron">
         <div class="container">
+            <br>
             <div class="row">
+                
                 <div class="col-md-2">
                     <br><div style="padding:12px;"></div>
-                     <img style="height:140px;width:140px;border-radius:50%;" src="<%= user.image %>"/>
+                     <img style="height:170px;width:170px;border-radius:50%;" src="<%= user.image %>"/>
                  </div>
                  <div class="col-md-10">
                      <br><br>
-                     <h1 style="font-size:80px;color:white;"><%= user.username %></h1>
+                     <h1 style="font-size:100px;font-weight:800;color:white;"><%= user.username %></h1>
                      <% if (currentUser && user._id.equals(currentUser.id)) { %>
-                     <button class="btn btn-primary"><a style="color:white;text-decoration:none;" href="/users/<%= currentUser._id %>"><i class="fas fa-cog"></i> Settings</a></button>
+                     <button class="btn btn-warning"><a style="color:white;text-decoration:none;" href="/users/<%= currentUser._id %>"><i class="fas fa-cog"></i> Settings</a></button>
                      <% } else{ %><% } %>
                  </div>
              </div>
@@ -36,9 +39,10 @@
     </div>
 <div class="container">
    <h1 style="font-size:45px;font-weight:700;">Acheivements 🏆</h1>
-<hr>
+   <hr>
+   <h2 style="font-size:16px;font-weight:400;color:#B2B2B2;">This feature is currently under development.</h2>
 <br>
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 <% include ./partials/footer %>

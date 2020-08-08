@@ -4,10 +4,19 @@
     overflow:hidden;
   }
 </style>
-<br>
+<div class="container">
+        
+    
+
+</div>
 <div class="login-page">
+
+    <% if(error && error.length > 0){ %>
+      <div class="alert alert-danger" role="alert" style="text-align:center;">
+          <%= error %>
+      </div>
+  <% } %>
   <div class="form">
-  
     <form action="/register" method="POST" class="login-form">
       <h1 style="font-size:45px;font-weight:800;color:black">Register</h1>
       <hr><br>
@@ -17,12 +26,13 @@
       <!--<input type="password" name="developerCode" placeholder="Admin (Developing Purposes)"/>-->
      
       <button>get started!</button>
-      <p class="message">Not registered? <a href="/login" style="color:#0097FF;">Create an account</a></p>
+      <p class="message">Have an account? <a href="/login" style="color:#0097FF;">Login Now</a></p>
+      <p style="color:#9E9E9E;font-size:12px;">Inputs are case sensitive</p>
     </form>
   </div>
 </div>
 <style>
-  $('.message a').click(function(){
+  /* $('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-});
+}); */
 </style>

@@ -56,7 +56,7 @@
     <span class="navbar-text">
       <% if(!currentUser){ %> 
       
-       <ul  style="display: inline-block;" class="nav navbar-nav flex-row justify-content-between ml-auto">
+       <!-- <ul  style="display: inline-block;" class="nav navbar-nav flex-row justify-content-between ml-auto">
 
                 <li class="dropdown order-1">
                     <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Login </span> <span class="caret"></button>
@@ -76,9 +76,9 @@
                             </div>
                         </form>
                 </li>
-            </ul>
-            
-      <button style="display: inline-block;" type="button" class="btn btn-primary"><a href="/register" style="color:white;font-size:16px;padding-top:5px;">Register</a></button>
+            </ul> -->
+            <button style="display: inline-block;" type="button" class="btn btn-primary"><a href="/login" style="color:white;font-size:16px;padding-top:5px;text-decoration: none;">Login</a></button>      
+      <button style="display: inline-block;" type="button" class="btn btn-primary"><a href="/register" style="color:white;font-size:16px;padding-top:5px;text-decoration: none;">Register</a></button>
       <% } else { %> 
         <% if(currentUser && currentUser.isAdmin) { %>
           <button type="button" class="btn btn-danger"><a href="/admin" style="color:white;text-decoration:none;">Admin Access</a></button>
@@ -93,9 +93,8 @@
     Logged In as <%= currentUser.username %>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/"><i class="fas fa-home"></i> Dashboard</a>
     <a class="dropdown-item" href="/users/friends/<%= currentUser._id %>"><i class="fas fa-user-alt"></i> My Profile</a>
-    <a class="dropdown-item" href="/explore"><i class="fas fa-globe-asia"></i> Explore</a>
-    <a class="dropdown-item" href="/"><i class="far fa-caret-square-left"></i> To Dashboard</a>
     <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout </a>
   </div>
 </div>

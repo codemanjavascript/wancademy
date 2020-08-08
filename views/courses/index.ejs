@@ -2,8 +2,8 @@
 
 <style>
     .jumbotron{
-background: url(https://i.imgur.com/WOv6Avj.png);
-        height:380px;
+        background: #8AC5FC;
+        height:280px;
     }
     .explore-title{
    font-family: 'Raleway', sans-serif;
@@ -15,22 +15,31 @@ background: url(https://i.imgur.com/WOv6Avj.png);
 }
 </style>
 <div class="jumbotron">
- 
     <br><br>
     <h1 style="text-align:center;color:white;font-weight: 900;font-size:85px;">
-       OWN your curiosity
+       Own your curiosity
     </h1>
    <br>
-   <div style="text-align:center;">
-   <input style="text-align:center;width:50%" placeholder="Search All Courses 🔎">
-   </div> 
    <br>
-
-
 </div>
 
 <div class="container">
-    <h1 style="font-size:55px;"><span style="color:#00A6FF;"><strong>Educator</strong></span> Created Courses</h1>
+    <h1 style="text-align:center;font-size:60px;font-weight:700;color:black;">Current Courses:</h1>   
+<div style="padding:2.5px;"></div>
+<div class="row">
+   <div class="box col">
+       <a href="/html"><img  src="https://i.imgur.com/nFahwqw.jpg" alt="HTML" height="235" width="350"></a>
+   </div>
+   <div class="box col">
+       <a href="/css"><img src="https://i.imgur.com/Am7PUfR.jpg" alt="CSS" height="235" width="350"></a>
+   </div>
+   <div class="box col">
+       <a href="/aviation"><img src="https://i.imgur.com/YyNss4e.jpg" alt="Aviation" height="235" width="350"></a>
+   </div>  
+</div>
+<h2 style="text-align:center;font-size:25px;font-weight:300;color:#3E3E3E;">More are in the works! <a href="/plannedUpdates" target="_blank" style="text-decoration: none;">More info</a></h2>
+
+  <!-- <h1 style="font-size:55px;"><span style="color:#00A6FF;"><strong>Educator</strong></span> Created Courses</h1>
     <hr>
     <div class="card-deck">    
         <% courses.forEach(function(course){ %>
@@ -47,9 +56,10 @@ background: url(https://i.imgur.com/WOv6Avj.png);
           </div>
           </div>
         <% }); %>
-    </div>
+    </div> -->
+
 </div>
 
  
-<br><br><br><br><br><br><br><br><br>
+<br><br>
 <% include ../partials/footer %> 

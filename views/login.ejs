@@ -5,8 +5,13 @@
   }
 </style>
 
-<br><br>
+<br>
 <div class="login-page">
+    <% if(error && error.length > 0){ %>
+      <div class="alert alert-danger" style="text-align: center;" role="alert">
+          <%= error %>
+      </div>
+  <% } %>
   <div class="form">
   
     <form action="/login" method="POST" class="login-form">
@@ -14,17 +19,8 @@
       <h1 style="font-size:45px;font-weight:800;color:black">Login</h1>
       
       <div class="container">
+    
         
-        <% if(error && error.length > 0){ %>
-            <div class="alert alert-danger" role="alert">
-                <%= error %>
-            </div>
-        <% } %>
-        <% if(success && success.length > 0){ %>
-            <div class="alert alert-success" role="alert">
-                <%= success %>
-            </div>
-        <% } %>
     </div>
       <hr><br>
       <input name="username" type="text" placeholder="Username"/>
@@ -32,6 +28,7 @@
       <button>login</button>
       <p class="message"> <a href="/forgot" style="color:#0097FF;">Forgot your password?</a></p>
       <p class="message">Need an account?<a href="/register" style="color:#0097FF;"> Register Now</a></p>
+      <p style="color:#9E9E9E;font-size:12px;">Inputs are case sensitive</p>
     </form>
   </div>
 </div>
