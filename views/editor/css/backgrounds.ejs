@@ -108,42 +108,41 @@
                 <div style="padding-right:40px;">
                 <div style="padding:9px;"></div>
                     <div style="overflow:scroll;height:1000px;">
-                        <h1 style="font-size:35px;font-weight:600;">Positions<br><div style="padding:7px;"></div>
+                        <h1 style="font-size:35px;font-weight:600;">Backgrounds<br><div style="padding:7px;"></div>
                         <p style="font-weight:440;font-size:21px;">
                               
-                           
-                                The position property specifies the type of positioning methods used for an element. There are five different position properties: static, relative, fixed, absolute, and sticky. 
+                                CSS backgrounds can be styled many ways. First, to change the color, use the “background-color” property. You can use a valid color name, RGB, or Hex. 
                                 <br><br>
-                                <strong>Static</strong>
+                                
+                                <img src="https://i.imgur.com/cSVtirf.png" height="80" width="330">
                                 <br><br>
-                                By default, elements are in the static position. It just means that static is going with the flow of the page, and has no changes.
+                                Additionally, you can use the “background-image: url(“Website Link Goes Here”);” property to display an image that uses a url, such as a png or jpg. <br><br> It is recommended that you add backgrounds that make the text and content clear, so don’t be afraid of experimenting!
                                 <br><br>
-                                <strong>Relative</strong>
+                                
+                                <img src="https://i.imgur.com/2YOz56w.png" height="70" width="380">
                                 <br><br>
-                                Relative positions are relative to its normal position. This will allow the element to be adjusted away from the normal position.
+                                CSS Backgrounds are defaulted to repeat in order to cover the whole space. You can specify these using the “background-repeat” property.<br><br>  This property will define how a background will be repeated if the image isn’t big enough. Here are some syntax examples:
                                 <br><br>
-                                <strong>Fixed</strong>
+                                
+                                <img src="https://i.imgur.com/deAkQ48.png" height="130" width="330">
                                 <br><br>
-                                The Fixed Position will stick the element to the page, and will still stay in the page even if your scrolling. 
+                                Finally, you can bundle up all properties such as:
                                 <br><br>
-                                <strong>Absolute</strong>
-                                <br><br>
-                                An absolutely positioned element is an element whose computed position value is absolute or fixed. The top, right, bottom, and left properties specify offsets from the edges of the element's containing block. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset. Confusing right? Here’s an example.
-                                <br><br>
-                                <strong>Sticky</strong>
-                                <br><br>
-                                Is the position based on the users scroll positions. Some internet browsers such as Internet explorer and edge do not support the sticky position. Click here for a live example!
-                                <br><br>
-                                <strong>Overlap</strong>
-                                <br><br>
-                                You can also overlap elements so that they are on top of each other. You will use the z-index value, which will range from negative to positive. Generally, to have and element behind another, that element will have a negative, and the element on top will have a number greater than that number. <br><br> For example, A and B. We want A to be in front and B to be behind. A will have a z-index of 1 and B will have a z index of 0. 
-                                <br><br>
-                                Read more on practical uses <a href="https://www.w3schools.com/css/css_positioning.asp">here</a>.
-    
+                                
+                                <img src="https://i.imgur.com/Gp4gWGy.png" height="70" width="550">
+                                
+                    
+                                
+                                
+
+                                
+                                
+                          
+                    
                         </p>
                        <br>
                         <hr><h3><strong>Your Turn!</strong></h3>
-                        <i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp; <span style="font-size:21px;font-weight:440">Your Turn: No task! Click check code to move along.
+                        <i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp; <span style="font-size:21px;font-weight:440">Your Turn: With the link, create background-image for the page using the body selector: https://i.imgur.com/GqglFZJ.jpg (it may be repeated due to size)
 
 </span>
                         
@@ -247,7 +246,7 @@ function Run(){
  $('.nav-tabs a[href="#contact-tab"]').tab('show');
 
 
- if (HTMLCode.includes('')){
+ if (HTMLCode.includes('<h2', 'id=','</h2>' && CSSCode.includes('https://i.imgur.com/GqglFZJ.jpg', '{', '}', ';', 'body', 'background-image', 'url(', ')', ';'))){
       $( "#checkbox" ).addClass( ".far fa-check-square" ).removeClass( ".far fa-square" );
         swal({
             title: "Good job!",
@@ -258,7 +257,7 @@ function Run(){
                 confirm: "Next Lesson",
               }
         }).then(function() {
-            window.location.href = "/editor/css/align";
+            window.location.href = "/editor/css/mpf";
     });
    
    return false;
@@ -308,7 +307,12 @@ function seteditor(){
     ec.getSession().setMode("ace/mode/css");
     
     //Set values for html
-    eh.setValue(``,1); //1 = moves cursor to end
+    eh.setValue(`<!DOCTYPE html>
+<html>
+    <body>
+        
+    </body>
+</html>`,1); //1 = moves cursor to end
     eh.renderer.setScrollMargin(13, 3);
 
     //Set values for css
@@ -355,5 +359,3 @@ function seteditor(){
 seteditor();
 update();
 </script>
-
-

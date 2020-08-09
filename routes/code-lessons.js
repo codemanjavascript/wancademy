@@ -110,6 +110,10 @@ router.get("/editor/css/borders", function(req, res) {
     res.render("editor/css/borders");
 });
 
+router.get("/editor/css/backgrounds", function(req, res) {
+    res.render("editor/css/backgrounds");
+});
+
 router.get("/editor/css/mpf", function(req, res) {
     res.render("editor/css/mpf");
 });

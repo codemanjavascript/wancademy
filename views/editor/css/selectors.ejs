@@ -110,25 +110,74 @@
                     <div style="overflow:scroll;height:1000px;">
                         <h1 style="font-size:35px;font-weight:600;">Selectors<br><div style="padding:7px;"></div>
                         <p style="font-weight:440;font-size:21px;">
-                            Links are the way that users move from page to page through the internet. Links can also be referred to as "hyperlinks", which can be applied to text, images, or any other HTML element.
-                            <br><br>
-                            To create a link, you wil use this syntax(formula): 
-                            <br><br>
-                            <img src="https://i.imgur.com/BwtXaEY.png" height="40" width="310">
-                            <br><br>
-                            Example: <strong>&lt;a href="https://www.google.com"&gt; Google Link &lt;/a&gt;</strong>
-                            <br><br>
-                            The <i>href</i> attribute specifies the destination address of the link. The <i>Link Text</i> is the only text the user can see
-                            <br><br>
-                            To create <strong>Local Links</strong> (links in the same application/without www.), use "/page" and for an image, use "picture.png" (both inside href).
-                            <br><br>
-                            As you advnace in programming, will learn target attributes, links as images, external links, and styling links.
+                                Selectors are used to style a certain element using an ID, class, or an element. We will go over each of these. This is the general syntax:
+                                <br><br>
+                                <img src="https://i.imgur.com/vKQVmbg.png" height="120" width="250">
 
-
+                                <br><br>
+                                The selector refers to the object you are selecting. When you add specific styles, that is called a <strong>declaration</strong>. 
+                                <br><br>
+                                As shown here, a declaration has a property and value. For example, if you wanted to change the font color, you would use “color” as the property, and set the value to a color. 
+                                <br><br>
+                                <img src="https://i.imgur.com/s1nxobj.png" height="90" width="230">
+                                
+                                <br><br>
+                                A declaration is surrounded by curly braces: “{}”, and there is always a semicolon: “;” at the end of each declaration.
+                                <br><br>
+                                <strong>The Element Selector</strong>
+                                <br>
+                                The element selector selects elements by their name. Some common examples are paragrahs, headings, links, and body.
+                                <br><br>
+                                <img src="https://i.imgur.com/ebaAXHw.png" height="260" width="285">
+                                
+                                <br><br>
+                                <strong>The ID Selector</strong>
+                                The ID selector selects the id Attribute of an HTML Element to select a specific element. The ID is unique, so it is used once with an element. To ID an element, you will create the ID Attribute along with using the #. 
+                                <br><br>
+                                <img src="https://i.imgur.com/xMIKYV9.png" height="40" width="340">
+                                
+                                <br><br>
+                                Then using that, you can select the element: 
+                                <br><br>
+                                <img src="https://i.imgur.com/fRdlSoR.png" height="100" width="240">
+                                
+                                <br><br>
+                                
+                                <strong>The Class Selector</strong>
+                                <br>
+                                The class selector is similar to the ID Selector, but instead of being a unique single element, a class can apply to several elements. Like students in a class! Note that instead of #, you will use a period.
+                                <br><br>
+                                <img src="https://i.imgur.com/RpZ5oG1.png" height="35" width="310">
+                                
+                                <br><br>
+                                Then you can select the element:
+                                <br><br>
+                                <img src="https://i.imgur.com/89vh6R7.png" height="90" width="250">
+                                
+                                <br><br>
+                                
+                                For classes, you can select specific elements affected by the class
+                                <br><br>
+                                <img src="https://i.imgur.com/cEDMCCJ.png" height="100" width="320">
+                                
+                                <br><br>
+                                
+                                or have more than one class in an element.
+                                <br><br>
+                                <img src="https://i.imgur.com/iXkTEWN.png" height="35" width="320">
+                               
+                                <br><br>
+                                
+                                Before we end, you should also note that you can group elements together such as this: 
+                                <br><br>
+                                <img src="https://i.imgur.com/yQPReYI.png" height="120" width="330">
+                                <br><br>
+                                Selectors are the most important part of CSS as it allows you to select elements and apply styles to them. You will get used to them as you continue learning.
+                      
                         </p>
                        <br>
                         <hr><h3><strong>Your Turn!</strong></h3>
-                        <i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp; <span style="font-size:21px;font-weight:440">Under the paragraph tag, create a link directing to your favorite website! However, the link won't work as we are in a learning editor. Click "check code" once you are done.</span>
+                        <i class="far fa-square" id="checkbox" style="font-size:23px;"></i> &nbsp; <span style="font-size:21px;font-weight:440">Your turn: Create an ID in the HTML editor in an H1 Tag. Then, style the ID to your liking in the CSS Editor. You can use declerations shown above</span>
                         
                         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         
@@ -137,7 +186,7 @@
                         <div style="padding:9px;"></div>
                         <h1 style="font-size:21px;font-weight:440;"> </h1>
                     </div>
-                    <br>
+         
                 </div>
             </div>
             
@@ -230,7 +279,7 @@ function Run(){
  $('.nav-tabs a[href="#contact-tab"]').tab('show');
 
 
- if (HTMLCode.includes('test')){
+ if (HTMLCode.includes('<h1', 'id=','</h1>' && CSSCode.includes('#', '{', '}', ';'))){
       $( "#checkbox" ).addClass( ".far fa-check-square" ).removeClass( ".far fa-square" );
         swal({
             title: "Good job!",
@@ -300,7 +349,7 @@ function seteditor(){
     eh.renderer.setScrollMargin(13, 3);
 
     //Set values for css
-    ec.setValue(`HI`,1); //1 = moves cursor to end
+    ec.setValue(``,1); //1 = moves cursor to end
     ec.renderer.setScrollMargin(13, 3);
 
 //HTML Settings
