@@ -1,0 +1,148 @@
+<% include ../partials/header %> <!-- HEADER PARTIALS -->
+<style>
+    .jumbotron{
+        background: #A495FF;  /* fallback for old browsers */
+        height:275px;
+    }
+    a:hover{
+        color:#A495FF;
+        transition:0.2s;
+    }
+    .list-group-item.active {
+      z-index: 2;
+      color: #fff;
+      background-color: #A495FF;
+      border-color: #A495FF;
+    }
+    h1 {
+        font-size:45px;
+    }
+</style>
+<div class="jumbotron">
+    <br>
+    <div style="padding:7px;"></div>
+        
+        <h1 style="text-align:center;color:white;font-size:90px;font-weight:600;">Aviation</h1>
+        <br>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row">
+        <!--Vertical Buttons-->
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1) Introduction to Course</a>
+            <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#instruments" role="tab" aria-controls="home">2) Instruments</a>
+                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#aerodynamics" role="tab" aria-controls="home">3) Aerodynamics</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#engines" role="tab" aria-controls="profile">4) Engines</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#communications" role="tab" aria-controls="messages">5) Communications</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#weather" role="tab" aria-controls="settings">6) Weather</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#navigation" role="tab" aria-controls="settings">7) Navigation</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#wrap" role="tab" aria-controls="settings">8) Wrap Up</a>
+            </div>
+        </div>
+        <!--Info about lesson-->
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Intro-->
+                <div class="tab-pane fade show active" id="intro" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Introduction to Aviation</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this first lesson, we will look at aviation at a glance. This includes training overview, course content, and more!</h5>
+                    <br>
+                    <img src="https://i.imgur.com/nfBhHbv.jpg" width="450" height="260">
+                    <br><br><br>
+                    <a href="/aviation/introduction" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Instrumnets-->
+                <div class="tab-pane fade " id="instruments" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Instruments</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to the most common aviation instruments that pilots rely on.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/JntXrhy.jpg" width="450" height="260">
+                    <br><br>
+                    <a href="/aviation/instruments" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Aerodynamic-->
+                <div class="tab-pane fade " id="aerodynamics" role="tabpanel" aria-labelledby="list-home-list">
+                    <h1>Aerodynamics</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to what aerodynamics are, how it works, and the physics behind this phenomona.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/P4Jdya7.jpg" width="400" height="250">
+                    <br><br>
+                    <a href="/aviation/aerodynamics" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Engine-->
+                <div class="tab-pane fade" id="engines" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Engines</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to common types of engines used on planes.</h5>
+                    <br>
+                    <img src="https://i.imgur.com/0MH1yQ8.jpg" width="400" height="280">
+                    <br><br>
+                    <a href="/aviation/engines" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Communication-->
+                <div class="tab-pane fade" id="communications" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Communications</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be introduced to the classes of airspace, towered and non-towered communications, and terminology.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/ViqHWto.png" width="440" height="280">
+                        <br><br>
+                        <a href="/aviation/communications" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Weather-->
+                <div class="tab-pane fade" id="weather" role="tabpanel" aria-labelledby="list-settings-list">
+                    <h1>Basic Weather</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will be exposed to the basics of weather, clouds, fog, and instrument flying. </h5>
+                    <br>
+                    <img src="https://i.imgur.com/ZlzFC0L.png" width="608" height="300">
+                    <br><br>
+                    <a href="/aviation/weather" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                <!--Navigation-->
+                <div class="tab-pane fade" id="navigation" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Navigation</h1>
+                        <hr>
+                        <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">In this lesson, you will learn how pilots navigate using charts, pilotage, dead reckoning, and other resources.</h5>
+                        <br>
+                        <img src="https://i.imgur.com/yTW4JIW.jpg" width="370" height="200">
+                        <br><br>
+                        <a href="/aviation/navigation" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Start Lesson</a>
+                </div>
+                
+                <!--Wrap up-->
+                <div class="tab-pane fade" id="wrap" role="tabpanel" aria-labelledby="list-profile-list">
+                    <h1>Wrap Up</h1>
+                    <hr>
+                    <h5 style="color:#2A2A2A;font-weight:300;font-size:25px;line-height: 1.5;">Great job! You have finished the aviation course! With your knowledge, you have a solid foundation in your ground school or flight training. Contact us <a href="/help"  style="text-decoration: none;" target="_blank">here</a> if you need any help!</h5>
+                    <br>
+                    <img src="https://i.imgur.com/oeFh70T.png" width="470" height="250">
+                    <br><br>
+                    <a class="btn btn-primary" href="/html" style="color:white;">Learn HTML</a>
+                    <a class="btn btn-primary" href="/css" style="color:white;">Learn CSS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    
+    <a class="btn btn-primary btn-lg" href="/" style="color:white;"><i class="fas fa-backward"></i> Back to Dashboard</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0ghPgun7IQdOhLUTfFKWujaWhi4GtR0GzF69ONuLEXPYdFQ/viewform?usp=sf_link" target="_blank" class="btn btn-info btn-lg" style="color:white;"><i class="fas fa-comments"></i> Feedback</a>
+
+</div>
+
+
+
+
+<br><br><br>
+<% include ../partials/footer %>

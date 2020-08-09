@@ -21,6 +21,42 @@ function escapeRegex(text){
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");  
 }
 
+// Aviation
+
+router.get("/aviation", function (req, res){
+    res.render("aviation/aviation");
+});
+
+router.get("/aviation/introduction", function (req, res){
+    res.render("aviation/introduction");
+});
+
+router.get("/aviation/instruments", function (req, res){
+    res.render("aviation/instruments");
+});
+
+router.get("/aviation/aerodynamics", function (req, res){
+    res.render("aviation/aerodynamics");
+});
+
+router.get("/aviation/engines", function (req, res){
+    res.render("aviation/engines");
+});
+
+router.get("/aviation/communications", function (req, res){
+    res.render("aviation/communications");
+});
+
+router.get("/aviation/weather", function (req, res){
+    res.render("aviation/weather");
+});
+
+router.get("/aviation/navigation", function (req, res){
+    res.render("aviation/navigation");
+});
+
+
+
 router.get("/plannedUpdates", function (req, res){
     res.render("plannedUpdates.ejs") ;
 });
