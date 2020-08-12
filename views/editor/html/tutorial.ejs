@@ -102,12 +102,12 @@ html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span style="color:#002439">Instructions</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span style="color:#002439">Video</span></a>
-                </li>
-                <li class="nav-item">
+                </li> -->
+                <!-- <li class="nav-item">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><span style="color:#002439">Hints</span></a>
-                </li>
+                </li> -->
             </ul>
         
         <!--Instruction Content-->
@@ -118,7 +118,7 @@ html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden;}
                 <div style="padding-right:40px;">
                 <div style="padding:9px;"></div>
                     <div style="overflow:scroll;height:1000px;">
-                        <h1 style="font-size:35px;font-weight:600;">Links<br><div style="padding:7px;"></div>
+                        <h1 style="font-size:35px;font-weight:600;">Using the Editor<br><div style="padding:7px;"></div>
                         <p style="font-weight:440;font-size:21px;">
                             Welcome to the HTML Editor! This is where you will be learning the new language. The left blue code is the HTML code. The results will show on the white space below the editors. 
                             <br><br>
@@ -232,7 +232,7 @@ function Run(){
  $('.nav-tabs a[href="#contact-tab"]').tab('show');
 
 
- if (Code.includes('<a','</a>','href')){
+ if (Code.includes('')){
       $( "#checkbox" ).addClass( ".far fa-check-square" ).removeClass( ".far fa-square" );
       
         swal({
@@ -244,7 +244,7 @@ function Run(){
                 confirm: "Next Lesson",
               }
         }).then(function() {
-            window.location.href = "/editor/introductiontohtml/headingsandparagraph";
+            window.location.href = "/editor/html/documentandtags";
             
             
     });
@@ -314,13 +314,7 @@ function setupEditor()
   window.editor = ace.edit("editor");
   editor.setTheme("ace/theme/cobalt");
   editor.getSession().setMode("ace/mode/html");
-  editor.setValue(`<!DOCTYPE html>
-<html>
-    <body>
-        <h1>Links</h1>
-        <p>Links are very useful!</p>
-    </body>
-</html>`,1); //1 = moves cursor to end
+  editor.setValue(`<p>Code goes here!</p>`,1); //1 = moves cursor to end
    editor.renderer.setScrollMargin(13, 3);
    
   editor.getSession().on('change', function() {

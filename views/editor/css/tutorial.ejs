@@ -54,12 +54,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span style="color:#002439">Instructions</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span style="color:#002439">Video</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><span style="color:#002439">Hints</span></a>
-                </li>
+                
             </ul>
         
         <!--Instruction Content-->
@@ -81,7 +76,7 @@
                             That's it! If you have anymore questions, feel free to chat with us, email us, or respond the the feedback forms, <a href="/help">here</a>. Happy Coding!
                         
                         <br><br>
-                        <a href="/editor/css/selectors" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Next Lesson</a>
+                        <a href="/editor/css/selectors" class="btn btn-primary" style="color:white;"><i class="fas fa-play-circle"></i> Continue to Next Lesson</a>
                         </p>
                        
                         
@@ -176,12 +171,7 @@ function update(){
             ec.setTheme("ace/theme/merbivore");
             ec.session.setMode("ace/mode/css");
            
-            eh.setValue(`<!DOCTYPE html>
-<html>
-    <body>
-    
-    </body>
-</html>`,1); //1 = moves cursor to end
+            eh.setValue(``,1); //1 = moves cursor to end
    eh.renderer.setScrollMargin(13, 3);
    
   eh.getSession().on('change', function() {
